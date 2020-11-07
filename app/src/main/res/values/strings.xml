@@ -1,0 +1,279 @@
+<resources>
+    <string name="app_name">Katundu</string>
+    <string name="descripcio" translatable="false">descripcio</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Nombre de usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Entra o regístrate</string>
+    <string name="action_sign_in_short">Entra</string>
+    <string name="welcome">"Bienvenido, "</string>
+    <string name="invalid_username">Nombre de usuario inválido</string>
+    <string name="invalid_password">La contraseña debe tener 8 o más carácteres</string> <!-- Login View Model-->
+    <string name="login_failed">"Entrada fallida"</string>
+    <string name="texto_registro"><u>¿No estás registrado?</u></string>
+    <string name="unregistered">No está registrado</string>
+    <string name="incorrect_password">Contraseña incorrecta</string>
+    <string name="security_login_text">Has introducido una contraseña incorrecta 5 veces. Por favor, responde a tu pregunta de seguridad correctamente o se te bloqueará la cuenta. Recuerda que debe ser igual a la respuesta que introdujiste al registrarte.</string>
+    <string name="account_blocked_successfully">Cuenta bloqueada</string>
+    <string name="wrong_answer">Respuesta incorrecta</string>
+
+
+    <!-- Strings related to register -->
+    <string name="title_activity_register">Crea tu cuenta</string>
+    <string name="subtitle_activity_register">Introduce tus datos personales</string>
+    <string name="name">Nombre</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_password_2">Repite la contraseña</string>
+    <string name="coordinate_latitude">Latitud</string>
+    <string name="coordinate_longitude">Longitud</string>
+    <string name="prompt_address">Dirección</string>
+    <string name="action_register">Regístrate</string>
+    <string name="error">Se ha producido un error</string>
+    <string name="mismatchedpasswords">No coinciden las contraseñas</string>
+    <string name="existing_user">El nombre de usuario ya existe</string>
+    <string name="empty_username">El nombre de usuario no puede estar vacío</string>
+    <string name="empty_password">La contraseña no puede estar vacía</string>
+    <string name="empty_repeatpasword">Debes escribir la contraseña dos veces</string>
+    <string name="empty_location">Los campos de latitud y longitud no pueden estar vacíos</string>
+    <string name="security_question">Escribe una pregunta de seguridad</string>
+    <string name="security_answer">Responde la pregunta</string>
+    <string name="empty_security_question">Debes escribir una pregunta de seguridad</string>
+    <string name="empty_security_answer">Debes responder la pregunta de seguridad</string>
+    <string name="more_info_about_you">Completa tu perfil</string>
+
+    <!-- Strings related to Menu Principal-->
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Sorpréndeme</string>
+    <string name="title_notifications">Añadir Producto</string>
+    <string name="title_chat">Chat</string>
+    <string name="search">Buscar</string>
+
+    <!-- Strings related to SearchProduct-->
+    <string name="search_product">Buscar Producto o Servicio</string>
+
+    <!-- Strings related to SearchUser-->
+    <string name="search_user">Buscar Usuario</string>
+    <string name="search_user_username">Nombre de usuario</string>
+    <string name="search_user_real_name">Nombre</string>
+    <string name="search_user_valoracio">Valoración</string>
+    <string name="search_user_good_search">Se han encontrado usuarios</string>
+    <string name="search_user_bad_search">No se ha encontrado ningún usuario</string>
+
+    <!-- String related to SearchProducts -->
+    <string name="search_products">Buscar Productos</string>
+    <string name="search_products_good_search">Se han encontrado productos</string>
+    <string name="search_products_bad_search">No se ha encontrado ningún producto</string>
+    <string name="search_products_value">Valor</string>
+    <string name="category_all_SP">Todas</string>
+    <string name="no_products_found_SP">No se ha encontrado ningún producto.\n\nPrueba modificando los filtros o ampliando tu rango de búsqueda. </string>
+    <!-- utilitzar string filtres d'addProduct -->
+
+    <!-- Strings related to User-->
+    <string name="nom_Usuari">Nombre de usuario</string>
+    <string name="user_valoracio_text">"Valoración: "</string>
+    <string name="user_valoracio_numero">0</string>
+    <string name="user_perfil_valoracio_max">"/5"</string>
+    <string name="user_birthdate">Fecha de nacimiento</string>
+    <string name="format_date">dd-mm-aaaa</string>
+    <string name="format_date_register">Fecha de nacimiento (dd-mm-aaaa)</string>
+    <string name="format_description">Escribe algo sobre ti</string>
+    <string name="invalid_birthdate">La fecha de nacimiento no es correcta</string>
+    <string name="add_pic">Añadir foto</string>
+
+    <!-- Strings related to Settings-->
+    <string name="title_settings">Configuración</string>
+
+    <!-- Strings related to Modificar Perfil-->
+    <string name="title_profile">Modificar Perfil</string>
+    <string name="prompt_distancia_max">Distancia máxima</string>
+    <string name="Save">Guardar cambios</string>
+    <string name="action_logout">Cerrar sessión</string>
+    <string name="prompt_delete_account"><u>¿Quieres darte de baja?</u></string>
+    <string name="account_modified_successfully">Cuenta modificada con éxito</string>
+
+    <!-- Strings related to Editar Idioma-->
+    <string name="title_idioma">Cambiar Idioma</string>
+    <string name="editar_idioma_español">Español</string>
+    <string name="editar_idioma_catalan">Català</string>
+    <string name="editar_idioma_ingles">English</string>
+
+    <!-- Strings related to Delete Account-->
+    <string name="title_delete_account">Eliminar Cuenta</string>
+    <string name="text_anti_delete_account">Este paso es irreversible y eliminará tu cuenta para siempre.\n\nPiénsatelo otra vez antes de continuar.</string>
+    <string name="action_delete_account">Eliminar cuenta</string>
+    <string name="account_deleted_successfully">Cuenta eliminada con éxito</string>
+
+    <!-- Strings related to Add-->
+    <string name="add_product">Subir Oferta</string>
+    <string name="add_wish">Añadir Deseo</string>
+    <string name="favorite_added_successfully">Favorito añadido con éxito</string>
+    <string name="favorite_removed_successfully">Favorito eliminado con éxito</string>
+
+    <!-- Strings related to Add Product-->
+    <string name="title_add_product">Añadir Nueva Oferta</string>
+    <string name="add_product_add_foto">Añadir foto</string>
+    <string name="add_product_open_camera">Abrir cámara</string>
+    <string name="add_product_open_gallery">Abrir galeria</string>
+    <string name="add_product_name">Nombre</string>
+    <string name="add_product_categories">Categoría</string>
+    <string name="add_product_category_technology">Tecnología</string>
+    <string name="add_product_category_home">Hogar</string>
+    <string name="add_product_category_beauty">Belleza</string>
+    <string name="add_product_category_sports">Deportes</string>
+    <string name="add_product_category_fashion">Moda</string>
+    <string name="add_product_category_leisure">Ocio</string>
+    <string name="add_product_category_transport">Transporte</string>
+    <string name="add_product_category_education">Educación</string>
+    <string name="add_product_value">Valor estimado</string>
+    <string name="add_product_type">Tipo</string>
+    <string name="add_product_type_product">Producto</string>
+    <string name="add_product_type_service">Servicio</string>
+    <string name="add_product_key_words">Palabras Clave</string>
+    <string name="add_product_description">Descripción</string>
+    <string name="add_product_cancel">Cancelar</string>
+    <string name="add_product_save">Subir Oferta</string>
+    <string name="add_product_muchas_fotos">Límite de fotos alcanzado</string>
+    <string name="add_product_no_hay_fotos">Debes añadir una foto</string>
+    <string name="add_product_no_hay_nombre">Debes añadir un nombre</string>
+    <string name="add_product_no_hay_valor">Debes añadir un valor</string>
+    <string name="add_product_no_hay_palabras_clave">Debes añadir como mínimo 2 palabras clave</string>
+    <string name="add_product_no_hay_descripcion">Debes añadir una descripción</string>
+    <string name="add_product_general_error">Ha habido un error, vuélvelo a intentar</string>
+    <string name="add_product_no_hay_hashtag">Las palabras clave deben empezar con # e ir sin espacios</string>
+    <string name="add_product_minimo_dos_keywords">Escribe como mínimo 2 palabras clave</string>
+    <string name="euro">€</string>
+    <string name="keyword">#palabraclave</string>
+
+    <!-- Strings related to Add Wish-->
+    <string name="title_add_wish">Añadir Nuevo Deseo</string>
+    <string name="add_new_wish_explication">
+        Un deseo es aquello que quieres conseguir en un intercambio con otro usuario
+    </string>
+    <string name="add_new_wish">Añadir Deseo</string>
+
+    <!-- Strings related to Add Offer-->
+    <string name="title_add_offer">Añadir Nueva Oferta</string>
+    <string name="add_new_offer_explication">
+        Una oferta es aquello que ofreces en un intercambio con otro usuario
+    </string>
+    <string name="add_new_offer">Añadir Oferta</string>
+
+
+    <!-- Strings related to PreviewFoto-->
+    <string name="preview_foto_delete">Borrar foto</string>
+    <string name="preview_foto_cancelar">Cancelar</string>
+
+    <!-- Strings related to EditWish-->
+    <string name="edit_wish_title">Modificar deseo</string>
+    <string name="edit_wish_ok">Modificar deseo</string>
+    <string name="empty_values">Hay valores vacíos</string>
+    <string name="wish_modified_successfully">Deseo modificado con éxito</string>
+    <string name="wish_added_successfully">Deseo añadido con éxito</string>
+
+    <!-- Strings related to EditOffer-->
+    <string name="edit_offer_title">Modificar datos de la oferta</string>
+    <string name="edit_offer_ok">Modificar Oferta</string>
+    <string name="offer_modified_successfully">Oferta modificada con éxito</string>
+    <string name="offer_added_successfully">Oferta añadida con éxito</string>
+    <string name="EditOfferAddPhoto">Añadir foto</string>
+    <string name="title_modify_offer">Modificar Oferta</string>
+    <string name="modified_images">Clica sobre Modificar Oferta para actualizar los valores</string>
+
+    <!-- Strings related to ChooseActionWish-->
+    <string name="title_wish">Deseo</string>
+    <string name="modify_wish">MODIFICAR DESEO</string>
+    <string name="delete_wish">ELIMINAR DESEO</string>
+    <string name="wish_deleted_successfully">Deseo eliminado con éxito</string>
+
+    <!-- Strings related to ChooseActionOffer-->
+    <string name="title_offer">Oferta</string>
+    <string name="modify_offer">MODIFICAR OFERTA</string>
+    <string name="delete_offer">ELIMINAR OFERTA</string>
+    <string name="offer_deleted_successfully">Oferta eliminada con éxito</string>
+
+    <!-- Strings related to PreviewFotoeDIT-->
+    <string name="preview_fotoE_delete">Borrar foto</string>
+    <string name="preview_fotoE_cancelar">Cancelar</string>
+    <string name="preview_fotoE_error">Error al borrar la foto</string>
+
+    <!-- Strings related to ListTrophies-->
+    <string name="list_trophies_title">Trofeos</string>
+    <string name="list_trophies_title0">¿Soy yo?</string>
+    <string name="list_trophies_description0">Completa tu perfil</string>
+    <string name="list_trophies_title1">Primeros pasos</string>
+    <string name="list_trophies_description1">Sube tu primer oferta</string>
+    <string name="list_trophies_title2">Aladdín</string>
+    <string name="list_trophies_description2">Sube tu primer deseo</string>
+    <string name="list_trophies_title3">Corregir es de sabíos</string>
+    <string name="list_trophies_description3">Modifica una oferta de tu lista de ofertas</string>
+    <string name="list_trophies_title4">Primera estrella</string>
+    <string name="list_trophies_description4">Añade una oferta de otra usuario a tu lista de favoritos</string>
+    <string name="list_trophies_title5">Los deseos se hacen realidad</string>
+    <string name="list_trophies_description5">Consigue, mediante un intercambio, aquello que tenias en tu lista de deseos</string>
+    <string name="list_trophies_title6">Ya es mío</string>
+    <string name="list_trophies_description6">Consigue, mediante un intercambio, un producto de tu lista de favoritos</string>
+    <string name="list_trophies_title7">La primera de muchas</string>
+    <string name="list_trophies_description7">Haz tu primer intercambio</string>
+    <string name="list_trophies_title8">¡Choca los cinco!</string>
+    <string name="list_trophies_description8">Haz 5 intercambios</string>
+    <string name="list_trophies_title9">Docena</string>
+    <string name="list_trophies_description9">Haz 12 intercambios</string>
+    <string name="list_trophies_title10">¡En racha!</string>
+    <string name="list_trophies_description10">Haz 25 intercambios</string>
+    <string name="list_trophies_title11">Medio centenario</string>
+    <string name="list_trophies_description11">Haz 50 intercambios</string>
+    <string name="list_trophies_title12">Franklin</string>
+    <string name="list_trophies_description12">Haz 100 intercambios</string>
+    <string name="list_trophies_title13">Cuarto de millar</string>
+    <string name="list_trophies_description13">Haz 250 intercambios</string>
+    <string name="list_trophies_title14">Medio millar</string>
+    <string name="list_trophies_description14">Haz 500 intercambios</string>
+    <string name="list_trophies_title15">1K</string>
+    <string name="list_trophies_description15">Haz 1000 intercambios</string>
+
+    <!-- Strings related to VisualizeChat-->
+    <string name="contingut_message">Escribe un mensaje</string>
+    <string name="chats">Chats</string>
+
+    <!-- Strings related to Sorprenme-->
+    <string name="sorpren_me">Sorpréndeme!</string>
+    <string name="no_sorprenme_found">Aún no tenemos ninguna oferta con la que sorprenderte!</string>
+    <!-- Strings related to Forum-->
+    <string name="forum">Fórum!</string>
+    <string name="title_add_post">Añadir publicación</string>
+    <string name="add_new_post_explication">Tu publicación debe contener un título y una descripción. Publica cualquier cosa que creas interesante!</string>
+    <string name="add_post_title">Título</string>
+    <string name="add_post_description">Descripción</string>
+    <string name="add_new_post">Añadir</string>
+    <string name="add_post_no_hay_titulo">Debes añadir un título</string>
+    <string name="add_post_no_hay_descripcion">Debes añadir una descripción</string>
+    <string name="add_post_general_error">Ha habido un error, vuélvelo a intentar</string>
+    <string name="add_post_general_ok">Publicación añadida!</string>
+    <string name="personalposts">Tus publicaciones</string>
+    <string name="title_editar_post">Modificar publicación</string>
+    <string name="edit_post">Modificar</string>
+    <string name="eliminar_post">Eliminar publicación</string>
+    <string name="eliminar_post_confirmacion">Quieres eliminar esta publicación?</string>
+    <string name="confirmar">Si</string>
+    <string name="cancelar">No</string>
+    <string name="post_deleted_successfully">Publicación eliminada</string>
+    <string name="post_modified_successfully">Modificación efectuada</string>
+
+    <!-- Strings related to Mapa-->
+    <string name="title_activity_mapa" translatable="false">Map</string>
+
+    <!-- Strings related to EndExchange-->
+    <string name="End_Exchange">Finalizar intercambio</string>
+    <string name="offers_exchanged1">Indica tu oferta intercambiada:</string>
+    <string name="offers_exchanged2">Indica la otra oferta intercambiada:</string>
+
+    <!-- Strings related to RateExchange-->
+    <string name="rate_exchange">Valorar intercambio</string>
+    <string name="rate_explanation">Valora el usuario que has indicado. Recuerda que la puntuación es un valor entre 1 y 5.</string>
+    <string name="save_rating">Enviar valoración</string>
+    <string name="wrong_rating">Valoración inválida</string>
+
+
+</resources>

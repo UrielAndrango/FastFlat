@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katundu</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Nom d\'usuari</string>
+    <string name="prompt_password">Contrasenya</string>
+    <string name="action_sign_in">Entra o registra\'t</string>
+    <string name="action_sign_in_short">Entra</string>
+    <string name="welcome">"Benvingut, "</string>
+    <string name="invalid_username">Nom d\'usuari invàlid</string>
+    <string name="invalid_password">La contrasenya ha de tenir 8 o més caràcters</string>
+    <string name="login_failed">"Entrada fallida"</string>
+    <string name="texto_registro"><u>No estàs registrat?</u></string>
+    <string name="unregistered">No està registrat</string>
+    <string name="incorrect_password">Contrasenya incorrecta</string>
+    <string name="security_login_text">Has introduit una contrasenya incorrecta 5 vegades. Si us plau, respon a la teva pregunta de seguretat correctament o se\'t bloquejarà el compte. Recorda que ha de ser igual a la resposta que vas introduir al registrar-te.</string>
+    <string name="account_blocked_successfully">Compte bloquejat</string>
+    <string name="wrong_answer">Resposta incorrecta</string>
+
+    <!-- Strings related to register -->
+    <string name="title_activity_register">Crea el teu compte</string>
+    <string name="subtitle_activity_register">Introdueix les teves dades personals</string>
+    <string name="name">Nom</string>
+    <string name="prompt_email">Correu electrònic</string>
+    <string name="prompt_password_2">Repeteix la contrasenya</string>
+    <string name="coordinate_latitude">Latitud</string>
+    <string name="coordinate_longitude">Longitud</string>
+    <string name="prompt_address">Direcció</string>
+    <string name="action_register">Registra\'t</string>
+    <string name="error">S\'ha produit un error</string>
+    <string name="mismatchedpasswords">No coincideixen les contrasenyes</string>
+    <string name="existing_user">El nom d\'usuari ja existeix</string>
+    <string name="empty_username">El nom d\'usuari no pot estar buit</string>
+    <string name="empty_password">La contrasenya no pot estar buida</string>
+    <string name="empty_repeatpasword">Has d\'escriure la contraasenya dues vegades</string>
+    <string name="empty_location">Els camps de latitud i longitud no poden estar buits</string>
+    <string name="security_question">Escriu una pregunta de seguretat</string>
+    <string name="security_answer">Respon la pregunta</string>
+    <string name="empty_security_question">Has d\'escriure una pregunta de seguretat</string>
+    <string name="empty_security_answer">Has de respondre la pregunta de seguretat</string>
+    <string name="more_info_about_you">Completa el teu perfil</string>
+
+    <!-- Strings related to Menu Principal-->
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Sorprèn-me</string>
+    <string name="title_notifications">Afegir Producte</string>
+    <string name="title_chat">Xat</string>
+    <string name="search">Cercar</string>
+
+    <!-- Strings related to SearchProduct-->
+    <string name="search_product">Cercar Producte o Servei</string>
+
+    <!-- Strings related to SearchUser-->
+    <string name="search_user">Cercar Usuari</string>
+    <string name="search_user_username">Nom d\'usuari</string>
+    <string name="search_user_real_name">Nom</string>
+    <string name="search_user_valoracio">Valoració</string>
+    <string name="search_user_good_search">S\'han trobat usuaris</string>
+    <string name="search_user_bad_search">No s\'ha trobat cap usuari</string>
+
+    <!-- String related to SearchProducts -->
+    <string name="search_products">Cercar productes</string>
+    <string name="search_products_good_search">S\'han trobar productes</string>
+    <string name="search_products_bad_search">No s\'ha trobar cap producte</string>
+    <string name="search_products_value">Valor</string>
+    <string name="category_all_SP">Totes</string>
+    <string name="no_products_found_SP">No s\'ha trobat cap producte.\n\nProva modificant els filtres o ampliant el teu rang de cerca. </string>
+    <!-- utilitzar string filtres d'addProduct -->
+
+    <!-- Strings related to Users-->
+    <string name="nom_Usuari">Nom d\'usuari</string>
+    <string name="user_valoracio_text">"Valoració: "</string>
+    <string name="user_valoracio_numero">0</string>
+    <string name="user_perfil_valoracio_max">"/5"</string>
+    <string name="user_birthdate">Data de naixement</string>
+    <string name="format_date">dd-mm-aaaa</string>
+    <string name="format_date_register">Data de naixement (dd-mm-aaaa)</string>
+    <string name="format_description">Escriu alguna cosa sobre tu</string>
+    <string name="invalid_birthdate">La data de naixement no és correcta</string>
+    <string name="add_pic">Afegir foto</string>
+
+    <!-- Strings related to Settings-->
+    <string name="title_settings">Configuració</string>
+
+    <!-- Strings related to Modificar Perfil-->
+    <string name="title_profile">Modificar Perfil</string>
+    <string name="prompt_distancia_max">Distància màxima</string>
+    <string name="Save">Desar canvis</string>
+    <string name="action_logout">Tancar sessió</string>
+    <string name="prompt_delete_account">Vols donar-te de baixa?</string>
+    <string name="account_modified_successfully">Compte modificat amb èxit</string>
+
+    <!-- Strings related to Editar Idioma-->
+    <string name="title_idioma">Canviar Idioma</string>
+    <string name="editar_idioma_español">Español</string>
+    <string name="editar_idioma_catalan">Català</string>
+    <string name="editar_idioma_ingles">English</string>
+
+    <!-- Strings related to Delete Account-->
+    <string name="title_delete_account">Esborrar Compte</string>
+    <string name="text_anti_delete_account">Aquest pas és irreversible i eliminarà el teu compte per sempre.\n\nPensa-t\'ho una altra vegada abans de continuar.</string>
+    <string name="action_delete_account">Esborrar compte</string>
+    <string name="account_deleted_successfully">Compte eliminada amb èxit</string>
+
+    <!-- Strings related to Add-->
+    <string name="add_product">Pujar Oferta</string>
+    <string name="add_wish">Afegir Desig</string>
+    <string name="favorite_added_successfully">Preferit afegit amb èxit</string>
+    <string name="favorite_removed_successfully">Preferit eliminat amb èxit</string>
+
+    <!-- Strings related to Add Product-->
+    <string name="title_add_product">Afegir Nova Oferta</string>
+    <string name="add_product_add_foto">Afegir foto</string>
+    <string name="add_product_open_camera">Obrir càmera</string>
+    <string name="add_product_open_gallery">Obrir galeria</string>
+    <string name="add_product_name">Nom</string>
+    <string name="add_product_categories">Categoria</string>
+    <string name="add_product_category_technology">Tecnologia</string>
+    <string name="add_product_category_home">Llar</string>
+    <string name="add_product_category_beauty">Bellesa</string>
+    <string name="add_product_category_sports">Esports</string>
+    <string name="add_product_category_fashion">Moda</string>
+    <string name="add_product_category_leisure">Oci</string>
+    <string name="add_product_category_transport">Transport</string>
+    <string name="add_product_category_education">Educació</string>
+    <string name="add_product_value">Valor estimat</string>
+    <string name="add_product_type">Tipus</string>
+    <string name="add_product_type_product">Producte</string>
+    <string name="add_product_type_service">Servei</string>
+    <string name="add_product_key_words">Paraules Clau</string>
+    <string name="add_product_description">Descripció</string>
+    <string name="add_product_cancel">Cancel·lar</string>
+    <string name="add_product_save">Pujar Oferta</string>
+    <string name="add_product_muchas_fotos">Límit de fotos assolit</string>
+    <string name="add_product_no_hay_fotos">Has d\'afegir una foto</string>
+    <string name="add_product_no_hay_nombre">Has d\'afegir un nom</string>
+    <string name="add_product_no_hay_valor">Has d\'afegir un valor</string>
+    <string name="add_product_no_hay_palabras_clave">Has d\'afegir com a mínim 2 paraules clau</string>
+    <string name="add_product_no_hay_descripcion">Has d\'afegir una descripció</string>
+    <string name="add_product_general_error">Hi ha hagut un error, torna-ho a intentar</string>
+    <string name="add_product_no_hay_hashtag">Les paraules clau han de començar amb # i sense espais</string>
+    <string name="add_product_minimo_dos_keywords">Escriu com a mínim 2 paraules clau</string>
+    <string name="euro">€</string>
+    <string name="keyword">#paraulaclau</string>
+
+    <!-- Strings related to Add Wish-->
+    <string name="title_add_wish">Afegir Nou Desig</string>
+    <string name="add_new_wish_explication">
+        Un desig és allò que vols aconseguir en un intercanvi amb un altre usuari
+    </string>
+    <string name="add_new_wish">Afegir Desig</string>
+
+    <!-- Strings related to Add Offer-->
+    <string name="title_add_offer">Afegir Nova Oferta</string>
+    <string name="add_new_offer_explication">
+        Una oferta es allò que ofereixes en un intercanvi amb un altre usuari
+    </string>
+    <string name="add_new_offer">Afegir Oferta</string>
+
+    <!-- Strings related to PreviewFoto-->
+    <string name="preview_foto_delete">Esborrar foto</string>
+    <string name="preview_foto_cancelar">Cancel·lar</string>
+
+    <!-- Strings related to EditWish-->
+    <string name="edit_wish_title">Modificar desig</string>
+    <string name="edit_wish_ok">Modificar desig</string>
+    <string name="empty_values">Hi ha valors buits</string>
+    <string name="wish_modified_successfully">Desig modificat amb èxit</string>
+    <string name="wish_added_successfully">Desig afegit amb èxit</string>
+
+    <!-- Strings related to EditOffer-->
+    <string name="edit_offer_title">Modificar dades oferta</string>
+    <string name="edit_offer_ok">Modificar Oferta</string>
+    <string name="offer_modified_successfully">Oferta modificada amb èxit</string>
+    <string name="offer_added_successfully">Oferta afegida amb èxit</string>
+    <string name="EditOfferAddPhoto">Afegir foto</string>
+    <string name="title_modify_offer">Modificar Oferta</string>
+    <string name="modified_images">Clica sobre Modificar Oferta per a actualizar els valors</string>
+
+
+    <!-- Strings related to ChooseActionWish-->
+    <string name="title_wish">Desig</string>
+    <string name="modify_wish">MODIFICAR DESEO</string>
+    <string name="delete_wish">ELIMINAR DESEO</string>
+    <string name="wish_deleted_successfully">Desig eliminat amb èxit</string>
+
+    <!-- Strings related to ChooseActionOffer-->
+    <string name="title_offer">Oferta</string>
+    <string name="modify_offer">MODIFICAR OFERTA</string>
+    <string name="delete_offer">ELIMINAR OFERTA</string>
+    <string name="offer_deleted_successfully">Oferta eliminada amb èxit</string>
+
+    <!-- Strings related to PreviewFotoeDIT-->
+    <string name="preview_fotoE_delete">Esborrar foto</string>
+    <string name="preview_fotoE_cancelar">Cancel·lar</string>
+    <string name="preview_fotoE_error">Error a l\'esborrar la foto</string>
+
+    <!-- Strings related to ListTrophies-->
+    <string name="list_trophies_title">Trofeus</string>
+    <string name="list_trophies_title0">Sóc jo?</string>
+    <string name="list_trophies_description0">Completa el teu perfil</string>
+    <string name="list_trophies_title1">Primeres pases</string>
+    <string name="list_trophies_description1">Puja la teva primera oferta</string>
+    <string name="list_trophies_title2">Aladdin</string>
+    <string name="list_trophies_description2">Puja el teu primer desig</string>
+    <string name="list_trophies_title3">Corregir és de sabis</string>
+    <string name="list_trophies_description3">Modifica una oferta de la teva llista d\'ofertes</string>
+    <string name="list_trophies_title4">Primera estrella</string>
+    <string name="list_trophies_description4">Afegeix una oferta d\'una altre usuari a la teva llista de favorits</string>
+    <string name="list_trophies_title5">Els desitjos es fan realitat</string>
+    <string name="list_trophies_description5">Aconsegueix, mitjançant un intercanvi, allò tenies a la teva llista de desitjos</string>
+    <string name="list_trophies_title6">Ja es meu</string>
+    <string name="list_trophies_description6">Aconsegueix, mitjançant un intercanvi, una oferta de la teva llista de favorits</string>
+    <string name="list_trophies_title7">La primera de moltes</string>
+    <string name="list_trophies_description7">Realitza el teu primer intercanvi</string>
+    <string name="list_trophies_title8">¡Xoca els cinc!</string>
+    <string name="list_trophies_description8">Realitza 5 intercanvis</string>
+    <string name="list_trophies_title9">Dotzena</string>
+    <string name="list_trophies_description9">Realitza 12 intercanvis</string>
+    <string name="list_trophies_title10">En ratxa!</string>
+    <string name="list_trophies_description10">Realitza 25 intercanvis</string>
+    <string name="list_trophies_title11">Mig centenari</string>
+    <string name="list_trophies_description11">Realitza 50 intercanvis</string>
+    <string name="list_trophies_title12">Franklin</string>
+    <string name="list_trophies_description12">Realitza 100 intercanvis</string>
+    <string name="list_trophies_title13">Quart de miler</string>
+    <string name="list_trophies_description13">Realitza 250 intercanvis</string>
+    <string name="list_trophies_title14">Mig miler</string>
+    <string name="list_trophies_description14">Realitza 500 intercanvis</string>
+    <string name="list_trophies_title15">1K</string>
+    <string name="list_trophies_description15">Realitza 1000 intercanvis</string>
+
+    <!-- Strings related to VisualizeChat-->
+    <string name="contingut_message">Escriu un missatge</string>
+    <string name="chats">Xats</string>
+
+    <!-- Strings related to Sorprenme-->
+    <string name="sorpren_me">Sorprèn-me!</string>
+    <string name="no_sorprenme_found">Encara no tenim cap oferta que et pugui sorprendre</string>
+    <!-- Strings related to Forum-->
+    <string name="forum">Fòrum!</string>
+    <string name="title_add_post">Afegir publicació</string>
+    <string name="add_new_post_explication">La teva publicació ha de tenir títol i descripció. Publica qualsevol cosa que creguis interessant! </string>
+    <string name="add_post_title">Títol</string>
+    <string name="add_post_description">Descripció</string>
+    <string name="add_new_post">Afegir</string>
+    <string name="add_post_no_hay_titulo">Has d\'afegir un tìtol</string>
+    <string name="add_post_no_hay_descripcion">Has d\'afegir una descripció</string>
+    <string name="add_post_general_error">Hi ha hagut un error, torna-ho a intentar</string>
+    <string name="add_post_general_ok">Publicació afegida!</string>
+    <string name="personalposts">Les teves publicacions</string>
+    ç<string name="title_editar_post">Modificar publicació</string>
+    <string name="edit_post">Modificar</string>
+    <string name="eliminar_post">Eliminar publicació</string>
+    <string name="eliminar_post_confirmacion">Vols eliminar aquesta publicació?</string>
+    <string name="confirmar">Si</string>
+    <string name="cancelar">No</string>
+    <string name="post_deleted_successfully">Publicació eliminada</string>
+    <string name="post_modified_successfully">Modificació efectuada</string>
+
+    <!-- Strings related to EndExchange-->
+    <string name="End_Exchange">Finalitzar intercanvi</string>
+    <string name="offers_exchanged1">Indica la teva oferta intercanviada:</string>
+    <string name="offers_exchanged2">Indica l\'altre oferta intercanviada:</string>
+
+    <!-- Strings related to RateExchange-->
+    <string name="rate_exchange">Valorar intercanvi</string>
+    <string name="rate_explanation">Valora l\'usuari que has indicat. Recorda que la puntuació és un valor entre 1 i 5.</string>
+    <string name="save_rating">Enviar valoració</string>
+    <string name="wrong_rating">Valoració invàlida</string>
+
+</resources>
