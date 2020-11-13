@@ -23,6 +23,7 @@ public class Profile extends AppCompatActivity {
         getSupportActionBar().hide();
 
         final ImageView Atras = findViewById(R.id.DeleteAccount_Atras);
+        final Button MiPerfil = findViewById(R.id.mi_perfil);
         final Button MisPropiedades = findViewById(R.id.mis_propiedades);
         final Button PreferenciasBusqueda = findViewById(R.id.preferencias_busqueda);
         final Button MiHorario = findViewById(R.id.mi_horario);
@@ -37,6 +38,16 @@ public class Profile extends AppCompatActivity {
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();
+            }
+        });
+
+        MiPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this, EditarPerfil.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                //finish();
             }
         });
 

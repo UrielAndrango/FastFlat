@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
@@ -33,9 +34,10 @@
 
                 <ImageView
                     android:id="@+id/EditOffer_Atras"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/abc_vector_test"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:tint="@color/colorBlancoMate"
+                    app:srcCompat="@drawable/icon_back"
                     tools:ignore="PrivateResource" />
 
                 <Space
@@ -58,6 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/title_modify_offer"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
@@ -66,11 +69,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
                 </LinearLayout>
+
                 <ImageView
                     android:id="@+id/basura_delete_offer"
                     android:layout_width="70dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/icono_basura" />
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_rubbish"
+                    android:tint="@color/colorBlancoMate" />
 
             </LinearLayout>
 

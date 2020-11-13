@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,13 +27,14 @@
 
             <ImageView
                 android:id="@+id/DeleteAccount_Atras"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/abc_vector_test"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorBlancoMate"
+                app:srcCompat="@drawable/icon_back"
                 tools:ignore="PrivateResource" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -47,18 +48,20 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
                 <TextView
                     android:id="@+id/addProduct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/title_profile"
+                    android:textColor="@color/colorBlancoMate"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
             </LinearLayout>
 
         </LinearLayout>

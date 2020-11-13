@@ -119,7 +119,7 @@
     <string name="favorite_removed_successfully">Preferit eliminat amb èxit</string>
 
     <!-- Strings related to Add Product-->
-    <string name="title_add_product">Afegir Nova Oferta</string>
+    <string name="title_add_product">Afegir Nova Propietat</string>
     <string name="add_product_add_foto">Afegir foto</string>
     <string name="add_product_open_camera">Obrir càmera</string>
     <string name="add_product_open_gallery">Obrir galeria</string>
@@ -140,7 +140,7 @@
     <string name="add_product_key_words">Paraules Clau</string>
     <string name="add_product_description">Descripció</string>
     <string name="add_product_cancel">Cancel·lar</string>
-    <string name="add_product_save">Pujar Oferta</string>
+    <string name="add_product_save">Pujar Propietat</string>
     <string name="add_product_muchas_fotos">Límit de fotos assolit</string>
     <string name="add_product_no_hay_fotos">Has d\'afegir una foto</string>
     <string name="add_product_no_hay_nombre">Has d\'afegir un nom</string>
@@ -180,11 +180,11 @@
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modificar dades oferta</string>
-    <string name="edit_offer_ok">Modificar Oferta</string>
+    <string name="edit_offer_ok">Modificar Propietat</string>
     <string name="offer_modified_successfully">Oferta modificada amb èxit</string>
     <string name="offer_added_successfully">Oferta afegida amb èxit</string>
     <string name="EditOfferAddPhoto">Afegir foto</string>
-    <string name="title_modify_offer">Modificar Oferta</string>
+    <string name="title_modify_offer">Modificar Propietat</string>
     <string name="modified_images">Clica sobre Modificar Oferta per a actualizar els valors</string>
 
 

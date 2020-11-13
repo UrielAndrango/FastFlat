@@ -121,7 +121,7 @@
     <string name="favorite_removed_successfully">Favorite successfully deleted</string>
 
     <!-- Strings related to Add Product-->
-    <string name="title_add_product">Add New Offer</string>
+    <string name="title_add_product">Add New Property</string>
     <string name="add_product_add_foto">Add picture</string>
     <string name="add_product_open_camera">Open camera</string>
     <string name="add_product_open_gallery">Open gallery</string>
@@ -142,7 +142,7 @@
     <string name="add_product_key_words">Keywords</string>
     <string name="add_product_description">Description</string>
     <string name="add_product_cancel">Cancel</string>
-    <string name="add_product_save">Upload Offer</string>
+    <string name="add_product_save">Upload Property</string>
     <string name="add_product_muchas_fotos">Photo limit reached</string>
     <string name="add_product_no_hay_fotos">Must add one picture</string>
     <string name="add_product_no_hay_nombre">Must add a name</string>
@@ -182,11 +182,11 @@
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modify offer data</string>
-    <string name="edit_offer_ok">Modify Offer</string>
+    <string name="edit_offer_ok">Modify Property</string>
     <string name="offer_modified_successfully">Offer successfully modified</string>
     <string name="offer_added_successfully">Offer successfully added</string>
     <string name="EditOfferAddPhoto">Add photo</string>
-    <string name="title_modify_offer">Modify Offer</string>
+    <string name="title_modify_offer">Modify Property</string>
     <string name="modified_images">Please, click Modify Offer to update the data</string>
 
     <!-- Strings related to ChooseActionWish-->

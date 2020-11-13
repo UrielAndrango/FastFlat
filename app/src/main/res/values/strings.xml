@@ -181,11 +181,11 @@
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modificar datos de la oferta</string>
-    <string name="edit_offer_ok">Modificar Oferta</string>
+    <string name="edit_offer_ok">Modificar Propiedad</string>
     <string name="offer_modified_successfully">Oferta modificada con éxito</string>
     <string name="offer_added_successfully">Oferta añadida con éxito</string>
     <string name="EditOfferAddPhoto">Añadir foto</string>
-    <string name="title_modify_offer">Modificar Oferta</string>
+    <string name="title_modify_offer">Modificar Propiedad</string>
     <string name="modified_images">Clica sobre Modificar Oferta para actualizar los valores</string>
 
     <!-- Strings related to ChooseActionWish-->
