@@ -45,7 +45,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
-public class AddProduct extends AppCompatActivity {
+public class AddProperty extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReference();
@@ -74,7 +74,7 @@ public class AddProduct extends AppCompatActivity {
         } else {
             signInAnonymously();
         }
-        setContentView(R.layout.activity_add_product);
+        setContentView(R.layout.activity_add_property);
 
         //Escondemos la Action Bar porque usamos la ToolBar, aunque podriamos usar la ActionBar
         getSupportActionBar().hide();
@@ -153,7 +153,7 @@ public class AddProduct extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddProduct.this, Add.class);
+                Intent intent = new Intent(AddProperty.this, MyProperties.class);
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();
@@ -163,27 +163,27 @@ public class AddProduct extends AppCompatActivity {
         SubirProducto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RequestQueue queue = Volley.newRequestQueue(AddProduct.this);
+                RequestQueue queue = Volley.newRequestQueue(AddProperty.this);
                 boolean okay = false;
                 //Comprovaciones de que ha puesto cosas
                 if (cantidad_fotos == 0) {
                     String texterror = getString(R.string.add_product_no_hay_fotos);
-                    Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 } else {
                     if (nombre.length() == 0) {
                         String texterror = getString(R.string.add_product_no_hay_nombre);
-                        Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                         toast.show();
                     } else {
                         if (valor.length() == 0) {
                             String texterror = getString(R.string.add_product_no_hay_valor);
-                            Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                             toast.show();
                         } else {
                             if (palabras_clave.length() == 0) {
                                 String texterror = getString(R.string.add_product_no_hay_palabras_clave);
-                                Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                             else if (!palabras_clave.getText().toString().contains("#"))
@@ -192,13 +192,13 @@ public class AddProduct extends AppCompatActivity {
                                 //Opcion1: Podemos traducir la frase
                                 //Opcion2: Poner un text encima de las palabras clave que siempre este ahí
                                 String texterror = "Las palabras clave deben empezar con # e ir sin espacios.";
-                                Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                             else {
                                 if (descripcion.length() == 0) {
                                     String texterror = getString(R.string.add_product_no_hay_descripcion);
-                                    Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                                    Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                                     toast.show();
                                 } else {
                                     okay = true;
@@ -244,7 +244,7 @@ public class AddProduct extends AppCompatActivity {
                                     public void onResponse(String response) {
                                         if (response.equals("-1")) { //Error
                                             String texterror = getString(R.string.add_product_general_error);
-                                            Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                                            Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                                             toast.show();
                                         } else {
                                             productid[0] = response;
@@ -273,7 +273,7 @@ public class AddProduct extends AppCompatActivity {
                                                 }
                                             }
                                             //Nos vamos a ListOffer
-                                            Intent intent = new Intent(AddProduct.this, ListOffer.class);
+                                            Intent intent = new Intent(AddProperty.this, MyProperties.class);
                                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                             startActivity(intent);
                                             finish();
@@ -283,7 +283,7 @@ public class AddProduct extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 String texterror = getString(R.string.add_product_general_error);
-                                Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                         });
@@ -295,7 +295,7 @@ public class AddProduct extends AppCompatActivity {
                     else
                     {
                         String texterror = getString(R.string.add_product_minimo_dos_keywords);
-                        Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                         toast.show();
                         Atras.setEnabled(true);
                         SubirProducto.setEnabled(true);
@@ -317,7 +317,7 @@ public class AddProduct extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraAddProduct.setNumero_imagen(0);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(AddProduct.this, PreviewFoto.class);
+                Intent intent = new Intent(AddProperty.this, PreviewFoto.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -336,7 +336,7 @@ public class AddProduct extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraAddProduct.setNumero_imagen(1);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(AddProduct.this, PreviewFoto.class);
+                Intent intent = new Intent(AddProperty.this, PreviewFoto.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -355,7 +355,7 @@ public class AddProduct extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraAddProduct.setNumero_imagen(2);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(AddProduct.this, PreviewFoto.class);
+                Intent intent = new Intent(AddProperty.this, PreviewFoto.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -374,7 +374,7 @@ public class AddProduct extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraAddProduct.setNumero_imagen(3);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(AddProduct.this, PreviewFoto.class);
+                Intent intent = new Intent(AddProperty.this, PreviewFoto.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -393,7 +393,7 @@ public class AddProduct extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraAddProduct.setNumero_imagen(4);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(AddProduct.this, PreviewFoto.class);
+                Intent intent = new Intent(AddProperty.this, PreviewFoto.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -425,7 +425,7 @@ public class AddProduct extends AppCompatActivity {
                 }
                 else {
                     String texterror = getString(R.string.add_product_muchas_fotos);
-                    Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
@@ -478,7 +478,7 @@ public class AddProduct extends AppCompatActivity {
         }
         else {
             String texterror = getString(R.string.add_product_muchas_fotos);
-            Toast toast = Toast.makeText(AddProduct.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(AddProperty.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
     }

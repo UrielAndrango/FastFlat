@@ -60,7 +60,7 @@ public class SearchProduct extends AppCompatActivity {
 
                     //Si lo hacemos con ventanas independientes, quitamos los TRUES
                     return true;
-                case R.id.navigation_home:
+                case R.id.navigation_comprador:
                     Intent intentHome = new Intent(SearchProduct.this, MenuPrincipal.class);
                     intentHome.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -70,31 +70,13 @@ public class SearchProduct extends AppCompatActivity {
                     finish();
                     //Si lo hacemos con ventanas independientes, quitamos los TRUES
                     return true;
-                case R.id.navigation_surprise:
-                    Intent intent_surprise = new Intent(SearchProduct.this, Sorprenme.class);
+                case R.id.navigation_vendedor:
+                    Intent intent_surprise = new Intent(SearchProduct.this, Vendedor.class);
                     intent_surprise.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent_surprise.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent_surprise);
                     overridePendingTransition(0,0);
                     break;
-                case R.id.navigation_add:
-                    Intent intentAdd = new Intent(SearchProduct.this, Add.class);
-                    intentAdd.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    intentAdd.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentAdd);
-                    overridePendingTransition(0,0);
-                    finish();
-
-                    //Si lo hacemos con ventanas independientes, quitamos los TRUES
-                    return true;
-                case R.id.navigation_xat:
-                    Intent intentChat = new Intent(SearchProduct.this, ListChat.class);
-                    intentChat.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    intentChat.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentChat);
-                    overridePendingTransition(0,0);
-                    finish();
-                    return true;
             }
             return false;
         }

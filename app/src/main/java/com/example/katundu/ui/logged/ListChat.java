@@ -37,43 +37,6 @@ import java.util.ArrayList;
 
 public class ListChat extends AppCompatActivity {
 
-        private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    Intent intent = new Intent(ListChat.this, MenuPrincipal.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    //onNewIntent(intent);
-                    startActivity(intent);
-                    overridePendingTransition(0,0);
-                    //finish();
-                    break;
-                case R.id.navigation_surprise:
-                    Intent intent_surprise = new Intent(ListChat.this, Sorprenme.class);
-                    intent_surprise.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent_surprise.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent_surprise);
-                    overridePendingTransition(0,0);
-                    break;
-                case R.id.navigation_add:
-                    Intent intent_2 = new Intent(ListChat.this, Add.class);
-                    intent_2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent_2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent_2);
-                    overridePendingTransition(0,0);
-                    //finish();
-                    break;
-                case R.id.navigation_xat:
-                    return true;
-            }
-            return false;
-        }
-    };
-
     SwipeRefreshLayout refreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,22 +45,21 @@ public class ListChat extends AppCompatActivity {
         //Escondemos la Action Bar porque usamos la ToolBar
         getSupportActionBar().hide();
 
-        final ImageView search = findViewById(R.id.imageView_newChat_LC);
+        final ImageView Atras = findViewById(R.id.ListChat_Atras);
         final LinearLayout llBotonera = findViewById(R.id.LinearLayout_Chats);
-        refreshLayout = findViewById(R.id.refreshLayout_LC);
-        BottomNavigationView navView = findViewById(R.id.nav_view_chat);
-        navView.setSelectedItemId(R.id.navigation_xat);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        RequestGetChats(llBotonera);
-        search.setOnClickListener(new View.OnClickListener() {
+
+        Atras.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ListChat.this, SearchUserChat.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                //finish();
+            public void onClick(View v) {
+                Intent intent = new Intent(ListChat.this, MenuPrincipal.class);
+                onNewIntent(intent);
+                //startActivity(intent);
+                finish();
             }
         });
+
+        refreshLayout = findViewById(R.id.refreshLayout_LC);
+        RequestGetChats(llBotonera);
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {

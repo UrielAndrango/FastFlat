@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logged.AddWish">
+    tools:context=".ui.logged.AddPreference">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -31,7 +31,7 @@
                 tools:ignore="PrivateResource" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout

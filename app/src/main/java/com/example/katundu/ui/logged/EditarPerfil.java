@@ -2,12 +2,7 @@ package com.example.katundu.ui.logged;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,11 +27,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
-import java.io.ByteArrayOutputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -78,7 +69,7 @@ public class EditarPerfil extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EditarPerfil.this, Ajustes.class);
+                Intent intent = new Intent(EditarPerfil.this, Profile.class);
                 onNewIntent(intent);
                 finish();
             }
@@ -180,7 +171,7 @@ public class EditarPerfil extends AppCompatActivity {
                             ControladoraPresentacio.setBirthdate(birthdateEditText.getText().toString());
 
                             //Volvemos a Ajustes
-                            Intent intent = new Intent(EditarPerfil.this, Ajustes.class);
+                            Intent intent = new Intent(EditarPerfil.this, Profile.class);
                             onNewIntent(intent);
                             //startActivity(intent);
                             finish();

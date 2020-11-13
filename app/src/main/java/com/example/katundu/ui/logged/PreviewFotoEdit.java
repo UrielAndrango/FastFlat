@@ -2,9 +2,7 @@ package com.example.katundu.ui.logged;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.katundu.R;
-import com.example.katundu.ui.ControladoraAddProduct;
 import com.example.katundu.ui.ControladoraEditOffer;
 import com.example.katundu.ui.ControladoraPresentacio;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -52,7 +49,7 @@ public class PreviewFotoEdit extends AppCompatActivity {
                 Reference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Intent intent = new Intent(PreviewFotoEdit.this, EditOffer.class);
+                        Intent intent = new Intent(PreviewFotoEdit.this, EditProperty.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();
@@ -67,7 +64,7 @@ public class PreviewFotoEdit extends AppCompatActivity {
                 });
                 //Vuelvo a la ventan de Add Product
                 ControladoraEditOffer.setEstatImatges(true);
-                Intent intent = new Intent(PreviewFotoEdit.this, EditOffer.class);
+                Intent intent = new Intent(PreviewFotoEdit.this, EditProperty.class);
                 //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

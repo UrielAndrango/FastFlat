@@ -37,7 +37,7 @@ public class DeleteAccount extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DeleteAccount.this, Ajustes.class);
+                Intent intent = new Intent(DeleteAccount.this, Profile.class);
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();

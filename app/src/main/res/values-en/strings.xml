@@ -51,6 +51,10 @@
     <string name="title_chat">Chat</string>
     <string name="search">Search</string>
 
+    <!-- Strings related to BarraNav-->
+    <string name="buyer">Buy</string>
+    <string name="seller">Sell</string>
+
     <!-- Strings related to SearchProduct-->
     <string name="search_product">Search Product or Service</string>
 
@@ -85,6 +89,10 @@
 
     <!-- Strings related to Settings-->
     <string name="title_settings">Settings</string>
+    <string name="account_my_properties">My properties</string>
+    <string name="account_my_preferences">Search preferences</string>
+    <string name="account_my_schedule">My schedule</string>
+
 
     <!-- Strings related to Modificar Perfil-->
     <string name="title_profile">Change Profile</string>
@@ -166,11 +174,11 @@
     <string name="preview_foto_cancelar">Cancel</string>
 
     <!-- Strings related to EditWish-->
-    <string name="edit_wish_title">Modify wish</string>
-    <string name="edit_wish_ok">Modify wish</string>
+    <string name="edit_wish_title">Modify preferences</string>
+    <string name="edit_wish_ok">Modify preferences</string>
     <string name="empty_values">There are empty values</string>
-    <string name="wish_modified_successfully">Wish successfully modified</string>
-    <string name="wish_added_successfully">Wish successfully added</string>
+    <string name="wish_modified_successfully">Search preferences successfully modified</string>
+    <string name="wish_added_successfully">Search preferences successfully added</string>
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modify offer data</string>

@@ -50,6 +50,10 @@
     <string name="title_chat">Chat</string>
     <string name="search">Buscar</string>
 
+    <!-- Strings related to BarraNav-->
+    <string name="buyer">Comprar</string>
+    <string name="seller">Vender</string>
+
     <!-- Strings related to SearchProduct-->
     <string name="search_product">Buscar Producto o Servicio</string>
 
@@ -84,6 +88,9 @@
 
     <!-- Strings related to Settings-->
     <string name="title_settings">Configuración</string>
+    <string name="account_my_properties">Mis propiedades</string>
+    <string name="account_my_preferences">Preferencias de búsqueda</string>
+    <string name="account_my_schedule">Mi horario</string>
 
     <!-- Strings related to Modificar Perfil-->
     <string name="title_profile">Modificar Perfil</string>
@@ -112,7 +119,7 @@
     <string name="favorite_removed_successfully">Favorito eliminado con éxito</string>
 
     <!-- Strings related to Add Product-->
-    <string name="title_add_product">Añadir Nueva Oferta</string>
+    <string name="title_add_product">Añadir Nueva Propiedad</string>
     <string name="add_product_add_foto">Añadir foto</string>
     <string name="add_product_open_camera">Abrir cámara</string>
     <string name="add_product_open_gallery">Abrir galeria</string>
@@ -133,7 +140,7 @@
     <string name="add_product_key_words">Palabras Clave</string>
     <string name="add_product_description">Descripción</string>
     <string name="add_product_cancel">Cancelar</string>
-    <string name="add_product_save">Subir Oferta</string>
+    <string name="add_product_save">Subir Propiedad</string>
     <string name="add_product_muchas_fotos">Límite de fotos alcanzado</string>
     <string name="add_product_no_hay_fotos">Debes añadir una foto</string>
     <string name="add_product_no_hay_nombre">Debes añadir un nombre</string>
@@ -166,11 +173,11 @@
     <string name="preview_foto_cancelar">Cancelar</string>
 
     <!-- Strings related to EditWish-->
-    <string name="edit_wish_title">Modificar deseo</string>
-    <string name="edit_wish_ok">Modificar deseo</string>
+    <string name="edit_wish_title">Modificar preferencias</string>
+    <string name="edit_wish_ok">Modificar preferencias</string>
     <string name="empty_values">Hay valores vacíos</string>
-    <string name="wish_modified_successfully">Deseo modificado con éxito</string>
-    <string name="wish_added_successfully">Deseo añadido con éxito</string>
+    <string name="wish_modified_successfully">Preferencias de búsqueda modificadas con éxito</string>
+    <string name="wish_added_successfully">Preferencias de búsqueda añadids con éxito</string>
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modificar datos de la oferta</string>
@@ -274,6 +281,5 @@
     <string name="rate_explanation">Valora el usuario que has indicado. Recuerda que la puntuación es un valor entre 1 y 5.</string>
     <string name="save_rating">Enviar valoración</string>
     <string name="wrong_rating">Valoración inválida</string>
-
 
 </resources>

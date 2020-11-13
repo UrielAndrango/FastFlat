@@ -49,6 +49,10 @@
     <string name="title_chat">Xat</string>
     <string name="search">Cercar</string>
 
+    <!-- Strings related to BarraNav-->
+    <string name="buyer">Comprar</string>
+    <string name="seller">Vendre</string>
+
     <!-- Strings related to SearchProduct-->
     <string name="search_product">Cercar Producte o Servei</string>
 
@@ -83,6 +87,10 @@
 
     <!-- Strings related to Settings-->
     <string name="title_settings">Configuració</string>
+    <string name="account_my_properties">Les meves propietats</string>
+    <string name="account_my_preferences">Preferències de cerca</string>
+    <string name="account_my_schedule">El meu horari</string>
+
 
     <!-- Strings related to Modificar Perfil-->
     <string name="title_profile">Modificar Perfil</string>
@@ -164,11 +172,11 @@
     <string name="preview_foto_cancelar">Cancel·lar</string>
 
     <!-- Strings related to EditWish-->
-    <string name="edit_wish_title">Modificar desig</string>
-    <string name="edit_wish_ok">Modificar desig</string>
+    <string name="edit_wish_title">Modificar preferències</string>
+    <string name="edit_wish_ok">Modificar preferències</string>
     <string name="empty_values">Hi ha valors buits</string>
-    <string name="wish_modified_successfully">Desig modificat amb èxit</string>
-    <string name="wish_added_successfully">Desig afegit amb èxit</string>
+    <string name="wish_modified_successfully">Preferències de cerca modificades amb èxit</string>
+    <string name="wish_added_successfully">Preferències de cerca afegides amb èxit</string>
 
     <!-- Strings related to EditOffer-->
     <string name="edit_offer_title">Modificar dades oferta</string>

@@ -23,7 +23,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.katundu.R;
 import com.example.katundu.ui.ControladoraPresentacio;
 
-public class AddWish extends AppCompatActivity {
+public class AddPreference extends AppCompatActivity {
 
     String[] categorias = new String[8];
     ImageView Atras;
@@ -32,7 +32,7 @@ public class AddWish extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_wish);
+        setContentView(R.layout.activity_add_preference);
         //Escondemos la Action Bar porque usamos la ToolBar, aunque podriamos usar la ActionBar
         getSupportActionBar().hide();
 
@@ -64,7 +64,7 @@ public class AddWish extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddWish.this, Add.class);
+                Intent intent = new Intent(AddPreference.this, MyProperties.class);
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();
@@ -90,22 +90,22 @@ public class AddWish extends AppCompatActivity {
         //Comprovaciones de que ha puesto cosas
         if (nameEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_nombre);
-            Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (valueEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_valor);
-            Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (paraulesClauEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_palabras_clave);
-            Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (!paraulesClauEditText.getText().toString().contains("#")) {
             String texterror = getString(R.string.add_product_no_hay_hashtag);
-            Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if(paraulesClauEditText.getText().toString().contains("#")) {
@@ -126,7 +126,7 @@ public class AddWish extends AppCompatActivity {
             if(count >= 2) okay = true;
             else {
                 String texterror = getString(R.string.add_product_minimo_dos_keywords);
-                Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
             }
         }
@@ -135,7 +135,7 @@ public class AddWish extends AppCompatActivity {
 
     private void RequestAddWish(Spinner categoriaSpinner, Switch tipusSwitch, String[] tipus, String username, EditText nameEditText, EditText paraulesClauEditText, EditText valueEditText) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(AddWish.this);
+        RequestQueue queue = Volley.newRequestQueue(AddPreference.this);
 
         if(tipusSwitch.isChecked()) tipus[0] = "Servei";
         else tipus[0] = "Producte"; 
@@ -171,7 +171,7 @@ public class AddWish extends AppCompatActivity {
                             Toast toast = Toast.makeText(getApplicationContext(), wish_added_successfully, Toast.LENGTH_SHORT);
                             toast.show();
                             //Volvemos a ListWish
-                            Intent intent = new Intent(AddWish.this, ListWish.class);
+                            Intent intent = new Intent(AddPreference.this, Profile.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             finish();
@@ -181,7 +181,7 @@ public class AddWish extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 String texterror = getString(R.string.error);
-                Toast toast = Toast.makeText(AddWish.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(AddPreference.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
                 //reactivar atras y subir wish
                 Atras.setEnabled(true);

@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logged.PersonalPosts">
+    tools:context=".ui.logged.MyProperties">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <ImageView
-            android:id="@+id/Post_Atras"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/abc_vector_test" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="3dp">
+
+            <ImageView
+                android:id="@+id/MyPropierties_Atras"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorBlancoMate"
+                app:srcCompat="@drawable/icon_back"
+                tools:ignore="PrivateResource" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -38,11 +48,11 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/sorprenme"
+                    android:id="@+id/addProduct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/personalposts"
-                    android:layout_marginLeft="15dp"
+                    android:text="@string/account_my_properties"
+                    android:textColor="@color/colorBlancoMate"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -53,39 +63,23 @@
             </LinearLayout>
 
         </LinearLayout>
-
     </androidx.appcompat.widget.Toolbar>
 
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/refreshLayout_SP"
-        android:layout_width="match_parent"
-        android:layout_height="675dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB_addProperty_MyP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:tint="@color/colorBlancoMate"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-
-        <ScrollView
-            android:id="@+id/scrollView4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/listaPosts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:orientation="vertical"
-                android:soundEffectsEnabled="false"
-                android:splitMotionEvents="false"
-                />
-
-
-
-        </ScrollView>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@drawable/icon_plus_rounded" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

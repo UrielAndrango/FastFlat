@@ -6,7 +6,73 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3f721e-e2a7-481d-9a1c-8fe12ba55c9b" name="Default Changelist" comment="" />
+    <list default="true" id="dc3f721e-e2a7-481d-9a1c-8fe12ba55c9b" name="Default Changelist" comment="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Innomads_FrontEnd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MyProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_rubbish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_properties.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_vendedor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Innomads.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Add.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddPost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddWish.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Ajustes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/DeleteAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/DeleteAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditWish.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarIdioma.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarIdioma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarPerfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarPerfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Forum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListFavorites.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListWish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PersonalPosts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFotoEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFotoEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Sorprenme.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeFavorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeFavorite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizePosts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/search_rounded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/search_rounded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_post.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_product.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_property.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_wish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_preference.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ajustes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_offer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_propierty.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_wish.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_preference.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_forum.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_principal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu_principal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_personal_posts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sorprenme.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_visualize_posts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/middle_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/middle_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +95,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jykX460Hzd1YN1PmczC0oJJEzY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,7 +105,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
+    </key>
+    <key name="android.template.447112686">
+      <recent name="com.example.katundu.ui.logged" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
+      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable-v24" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -129,20 +213,57 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I" />
     <MESSAGE value="Inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inicio" />
+    <MESSAGE value="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1604783948278">
+    <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605219955198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604783948278" />
+    <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219955198" />
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605222258064">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605222258064" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605224448869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605224448869" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1605227332051">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605227332051" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1605219298235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219298235" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604785501610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604785501610" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604785501610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604785501610" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604785501610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604785501610" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604785501610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604785501610" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604783954376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604783954376" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1604784718481">
+    <state x="776" y="298" key="chooseDestDirectoryDialog" timestamp="1605219264044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1604784718481" />
+    <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219264044" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1605191386931">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605191386931" />
   </component>
 </project>

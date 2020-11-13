@@ -35,54 +35,6 @@ import org.json.JSONObject;
 
 public class SearchUserChat extends AppCompatActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    Intent intentHome = new Intent(SearchUserChat.this, MenuPrincipal.class);
-                    intentHome.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    intentHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentHome);
-                    //onNewIntent(intentHome);
-                    overridePendingTransition(0,0);
-                    finish();
-                    //Si lo hacemos con ventanas independientes, quitamos los TRUES
-                    return true;
-                case R.id.navigation_surprise:
-                    Intent intent_surprise = new Intent(SearchUserChat.this, Sorprenme.class);
-                    intent_surprise.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent_surprise.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent_surprise);
-                    overridePendingTransition(0,0);
-                    break;
-                case R.id.navigation_add:
-                    Intent intentAdd = new Intent(SearchUserChat.this, Add.class);
-                    intentAdd.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    intentAdd.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentAdd);
-                    //onNewIntent(intentAdd);
-                    overridePendingTransition(0,0);
-                    finish();
-
-                    //Si lo hacemos con ventanas independientes, quitamos los TRUES
-                    return true;
-                case R.id.navigation_xat:
-                    Intent intentChat = new Intent(SearchUserChat.this, ListChat.class);
-                    intentChat.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    intentChat.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intentChat);
-                    //onNewIntent(intentChat);
-                    overridePendingTransition(0,0);
-                    finish();
-                    return true;
-            }
-            return false;
-        }
-    };
-
     //Obtenemos el linear layout donde colocar los botones
     LinearLayout llBotonera;
 
@@ -92,10 +44,6 @@ public class SearchUserChat extends AppCompatActivity {
         setContentView(R.layout.activity_search_user_chat);
         //Escondemos la Action Bar porque usamos la ToolBar
         getSupportActionBar().hide();
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setSelectedItemId(R.id.navigation_xat);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         final ImageView Atras = findViewById(R.id.Search_Chat_Atras);
         final SearchView search = findViewById(R.id.search_users);

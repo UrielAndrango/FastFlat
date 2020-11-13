@@ -25,10 +25,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.katundu.R;
+import com.example.katundu.ui.ControladoraAddProduct;
 import com.example.katundu.ui.ControladoraPresentacio;
 import com.example.katundu.ui.Offer;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -38,7 +40,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Sorprenme extends AppCompatActivity {
+public class Vendedor extends AppCompatActivity {
     private TextView mTextMessage;
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReference();
@@ -50,31 +52,16 @@ public class Sorprenme extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    Intent intent = new Intent(Sorprenme.this, MenuPrincipal.class);
+                case R.id.navigation_comprador:
+                    Intent intent = new Intent(Vendedor.this, MenuPrincipal.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                     //finish();
                     break;
-                case R.id.navigation_surprise:
+                case R.id.navigation_vendedor:
                     return true;
-                case R.id.navigation_add:
-                    Intent intent2 = new Intent(Sorprenme.this, Add.class);
-                    intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent2);
-                    overridePendingTransition(0, 0);
-                    //finish();
-                    break;
-                case R.id.navigation_xat:
-                    Intent intent3 = new Intent(Sorprenme.this, ListChat.class);
-                    intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent3);
-                    overridePendingTransition(0, 0);
-                    break;
             }
             return false;
         }
@@ -84,28 +71,27 @@ public class Sorprenme extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sorprenme);
+        setContentView(R.layout.activity_vendedor);
         //Escondemos la Action Bar porque usamos la ToolBar
         getSupportActionBar().hide();
 
-        final ImageView Perfil_img = findViewById(R.id.img_perfil);
+        final FloatingActionButton addProperty = findViewById(R.id.FAB_addProperty_Vendedor);
 
-        refreshLayout = findViewById(R.id.refreshLayout_SP);
-
-        BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.nav_view_sorprenme);
-        navView.setSelectedItemId(R.id.navigation_surprise);
-        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        //RequestGetMatches();
-
-        Perfil_img.setOnClickListener(new View.OnClickListener() {
+        addProperty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Sorprenme.this, ListOffer.class);
+                ControladoraAddProduct.reset();
+                Intent intent = new Intent(Vendedor.this, AddProperty.class);
                 startActivity(intent);
                 //finish();
             }
         });
+
+        refreshLayout = findViewById(R.id.refreshLayout_SP);
+
+        BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.nav_view_sorprenme);
+        navView.setSelectedItemId(R.id.navigation_vendedor);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -127,7 +113,7 @@ public class Sorprenme extends AppCompatActivity {
         final String username = ControladoraPresentacio.getUsername();
         final ArrayList<Offer> offer_list = new ArrayList<>();
         // Instantiate the RequestQueue.
-        final RequestQueue queue = Volley.newRequestQueue(Sorprenme.this);
+        final RequestQueue queue = Volley.newRequestQueue(Vendedor.this);
 
         String url = "https://us-central1-test-8ea8f.cloudfunctions.net/calculate-sorpren?un=" + ControladoraPresentacio.getUsername();
 
@@ -186,7 +172,7 @@ public class Sorprenme extends AppCompatActivity {
             //Creamos las propiedades de layout que tendrán los botones.
             //Son LinearLayout.LayoutParams porque los botones van a estar en un LinearLayout.
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            LinearLayout pareja = new LinearLayout(Sorprenme.this);
+            LinearLayout pareja = new LinearLayout(Vendedor.this);
             //Creamos los botones en bucle
             //Antes debemos saber si hay un numero par o impar
             boolean mostrar_producto = true;
@@ -197,7 +183,7 @@ public class Sorprenme extends AppCompatActivity {
                 //Modo Layout con pareja, layout de layout con foto+precio+nombre
                 //LinearLayout pareja;
                 if (mostrar_producto && i % 2 == 0) {
-                    pareja = new LinearLayout(Sorprenme.this);
+                    pareja = new LinearLayout(Vendedor.this);
                     pareja.setOrientation(LinearLayout.HORIZONTAL);
                     TableRow.LayoutParams paramsP = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
                     if (i == 0) paramsP.setMargins(0, 20, 0, 20);
@@ -206,11 +192,11 @@ public class Sorprenme extends AppCompatActivity {
                     //pareja.setBackgroundResource(R.drawable.logout_rounded);
                 }
                 //Definimos el layout y lo que contiene (foto+precio+nombre)
-                LinearLayout ll = new LinearLayout(Sorprenme.this);
+                LinearLayout ll = new LinearLayout(Vendedor.this);
                 ll.setOrientation(LinearLayout.VERTICAL);
-                final ImageView foto = new ImageView(Sorprenme.this);
-                TextView preu_producte = new TextView(Sorprenme.this);
-                TextView nom_producte = new TextView(Sorprenme.this);
+                final ImageView foto = new ImageView(Vendedor.this);
+                TextView preu_producte = new TextView(Vendedor.this);
+                TextView nom_producte = new TextView(Vendedor.this);
                 //Asignamos Texto a los textViews
                 preu_producte.setText(offer_list.get(i).getValue() + "€");
                 nom_producte.setText(offer_list.get(i).getName() + "");
@@ -233,8 +219,8 @@ public class Sorprenme extends AppCompatActivity {
                         foto.setVisibility(View.VISIBLE);
                     }
                 });
-                preu_producte.setTextColor(Sorprenme.this.getResources().getColor(R.color.colorLetraKatundu));
-                nom_producte.setTextColor(Sorprenme.this.getResources().getColor(R.color.colorLetraKatundu));
+                preu_producte.setTextColor(Vendedor.this.getResources().getColor(R.color.colorLetraKatundu));
+                nom_producte.setTextColor(Vendedor.this.getResources().getColor(R.color.colorLetraKatundu));
                 Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
                 preu_producte.setTypeface(boldTypeface);
                 nom_producte.setTypeface(boldTypeface);
@@ -263,7 +249,7 @@ public class Sorprenme extends AppCompatActivity {
                 //Le escondemos el nombre del producto en la descripcion
                 ll.setContentDescription(offer_list.get(i).getName());
                 //Asignamose el Listener al Layout dinamico
-                ll.setOnClickListener(new Sorprenme.LayoutOnClickListener(Sorprenme.this));
+                ll.setOnClickListener(new Vendedor.LayoutOnClickListener(Vendedor.this));
                 //Añadimos el layout dinamico al layout
                 ll.addView(foto);
                 ll.addView(preu_producte);
@@ -282,7 +268,7 @@ public class Sorprenme extends AppCompatActivity {
     }
 
     private class LayoutOnClickListener implements View.OnClickListener {
-        public LayoutOnClickListener(Sorprenme Sorprenme) {
+        public LayoutOnClickListener(Vendedor Sorprenme) {
         }
 
         @Override
@@ -305,7 +291,7 @@ public class Sorprenme extends AppCompatActivity {
             ControladoraPresentacio.setOffer_Value(info_offer.getValue());
             ControladoraPresentacio.setOffer_Description(info_offer.getDescription());
             //Nos vamos a la ventana de EditOffer
-            Intent intent = new Intent(Sorprenme.this, VisualizeOffer.class);
+            Intent intent = new Intent(Vendedor.this, VisualizeOffer.class);
             startActivity(intent);
             //finish();
         }

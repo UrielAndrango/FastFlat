@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logged.EditWish">
+    tools:context=".ui.logged.EditPreference">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +25,14 @@
 
             <ImageView
                 android:id="@+id/EditWish_Atras"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/abc_vector_test"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorBlancoMate"
+                app:srcCompat="@drawable/icon_back"
                 tools:ignore="PrivateResource" />
 
             <Space
-                android:layout_width="20dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent" />
 
             <LinearLayout
@@ -50,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/edit_wish_title"
+                    android:textColor="@color/colorBlancoMate"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -62,8 +64,9 @@
             <ImageView
                 android:id="@+id/basura_delete_wish"
                 android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:src="@drawable/icono_basura" />
+                android:layout_height="40dp"
+                android:src="@drawable/icon_rubbish"
+                android:tint="@color/colorBlancoMate" />
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>

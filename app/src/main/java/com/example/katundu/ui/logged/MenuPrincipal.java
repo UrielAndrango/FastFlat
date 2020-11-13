@@ -51,30 +51,15 @@ public class MenuPrincipal extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_comprador:
                     return true;
-                case R.id.navigation_surprise:
-                    Intent intent3 = new Intent(MenuPrincipal.this,Sorprenme.class);
+                case R.id.navigation_vendedor:
+                    Intent intent3 = new Intent(MenuPrincipal.this, Vendedor.class);
                     intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent3);
                     overridePendingTransition(0,0);
                     //finish();
-                    break;
-                case R.id.navigation_add:
-                    Intent intent = new Intent(MenuPrincipal.this, Add.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    overridePendingTransition(0,0);
-                    //finish();
-                    break;
-                case R.id.navigation_xat:
-                    Intent intent2 = new Intent(MenuPrincipal.this, ListChat.class);
-                    intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent2);
-                    overridePendingTransition(0,0);
                     break;
             }
             return false;
@@ -91,8 +76,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         final ImageView Perfil_img = findViewById(R.id.img_perfil);
         final LinearLayout search = findViewById(R.id.search_MP);
-
-        final ImageView Forum = findViewById(R.id.forum);
+        final ImageView Chats = findViewById(R.id.Chats);
 
         refreshLayout = findViewById(R.id.refreshLayout_MP);
 
@@ -107,7 +91,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //Para todas las listas y en cualquier momento, hasta que se diga lo contrario
                 ControladoraTrophies.setUsername(ControladoraPresentacio.getUsername());
                 //Nos vamos a ListOffer
-                Intent intent = new Intent(MenuPrincipal.this, ListOffer.class);
+                Intent intent = new Intent(MenuPrincipal.this, Profile.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -123,10 +107,11 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-        Forum.setOnClickListener(new View.OnClickListener() {
+
+        Chats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuPrincipal.this, Forum.class);
+                Intent intent = new Intent(MenuPrincipal.this, ListChat.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();

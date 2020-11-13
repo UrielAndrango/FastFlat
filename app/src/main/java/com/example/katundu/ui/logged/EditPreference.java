@@ -23,14 +23,14 @@ import com.android.volley.toolbox.Volley;
 import com.example.katundu.R;
 import com.example.katundu.ui.ControladoraPresentacio;
 
-public class EditWish extends AppCompatActivity {
+public class EditPreference extends AppCompatActivity {
 
     String[] categorias = new String[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_wish);
+        setContentView(R.layout.activity_edit_preference);
         //Escondemos la Action Bar porque usamos la ToolBar, aunque podriamos usar la ActionBar
         getSupportActionBar().hide();
 
@@ -71,7 +71,7 @@ public class EditWish extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(EditWish.this, ListWish.class);
+            Intent intent = new Intent(EditPreference.this, Profile.class);
             onNewIntent(intent);
             //startActivity(intent);
             finish();
@@ -101,22 +101,22 @@ public class EditWish extends AppCompatActivity {
         //Comprovaciones de que ha puesto cosas
         if (nameEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_nombre);
-            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (valueEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_valor);
-            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (paraulesClauEditText.length() == 0) {
             String texterror = getString(R.string.add_product_no_hay_palabras_clave);
-            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if (!paraulesClauEditText.getText().toString().contains("#")) {
             String texterror = getString(R.string.add_product_no_hay_hashtag);
-            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
         else if(paraulesClauEditText.getText().toString().contains("#")) {
@@ -137,7 +137,7 @@ public class EditWish extends AppCompatActivity {
             if(count >= 2) okay = true;
             else {
                 String texterror = getString(R.string.add_product_minimo_dos_keywords);
-                Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
             }
         }
@@ -146,7 +146,7 @@ public class EditWish extends AppCompatActivity {
 
     private void RequestDeleteWish(final String id) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(EditWish.this);
+        RequestQueue queue = Volley.newRequestQueue(EditPreference.this);
 
         String url = "https://us-central1-test-8ea8f.cloudfunctions.net/delete-wish?" + "id=" + id;
 
@@ -161,13 +161,13 @@ public class EditWish extends AppCompatActivity {
                             toast.show();
 
                             //Volvemos a User
-                            Intent intent = new Intent(EditWish.this, ListWish.class);
+                            Intent intent = new Intent(EditPreference.this, MyProperties.class);
                             startActivity(intent);
                             finish();
                         }
                         else { //response == "1" No s'ha esborrat el desig
                             String texterror = getString(R.string.error);
-                            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
                             toast.show();
                         }
                     }
@@ -175,7 +175,7 @@ public class EditWish extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 String texterror = getString(R.string.error);
-                Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
@@ -187,7 +187,7 @@ public class EditWish extends AppCompatActivity {
 
     private void RequestEditWish(Spinner categoriaSpinner, Switch tipusSwitch, String[] tipus, String id, EditText nameEditText, EditText paraulesClauEditText, EditText valueEditText) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(EditWish.this);
+        RequestQueue queue = Volley.newRequestQueue(EditPreference.this);
 
         if(tipusSwitch.isChecked()) tipus[0] = "Servei";
         else tipus[0] = "Producte";
@@ -224,7 +224,7 @@ public class EditWish extends AppCompatActivity {
                             toast.show();
 
                             //Volvemos a User
-                            Intent intent = new Intent(EditWish.this, ListOffer.class);
+                            Intent intent = new Intent(EditPreference.this, ListOffer.class);
                             startActivity(intent);
                             finish();
                         }
@@ -235,7 +235,7 @@ public class EditWish extends AppCompatActivity {
                         }
                         else { //response == "1" No such user in the database
                             String texterror = getString(R.string.error);
-                            Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
                             toast.show();
                         }
                     }
@@ -243,7 +243,7 @@ public class EditWish extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 String texterror = getString(R.string.error);
-                Toast toast = Toast.makeText(EditWish.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(EditPreference.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
             }
         });

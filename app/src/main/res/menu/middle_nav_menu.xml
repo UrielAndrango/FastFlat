@@ -2,15 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_wish_list"
-        android:icon="@drawable/icon_heart" />
+        android:id="@+id/navigation_my_propierties"
+        android:icon="@drawable/icon_building" />
 
     <item
         android:id="@+id/navigation_own_list"
-        android:icon="@drawable/icon_box" />
-
-    <item
-        android:id="@+id/navigation_fav_list"
-        android:icon="@drawable/icon_star" />
+        android:icon="@drawable/icon_person" />
 
 </menu>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.katundu" >
+    package="com.example.katundu">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,9 +18,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning" >
-        <activity android:name=".ui.logged.RateExchange" >
-        </activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.logged.MyProperties"></activity>
+        <activity android:name=".ui.logged.RateExchange" />
         <activity
             android:name=".ui.login.SecurityLogin"
             android:screenOrientation="portrait"
@@ -41,23 +41,7 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizePosts"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.PersonalPosts"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.AddPost"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.Forum"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.Sorprenme"
+            android:name=".ui.logged.Vendedor"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -78,10 +62,6 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.logged.VisualizeFavorite"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.ListFavorites"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -117,19 +97,11 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditWish"
+            android:name=".ui.logged.EditPreference"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.ListWish"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.AddWish"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.logged.Add"
+            android:name=".ui.logged.AddPreference"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -137,7 +109,7 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.AddProduct"
+            android:name=".ui.logged.AddProperty"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -145,7 +117,7 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.Ajustes"
+            android:name=".ui.logged.Profile"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -163,7 +135,7 @@
             android:name=".ui.login.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" >
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -175,7 +147,7 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditOffer"
+            android:name=".ui.logged.EditProperty"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity

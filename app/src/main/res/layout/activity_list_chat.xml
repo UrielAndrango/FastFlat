@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,10 +22,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <ImageView
+                android:id="@+id/ListChat_Atras"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorBlancoMate"
+                app:srcCompat="@drawable/icon_back" />
+
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:orientation="vertical">
 
 
@@ -40,6 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:text="@string/chats"
+                    android:textColor="@color/colorBlancoMate"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -50,30 +57,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:id="@+id/imageView_newChat_LC"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:tint="@android:color/white"
-                    app:srcCompat="@drawable/icon_add_chat" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -81,7 +64,7 @@
         android:id="@+id/refreshLayout_LC"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
@@ -107,16 +90,4 @@
         </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/nav_view_chat"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:background="@color/colorLetraKatundu"
-    app:elevation="0dp"
-    app:itemIconSize="36dp"
-    app:itemIconTint="@color/nav_item_colors"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:menu="@menu/bottom_nav_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

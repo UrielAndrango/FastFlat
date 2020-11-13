@@ -55,27 +55,7 @@ public class ListOffer extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_wish_list:
-                    Intent intent = new Intent(ListOffer.this, ListWish.class);
-                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    //onNewIntent(intent);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    overridePendingTransition(0,0);
-                    finish();
-
-                    //Si lo hacemos con ventanas independientes, quitamos los TRUES
-                    return true;
                 case R.id.navigation_own_list:
-                    return true;
-                case R.id.navigation_fav_list:
-                    Intent intent2 = new Intent(ListOffer.this, ListFavorites.class);
-                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    //onNewIntent(intent);
-                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent2);
-                    overridePendingTransition(0,0);
-                    finish();
                     return true;
             }
             return false;
@@ -113,7 +93,7 @@ public class ListOffer extends AppCompatActivity {
         ImgSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListOffer.this, Ajustes.class);
+                Intent intent = new Intent(ListOffer.this, Profile.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -178,7 +158,7 @@ public class ListOffer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ControladoraAddProduct.reset();
-                Intent intent = new Intent(ListOffer.this, AddProduct.class);
+                Intent intent = new Intent(ListOffer.this, AddProperty.class);
                 startActivity(intent);
                 //finish();
             }
@@ -354,7 +334,7 @@ public class ListOffer extends AppCompatActivity {
             ControladoraPresentacio.setOffer_Value(info_offer.getValue());
             ControladoraPresentacio.setOffer_Description(info_offer.getDescription());
             //Nos vamos a la ventana de EditOffer
-            Intent intent = new Intent(ListOffer.this, EditOffer.class);
+            Intent intent = new Intent(ListOffer.this, EditProperty.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             //finish();

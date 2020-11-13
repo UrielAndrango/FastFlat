@@ -43,7 +43,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
-public class EditOffer extends AppCompatActivity {
+public class EditProperty extends AppCompatActivity {
 
     String[] categorias = new String[8];
     FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -69,7 +69,7 @@ public class EditOffer extends AppCompatActivity {
 
         String folder_product = "/products/Q9KGzX0vB7rC5aakqBEp/";
         final StorageReference imagesRef = storageRef.child(folder_product);
-        setContentView(R.layout.activity_edit_offer);
+        setContentView(R.layout.activity_edit_propierty);
         final ImageView Atras = findViewById(R.id.EditOffer_Atras);
         final Button Modify_Offer = findViewById(R.id.ok_button_EditOffer);
 
@@ -136,7 +136,7 @@ public class EditOffer extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraEditOffer.setNumero_imagen(0);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(EditOffer.this, PreviewFotoEdit.class);
+                Intent intent = new Intent(EditProperty.this, PreviewFotoEdit.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -156,7 +156,7 @@ public class EditOffer extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraEditOffer.setNumero_imagen(1);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(EditOffer.this, PreviewFotoEdit.class);
+                Intent intent = new Intent(EditProperty.this, PreviewFotoEdit.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -176,7 +176,7 @@ public class EditOffer extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraEditOffer.setNumero_imagen(2);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(EditOffer.this, PreviewFotoEdit.class);
+                Intent intent = new Intent(EditProperty.this, PreviewFotoEdit.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -196,7 +196,7 @@ public class EditOffer extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraEditOffer.setNumero_imagen(3);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(EditOffer.this, PreviewFotoEdit.class);
+                Intent intent = new Intent(EditProperty.this, PreviewFotoEdit.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -216,7 +216,7 @@ public class EditOffer extends AppCompatActivity {
                 //Indicamos la foto a la controladora que querremos ver
                 ControladoraEditOffer.setNumero_imagen(4);
                 //Nos vamos a la ventana de Preview
-                Intent intent = new Intent(EditOffer.this, PreviewFotoEdit.class);
+                Intent intent = new Intent(EditProperty.this, PreviewFotoEdit.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -247,7 +247,7 @@ public class EditOffer extends AppCompatActivity {
                 }
                 else {
                     String texterror = getString(R.string.add_product_muchas_fotos);
-                    Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
@@ -291,11 +291,11 @@ public class EditOffer extends AppCompatActivity {
                 if ( ControladoraEditOffer.getEstatImatges())
                 {
                     String texterror = getString(R.string.modified_images);
-                    Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 else {
-                    Intent intent = new Intent(EditOffer.this, ListOffer.class);
+                    Intent intent = new Intent(EditProperty.this, ListOffer.class);
                     onNewIntent(intent);
                     //startActivity(intent);
                     finish();
@@ -312,17 +312,17 @@ public class EditOffer extends AppCompatActivity {
                 if ( cantitat[0] == 0 && ControladoraEditOffer.getCantidad_fotos() == 0)
                 {
                     String texterror = getString(R.string.add_product_no_hay_fotos);
-                    Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 else if (nameEditText.length() == 0) {
                     String texterror = getString(R.string.add_product_no_hay_nombre);
-                    Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 } else {
                     if (paraulesClauEditText.length() == 0) {
                         String texterror = getString(R.string.add_product_no_hay_palabras_clave);
-                        Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                         toast.show();
                     }
                     else if (!paraulesClauEditText.getText().toString().contains("#"))
@@ -331,13 +331,13 @@ public class EditOffer extends AppCompatActivity {
                         //Opcion1: Podemos traducir la frase
                         //Opcion2: Poner un text encima de las palabras clave que siempre este ahí
                         String texterror = "Las palabras clave deben empezar con # e ir sin espacios.";
-                        Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                         toast.show();
                     }
                     else {
                         if (descriptionEditText.length() == 0) {
                             String texterror = getString(R.string.add_product_no_hay_descripcion);
-                            Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                             toast.show();
                         } else {
                             okay = true;
@@ -355,7 +355,7 @@ public class EditOffer extends AppCompatActivity {
     }
     private void RequestDeleteOffer(final String id) {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(EditOffer.this);
+        RequestQueue queue = Volley.newRequestQueue(EditProperty.this);
 
         String url = "https://us-central1-test-8ea8f.cloudfunctions.net/delete-offer?" + "id=" + id;
         for (int i = 0; i < 5; ++i) {
@@ -374,7 +374,7 @@ public class EditOffer extends AppCompatActivity {
                             toast.show();
 
                             //Volvemos a User
-                            Intent intent = new Intent(EditOffer.this, ListOffer.class);
+                            Intent intent = new Intent(EditProperty.this, ListOffer.class);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -383,7 +383,7 @@ public class EditOffer extends AppCompatActivity {
                         }
                         else { //response == "1" No s'ha esborrat el desig
                             String texterror = getString(R.string.error);
-                            Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                            Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                             toast.show();
                         }
                     }
@@ -391,7 +391,7 @@ public class EditOffer extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 String texterror = getString(R.string.error);
-                Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                 toast.show();
             }
         });
@@ -445,7 +445,7 @@ public class EditOffer extends AppCompatActivity {
                 });
             }
         }
-        RequestQueue queue = Volley.newRequestQueue(EditOffer.this);
+        RequestQueue queue = Volley.newRequestQueue(EditProperty.this);
 
         if(tipusSwitch.isChecked()) tipus[0] = "Servei";
         else tipus[0] = "Producte";
@@ -486,7 +486,7 @@ public class EditOffer extends AppCompatActivity {
                                 toast.show();
 
                                 //Volvemos a User
-                                Intent intent = new Intent(EditOffer.this, ListOffer.class);
+                                Intent intent = new Intent(EditProperty.this, ListOffer.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                                 finish();
@@ -498,7 +498,7 @@ public class EditOffer extends AppCompatActivity {
                             }
                             else { //response == "1" No such user in the database
                                 String texterror = getString(R.string.error);
-                                Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                                 toast.show();
                             }
                         }
@@ -506,7 +506,7 @@ public class EditOffer extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     String texterror = getString(R.string.error);
-                    Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                     Atras.setEnabled(true);
                     Modify_Offer.setEnabled(true);
@@ -520,7 +520,7 @@ public class EditOffer extends AppCompatActivity {
         }
         else {
             String texterror = getString(R.string.add_product_minimo_dos_keywords);
-            Toast toast = Toast.makeText(EditOffer.this, texterror, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(EditProperty.this, texterror, Toast.LENGTH_SHORT);
             toast.show();
         }
 

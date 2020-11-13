@@ -162,7 +162,7 @@ public class VisualizeFavorite extends AppCompatActivity {
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisualizeFavorite.this, ListFavorites.class);
+                Intent intent = new Intent(VisualizeFavorite.this, MyProperties.class);
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();
@@ -190,7 +190,7 @@ public class VisualizeFavorite extends AppCompatActivity {
                             Toast toast = Toast.makeText(getApplicationContext(), offer_deleted_successfully, Toast.LENGTH_SHORT);
                             toast.show();
 
-                            Intent intent = new Intent(VisualizeFavorite.this, ListFavorites.class);
+                            Intent intent = new Intent(VisualizeFavorite.this, MyProperties.class);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

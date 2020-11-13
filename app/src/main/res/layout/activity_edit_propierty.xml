@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.logged.AddProduct">
+    tools:context=".ui.logged.EditProperty">
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -32,7 +32,7 @@
                 tools:layout_editor_absoluteY="3dp">
 
                 <ImageView
-                    android:id="@+id/AddProduct_Atras"
+                    android:id="@+id/EditOffer_Atras"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/abc_vector_test"
@@ -54,10 +54,10 @@
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/addProduct"
+                        android:id="@+id/EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/title_add_product"
+                        android:text="@string/title_modify_offer"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
@@ -66,8 +66,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
                 </LinearLayout>
+                <ImageView
+                    android:id="@+id/basura_delete_offer"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icono_basura" />
 
             </LinearLayout>
+
+
         </androidx.appcompat.widget.Toolbar>
 
         <ScrollView
@@ -82,7 +89,7 @@
                 android:orientation="vertical">
 
                 <HorizontalScrollView
-                    android:id="@+id/scroll_fotos_AddP"
+                    android:id="@+id/scroll_fotos_EditOffer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -95,7 +102,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/previewFoto_AddP"
+                            android:id="@+id/previewFoto_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
@@ -104,7 +111,7 @@
                             android:maxHeight="200dp" />
 
                         <ImageView
-                            android:id="@+id/previewFoto2_AddP"
+                            android:id="@+id/previewFoto2_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
@@ -113,7 +120,7 @@
                             android:maxHeight="200dp" />
 
                         <ImageView
-                            android:id="@+id/previewFoto3_AddP"
+                            android:id="@+id/previewFoto3_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
@@ -122,7 +129,7 @@
                             android:maxHeight="200dp" />
 
                         <ImageView
-                            android:id="@+id/previewFoto4_AddP"
+                            android:id="@+id/previewFoto4_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
@@ -131,7 +138,7 @@
                             android:maxHeight="200dp" />
 
                         <ImageView
-                            android:id="@+id/previewFoto5_AddP"
+                            android:id="@+id/previewFoto5_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
@@ -155,7 +162,7 @@
                         android:layout_weight="2" />
 
                     <Button
-                        android:id="@+id/galleryButton_AddP"
+                        android:id="@+id/galleryButton_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -167,9 +174,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
-
                     <Button
-                        android:id="@+id/camaraButton_AddP"
+                        android:id="@+id/camaraButton_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -197,7 +203,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_nom"
+                        android:id="@+id/EditP_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_name"
@@ -210,13 +216,14 @@
                         android:layout_weight="1" />
 
                     <EditText
-                        android:id="@+id/editTextNom_AddP"
+                        android:id="@+id/editTextNom_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textEmailAddress"
                         android:textAlignment="viewEnd"
-                        android:maxLength="30"/>
+                        android:maxLength="30"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -232,7 +239,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_categoria"
+                        android:id="@+id/EditOffer_categoria"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_categories"
@@ -245,7 +252,7 @@
                         android:layout_weight="1" />
 
                     <Spinner
-                        android:id="@+id/spinner_AddP"
+                        android:id="@+id/spinner_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scrollbarSize="16dp"
@@ -265,7 +272,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_valor"
+                        android:id="@+id/EditOffer_valor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_value"
@@ -278,7 +285,7 @@
                         android:layout_weight="1" />
 
                     <EditText
-                        android:id="@+id/editTextValor_AddP"
+                        android:id="@+id/editTextValor_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="7"
@@ -312,7 +319,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_tipus"
+                        android:id="@+id/EditOffer_tipus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -334,7 +341,7 @@
                         android:textStyle="bold" />
 
                     <Switch
-                        android:id="@+id/switch2"
+                        android:id="@+id/switch3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -369,7 +376,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_paraules_clau"
+                        android:id="@+id/EditOffer_paraules_clau"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_key_words"
@@ -382,7 +389,7 @@
                         android:layout_weight="1" />
 
                     <EditText
-                        android:id="@+id/editTextParaulesClau_AddP"
+                        android:id="@+id/editTextParaulesClau_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -407,7 +414,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/AddP_descripcio"
+                        android:id="@+id/EditOffer_descripcio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_description"
@@ -415,7 +422,7 @@
                         android:textStyle="bold" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textDescripcion_AddP"
+                        android:id="@+id/textDescripcion_EditOffer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:maxLength="260"
@@ -424,7 +431,7 @@
                         app:errorEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editDescripcio_AddP"
+                            android:id="@+id/editDescripcio_EditOffer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
@@ -441,14 +448,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/ok_button_AddP"
+        android:id="@+id/ok_button_EditOffer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_rounded"
-        android:text="@string/add_product_save"
+        android:text="@string/edit_offer_ok"
         android:textColor="@color/colorLetraKatundu"
         android:textColorLink="@color/colorLetraKatundu"
         android:textSize="18sp"
