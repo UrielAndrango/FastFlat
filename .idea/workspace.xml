@@ -6,16 +6,62 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc3f721e-e2a7-481d-9a1c-8fe12ba55c9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_fatflat.png" afterDir="false" />
+    <list default="true" id="2a34daca-71ed-4765-a32a-892355dca234" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/katundu/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/fatflat/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraAddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraAddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraEditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraEditOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraPosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraPresentacio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraPresentacio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraSearchUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraSearchUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/ControladoraTrophies.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/ControladoraTrophies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/Favorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/Favorite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/Offer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/Wish.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/Wish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/AddPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/AddProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/AddProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/DeleteAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/DeleteAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/EditPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/EditProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarIdioma.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/EditarIdioma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EditarPerfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/EditarPerfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/EndExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/EndExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/ListChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/ListOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/ListTrophies.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/ListTrophies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/Mapa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/MenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/MyProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/PreviewFoto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFotoEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/PreviewFotoEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/PreviewFotoShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/PreviewFotoShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/RateExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/RateExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/SearchProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/SearchUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/SearchUserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/SearchUserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeFavorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeFavorite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeListOUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeListOUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeListWUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeListWUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/VisualizeWish.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/logged/VisualizeWish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/login/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/login/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/login/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/login/SecurityLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/fatflat/ui/login/SecurityLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/katundu/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/fatflat/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +84,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1jykX460Hzd1YN1PmczC0oJJEzY" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="1kFafDCJXfbWke5R6a2hbK5rw7S" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -49,22 +93,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Katundu" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
-  <component name="RecentsManager">
-    <key name="android.template.447112686">
-      <recent name="com.example.katundu.ui.logged" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
-      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable-v24" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
-    </key>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -131,98 +167,46 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dc3f721e-e2a7-481d-9a1c-8fe12ba55c9b" name="Default Changelist" comment="" />
-      <created>1604783754556</created>
+      <changelist id="2a34daca-71ed-4765-a32a-892355dca234" name="Default Changelist" comment="" />
+      <created>1605298893910</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604783754556</updated>
+      <updated>1605298893910</updated>
     </task>
-    <task id="LOCAL-00001" summary="I">
-      <created>1604783861313</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604783861313</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Inicio">
-      <created>1604783948577</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1604783948577</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts">
-      <created>1605227385816</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605227385816</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1">
-      <created>1605279812550</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1605279812550</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="I" />
-    <MESSAGE value="Inicio" />
-    <MESSAGE value="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts" />
-    <MESSAGE value="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605219955198">
+    <state x="477" y="252" key="#PSD" timestamp="1605299651976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219955198" />
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605222258064">
+    <state x="477" y="252" key="#PSD/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299651976" />
+    <state x="556" y="114" key="CommitChangelistDialog2" timestamp="1605301790539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605222258064" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605224448869">
+    <state x="556" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605301790539" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605299849802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605224448869" />
-    <state x="614" y="0" key="CommitChangelistDialog2" timestamp="1605279812040">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299849802" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1605299493433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="0" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605279812040" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1605219298235">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299493433" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1605299493433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219298235" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1605264515979">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299493433" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1605299493433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605264515979" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1605264515979">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299493433" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1605299493433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605264515979" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1605264515979">
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299493433" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1605299602358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605264515979" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1605264515979">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605264515979" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605227396572">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605227396572" />
-    <state x="776" y="298" key="chooseDestDirectoryDialog" timestamp="1605280339489">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605280339489" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1605276254389">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605276254389" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605299602358" />
   </component>
 </project>
