@@ -12,9 +12,9 @@
     <application
         android:allowBackup="true"
         android:configChanges="orientation"
-        android:icon="@drawable/logo_katundu"
+        android:icon="@drawable/logo_fatflat"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo_katundu"
+        android:roundIcon="@drawable/logo_fatflat"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"

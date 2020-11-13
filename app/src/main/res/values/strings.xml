@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Katundu</string>
     <string name="descripcio" translatable="false">descripcio</string>
 
     <!-- Strings related to login -->
@@ -281,5 +280,6 @@
     <string name="rate_explanation">Valora el usuario que has indicado. Recuerda que la puntuación es un valor entre 1 y 5.</string>
     <string name="save_rating">Enviar valoración</string>
     <string name="wrong_rating">Valoración inválida</string>
+    <string name="app_name" translatable="false">FatFlat</string>
 
 </resources>

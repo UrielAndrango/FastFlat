@@ -7,19 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc3f721e-e2a7-481d-9a1c-8fe12ba55c9b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_fatflat.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MyProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/MyProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/katundu/ui/logged/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_propierty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_propierty.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_editar_idioma.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_editar_idioma.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_editar_perfil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_editar_perfil.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_offer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_list_offer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_properties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_properties.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ca/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
@@ -58,19 +51,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
-    </key>
     <key name="android.template.447112686">
       <recent name="com.example.katundu.ui.logged" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
       <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\defie\AndroidStudioProjects\Innomads_FrontEnd\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,14 +158,22 @@
       <option name="project" value="LOCAL" />
       <updated>1605227385816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1">
+      <created>1605279812550</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605279812550</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I" />
     <MESSAGE value="Inicio" />
     <MESSAGE value="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Comprador v0.1&#10;Home Vendedor v0.1&#10;Lista Chats v0.1&#10;Profile v0.1&#10;&#10;My Properties v0.1&#10;Add Property v0.1&#10;Edit Property v0.1&#10;Edit Preference v0.1&#10;Edit Property v0.1&#10;&#10;Edit Language v1.0&#10;&#10;+ Borrado de algunas clases y layouts" />
+    <MESSAGE value="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile v0.2&#10;&#10;My Properties v0.2&#10;Edit Property v0.2&#10;Edit Profile v0.1&#10;&#10;Edit Language v1.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605219955198">
@@ -187,10 +188,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605224448869" />
-    <state x="614" y="0" key="CommitChangelistDialog2" timestamp="1605227385207">
+    <state x="614" y="0" key="CommitChangelistDialog2" timestamp="1605279812040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="614" y="0" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605227385207" />
+    <state x="614" y="0" key="CommitChangelistDialog2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605279812040" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1605219298235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605227396572" />
-    <state x="776" y="298" key="chooseDestDirectoryDialog" timestamp="1605219264044">
+    <state x="776" y="298" key="chooseDestDirectoryDialog" timestamp="1605280339489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605219264044" />
+    <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040/-1280.54.1280.984@0.0.1920.1040" timestamp="1605280339489" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1605276254389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
