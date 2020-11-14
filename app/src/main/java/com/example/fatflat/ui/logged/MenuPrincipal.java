@@ -3,7 +3,10 @@ package com.example.fatflat.ui.logged;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -16,6 +19,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.solver.widgets.Rectangle;
+import androidx.core.content.ContextCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
@@ -280,6 +286,8 @@ public class MenuPrincipal extends AppCompatActivity {
                 pareja.setLayoutParams(paramsP);
                 //pareja.setBackgroundResource(R.drawable.logout_rounded);
             }
+            //CardView para esquinas redondeadas
+            CardView cv = new CardView(MenuPrincipal.this);
             //Definimos el layout y lo que contiene (foto+precio+nombre)
             LinearLayout ll = new LinearLayout(MenuPrincipal.this);
             ll.setOrientation(LinearLayout.VERTICAL);
@@ -291,9 +299,9 @@ public class MenuPrincipal extends AppCompatActivity {
             nom_producte.setText(offer_list.get(i).getName() + "");
             //Le damos el estilo que queremos
             //pareja.setBackgroundResource(R.drawable.button_rounded);
-            ll.setBackgroundResource(R.drawable.button_rounded);
-            //ll.setBackgroundColor(Color.WHITE);
-            //ll.setBackgroundResource(R.drawable.custom_border_black);
+            cv.setRadius(16);
+            //ll.setBackgroundResource(R.drawable.layout_rounded);
+            ll.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
             //foto.setImageURI();
             StorageReference Reference = storageRef.child("/products/" + offer_list.get(i).getId()).child("product_0");
             Reference.getBytes(1000000000).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -312,20 +320,29 @@ public class MenuPrincipal extends AppCompatActivity {
             preu_producte.setTypeface(boldTypeface);
             nom_producte.setTypeface(boldTypeface);
             preu_producte.setTextSize(18);
-            nom_producte.setTextSize(18);
+            nom_producte.setTextSize(16);
             //Margenes del layout
-            TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsll.weight = 1;
-            paramsll.height = 800;
+            TableRow.LayoutParams paramscv = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramscv.weight = 1;
+            //paramscv.height = 500;
             //paramsll.setMargins(left, top, right, bottom);
-            if (i%2==0) paramsll.setMargins(0, 0, 10, 0);
-            else paramsll.setMargins(10, 0, 0, 0);
+            if (i%2==0) paramscv.setMargins(0, 0, 10, 0);
+            else paramscv.setMargins(10, 0, 0, 0);
+            cv.setLayoutParams(paramscv);
+            TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            //paramsll.weight = 1;
+            paramsll.height = 600;
+            //paramsll.setMargins(left, top, right, bottom);
+            if (i%2==0) paramsll.setMargins(0, 0, 0, 0);
+            else paramsll.setMargins(0, 0, 0, 0);
             ll.setLayoutParams(paramsll);
             //Margenes de los textViews
             TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             paramsFoto.weight = 1;
-            paramsFoto.setMargins(25, 25, 25, 10);
+            //paramsFoto.height = 600;
+            paramsFoto.setMargins(0, 0, 0, 10);
             foto.setLayoutParams(paramsFoto);
+            foto.setScaleType(ImageView.ScaleType.CENTER_CROP);
             TableRow.LayoutParams paramsPrecio = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             paramsPrecio.setMargins(25, 10, 25, 10);
             preu_producte.setLayoutParams(paramsPrecio);
@@ -341,8 +358,9 @@ public class MenuPrincipal extends AppCompatActivity {
             ll.addView(foto);
             ll.addView(preu_producte);
             ll.addView(nom_producte);
-            if (!mostrar_producto) ll.setVisibility(View.INVISIBLE);
-            pareja.addView(ll);
+            cv.addView(ll);
+            if (!mostrar_producto) cv.setVisibility(View.INVISIBLE);
+            pareja.addView(cv);
             if (mostrar_producto && i%2 == 0) llBotonera.addView(pareja);
 
             if (modo_impar == true && i==numBotones-1) {
