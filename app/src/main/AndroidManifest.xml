@@ -19,7 +19,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.example.fatflat.ui.logged.MyProperties"></activity>
+        <activity android:name="com.example.fatflat.ui.logged.MyProperties"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name="com.example.fatflat.ui.logged.ListBuyersRequests"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name="com.example.fatflat.ui.logged.BuyerRequest"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity android:name="com.example.fatflat.ui.logged.RateExchange" />
         <activity
             android:name="com.example.fatflat.ui.login.SecurityLogin"
