@@ -19,12 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.logged.BuyerRequest"></activity>
-        <activity android:name=".ui.logged.ListBuyersRequests" />
-        <activity android:name=".ui.logged.MyProperties" />
-        <activity android:name=".ui.logged.RateExchange" />
+        <activity android:name="com.example.fatflat.ui.logged.MyProperties"></activity>
+        <activity android:name="com.example.fatflat.ui.logged.RateExchange" />
         <activity
-            android:name=".ui.login.SecurityLogin"
+            android:name="com.example.fatflat.ui.login.SecurityLogin"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <!--
@@ -36,105 +34,105 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <activity
-            android:name=".ui.logged.Mapa"
+            android:name="com.example.fatflat.ui.logged.Mapa"
             android:label="@string/title_activity_mapa" />
         <activity
-            android:name=".ui.logged.EndExchange"
+            android:name="com.example.fatflat.ui.logged.EndExchange"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.Vendedor"
+            android:name="com.example.fatflat.ui.logged.Vendedor"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.ListTrophies"
+            android:name="com.example.fatflat.ui.logged.ListTrophies"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.ListChat"
+            android:name="com.example.fatflat.ui.logged.ListChat"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.SearchUserChat"
+            android:name="com.example.fatflat.ui.logged.SearchUserChat"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeChat"
+            android:name="com.example.fatflat.ui.logged.VisualizeChat"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeFavorite"
+            android:name="com.example.fatflat.ui.logged.VisualizeFavorite"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.PreviewFotoShow"
+            android:name="com.example.fatflat.ui.logged.PreviewFotoShow"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeOffer"
+            android:name="com.example.fatflat.ui.logged.VisualizeOffer"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeWish"
+            android:name="com.example.fatflat.ui.logged.VisualizeWish"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.SearchUser"
+            android:name="com.example.fatflat.ui.logged.SearchUser"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.SearchProduct"
+            android:name="com.example.fatflat.ui.logged.SearchProduct"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeListWUser"
+            android:name="com.example.fatflat.ui.logged.VisualizeListWUser"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.VisualizeListOUser"
+            android:name="com.example.fatflat.ui.logged.VisualizeListOUser"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditarIdioma"
+            android:name="com.example.fatflat.ui.logged.EditarIdioma"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditPreference"
+            android:name="com.example.fatflat.ui.logged.EditPreference"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.AddPreference"
+            android:name="com.example.fatflat.ui.logged.AddPreference"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.PreviewFoto"
+            android:name="com.example.fatflat.ui.logged.PreviewFoto"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.AddProperty"
+            android:name="com.example.fatflat.ui.logged.AddProperty"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.DeleteAccount"
+            android:name="com.example.fatflat.ui.logged.DeleteAccount"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.Profile"
+            android:name="com.example.fatflat.ui.logged.Profile"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.MenuPrincipal"
+            android:name="com.example.fatflat.ui.logged.MenuPrincipal"
             android:label="@string/title_activity_menu_principal"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.login.RegisterActivity"
+            android:name="com.example.fatflat.ui.login.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName=".ui.login.LoginActivity"
+            android:parentActivityName="com.example.fatflat.ui.login.LoginActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="com.example.fatflat.ui.login.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -145,19 +143,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.logged.ListOffer"
+            android:name="com.example.fatflat.ui.logged.ListOffer"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditProperty"
+            android:name="com.example.fatflat.ui.logged.EditProperty"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditarPerfil"
+            android:name="com.example.fatflat.ui.logged.EditarPerfil"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.PreviewFotoEdit"
+            android:name="com.example.fatflat.ui.logged.PreviewFotoEdit"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
 
