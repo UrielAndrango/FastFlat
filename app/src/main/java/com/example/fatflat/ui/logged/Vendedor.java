@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
@@ -164,6 +165,11 @@ public class Vendedor extends AppCompatActivity {
         LinearLayout llBotonera = findViewById(R.id.listaOffers_sp);
 
         for (int i = 0; i < numBotones; ++i) {
+            //CardView para esquinas redondeadas
+            CardView cv = new CardView(Vendedor.this);
+            cv.setRadius(16);
+
+            //Definimos el layout y lo que contiene (foto+precio+nombre)
             LinearLayout ll = new LinearLayout(Vendedor.this);
             ll.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -185,7 +191,7 @@ public class Vendedor extends AppCompatActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     //Redondeamos las esquinas de las fotos
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp, 64 * 2);
+                    //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp, 64 * 2);
                     foto.setImageBitmap(bmp);
                     foto.setVisibility(View.VISIBLE);
                 }
@@ -198,7 +204,7 @@ public class Vendedor extends AppCompatActivity {
 
 
             //Le damos el estilo que queremos al LinearLayout y a sus componentes
-            ll.setBackgroundResource(R.drawable.button_rounded);
+            ll.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
             preu_producte.setTextColor(Vendedor.this.getResources().getColor(R.color.colorLetraKatundu));
             num_ofertes.setTextColor(Vendedor.this.getResources().getColor(R.color.colorLetraKatundu));
             nom_producte.setTextColor(Vendedor.this.getResources().getColor(R.color.colorLetraKatundu));
@@ -211,22 +217,29 @@ public class Vendedor extends AppCompatActivity {
             nom_producte.setTextSize(18);
 
             //Asignar MARGENES
-            //Margenes del layout dinamico
+            //Margenes del CardView
+            TableRow.LayoutParams paramscv = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramscv.weight = 1;
+            //paramscv.height = 500;
+            //paramsll.setMargins(left, top, right, bottom);
+            if (i==0) paramscv.setMargins(0, 20, 0, 20);
+            else paramscv.setMargins(0, 0, 0, 20);
+            cv.setLayoutParams(paramscv);
+            //Margenes del layout dinamico (0 porque usamos CardView)
             TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsll.weight = 1;
+            //paramsll.weight = 1;
             paramsll.height = 400;
             //paramsll.setMargins(left, top, right, bottom);
-            paramsll.setMargins(0, 20, 0, 20);
-            if (i == 0) paramsll.setMargins(0, 20, 0, 20);
-            else paramsll.setMargins(0, 0, 0, 20);
+            paramsll.setMargins(0, 0, 0, 0);
             ll.setLayoutParams(paramsll);
             //Margenes de la ImageView
             //TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
             //paramsFoto.weight = 1;
             paramsFoto.width = 300;
-            paramsFoto.setMargins(25, 25, 25, 25);
+            paramsFoto.setMargins(0, 0, 25, 0);
             foto.setLayoutParams(paramsFoto);
+            foto.setScaleType(ImageView.ScaleType.CENTER_CROP);
             //Margenes del layout de datos
             //TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.MATCH_PARENT);
@@ -258,7 +271,8 @@ public class Vendedor extends AppCompatActivity {
             ll_datos.addView(preu_producte);
             ll_datos.addView(num_ofertes);
             ll.addView(ll_datos);
-            llBotonera.addView(ll);
+            cv.addView(ll);
+            llBotonera.addView(cv);
         }
     }
 

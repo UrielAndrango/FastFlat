@@ -1,6 +1,7 @@
 package com.example.fatflat.ui.logged;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
@@ -146,6 +147,11 @@ public class MyProperties extends AppCompatActivity {
         LinearLayout llBotonera = findViewById(R.id.listaPropiedades_MyP);
 
         for (int i=0; i<numBotones; ++i) {
+            //CardView para esquinas redondeadas
+            CardView cv = new CardView(MyProperties.this);
+            cv.setRadius(16);
+
+            //Definimos el layout y lo que contiene (foto+precio+nombre)
             LinearLayout ll = new LinearLayout(MyProperties.this);
             ll.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -166,7 +172,7 @@ public class MyProperties extends AppCompatActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     //Redondeamos las esquinas de las fotos
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
                     foto.setImageBitmap(bmp);
                     foto.setVisibility(View.VISIBLE);
                 }
@@ -177,7 +183,9 @@ public class MyProperties extends AppCompatActivity {
 
 
             //Le damos el estilo que queremos al LinearLayout y a sus componentes
-            ll.setBackgroundResource(R.drawable.button_rounded);
+            //ll.setBackgroundResource(R.drawable.button_rounded);
+            //Usamos CardView
+            ll.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
             preu_producte.setTextColor(MyProperties.this.getResources().getColor(R.color.colorLetraKatundu));
             nom_producte.setTextColor(MyProperties.this.getResources().getColor(R.color.colorLetraKatundu));
             Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
@@ -187,22 +195,29 @@ public class MyProperties extends AppCompatActivity {
             nom_producte.setTextSize(18);
 
             //Asignar MARGENES
-            //Margenes del layout dinamico
+            //Margenes del CardView
+            TableRow.LayoutParams paramscv = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramscv.weight = 1;
+            //paramscv.height = 500;
+            //paramsll.setMargins(left, top, right, bottom);
+            if (i==0) paramscv.setMargins(0, 20, 0, 20);
+            else paramscv.setMargins(0, 0, 0, 20);
+            cv.setLayoutParams(paramscv);
+            //Margenes del layout dinamico (0 porque usamos CardView)
             TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsll.weight = 1;
+            //paramsll.weight = 1;
             paramsll.height = 400;
             //paramsll.setMargins(left, top, right, bottom);
-            paramsll.setMargins(0, 20, 0, 20);
-            if (i==0) paramsll.setMargins(0, 20, 0, 20);
-            else paramsll.setMargins(0, 0, 0, 20);
+            paramsll.setMargins(0, 0, 0, 0);
             ll.setLayoutParams(paramsll);
             //Margenes de la ImageView
             //TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
             //paramsFoto.weight = 1;
             paramsFoto.width = 300;
-            paramsFoto.setMargins(25, 25, 25, 25);
+            paramsFoto.setMargins(0, 0, 25, 0);
             foto.setLayoutParams(paramsFoto);
+            foto.setScaleType(ImageView.ScaleType.CENTER_CROP);
             //Margenes del layout de datos
             //TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.MATCH_PARENT);
@@ -230,91 +245,9 @@ public class MyProperties extends AppCompatActivity {
             ll_datos.addView(nom_producte);
             ll_datos.addView(preu_producte);
             ll.addView(ll_datos);
-            llBotonera.addView(ll);
+            cv.addView(ll);
+            llBotonera.addView(cv);
         }
-        /*
-        for (int i=0; i<numBotones; ++i){
-            //Modo Layout con pareja, layout de layout con foto+precio+nombre
-            //LinearLayout pareja;
-            if (mostrar_producto && i%2==0) {
-                pareja = new LinearLayout(MyProperties.this);
-                pareja.setOrientation(LinearLayout.HORIZONTAL);
-                TableRow.LayoutParams paramsP = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-                if (i==0) paramsP.setMargins(0, 20, 0, 20);
-                else paramsP.setMargins(0, 0, 0, 20);
-                pareja.setLayoutParams(paramsP);
-                //pareja.setBackgroundResource(R.drawable.logout_rounded);
-            }
-            //Definimos el layout y lo que contiene (foto+precio+nombre)
-            LinearLayout ll = new LinearLayout(MyProperties.this);
-            ll.setOrientation(LinearLayout.VERTICAL);
-            final ImageView foto = new ImageView(MyProperties.this);
-            TextView preu_producte = new TextView(MyProperties.this);
-            TextView nom_producte = new TextView(MyProperties.this);
-            //Asignamos Texto a los textViews
-            preu_producte.setText(offer_list.get(i).getValue() + "€");
-            nom_producte.setText(offer_list.get(i).getName() + "");
-            //Le damos el estilo que queremos
-            //pareja.setBackgroundResource(R.drawable.button_rounded);
-            ll.setBackgroundResource(R.drawable.button_rounded);
-            //foto.setImageURI();
-            StorageReference Reference = storageRef.child("/products/" + offer_list.get(i).getId()).child("product_0");
-            Reference.getBytes(1000000000).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                @Override
-                public void onSuccess(byte[] bytes) {
-                    Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                    //Redondeamos las esquinas de las fotos
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
-                    foto.setImageBitmap(bmp);
-                    foto.setVisibility(View.VISIBLE);
-                }
-            });
-            preu_producte.setTextColor(MyProperties.this.getResources().getColor(R.color.colorLetraKatundu));
-            nom_producte.setTextColor(MyProperties.this.getResources().getColor(R.color.colorLetraKatundu));
-            Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
-            preu_producte.setTypeface(boldTypeface);
-            nom_producte.setTypeface(boldTypeface);
-            preu_producte.setTextSize(18);
-            nom_producte.setTextSize(18);
-            //Margenes del layout
-            TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsll.weight = 1;
-            paramsll.height = 800;
-            //paramsll.setMargins(left, top, right, bottom);
-            if (i%2==0) paramsll.setMargins(0, 0, 10, 0);
-            else paramsll.setMargins(10, 0, 0, 0);
-            ll.setLayoutParams(paramsll);
-            //Margenes de los textViews
-            TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsFoto.weight = 1;
-            paramsFoto.setMargins(25, 25, 25, 10);
-            foto.setLayoutParams(paramsFoto);
-            TableRow.LayoutParams paramsPrecio = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            paramsPrecio.setMargins(25, 10, 25, 10);
-            preu_producte.setLayoutParams(paramsPrecio);
-            TableRow.LayoutParams paramsN = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
-            //paramsN.weight = 1;
-            paramsN.setMargins(25, 10, 25, 20);
-            nom_producte.setLayoutParams(paramsN);
-            //Le escondemos el nombre del producto en la descripcion
-            ll.setContentDescription(offer_list.get(i).getName());
-            //Asignamose el Listener al Layout dinamico
-            ll.setOnClickListener(new LayoutOnClickListener(MyProperties.this));
-            //ll.setOnClickListener(new LayoutOnClickListener);
-            //Añadimos el layout dinamico al layout
-            ll.addView(foto);
-            ll.addView(preu_producte);
-            ll.addView(nom_producte);
-            if (!mostrar_producto) ll.setVisibility(View.INVISIBLE);
-            pareja.addView(ll);
-            if (mostrar_producto && i%2 == 0) llBotonera.addView(pareja);
-
-            if (modo_impar == true && i==numBotones-1) {
-                --i;
-                mostrar_producto = false;
-                modo_impar = false;
-            }
-        }*/
     }
 
     private class LayoutOnClickListener implements View.OnClickListener {

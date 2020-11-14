@@ -309,7 +309,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     //Redondeamos las esquinas de las fotos
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
                     foto.setImageBitmap(bmp);
                     foto.setVisibility(View.VISIBLE);
                 }
