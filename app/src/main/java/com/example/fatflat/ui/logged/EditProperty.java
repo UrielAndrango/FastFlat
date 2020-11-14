@@ -374,7 +374,7 @@ public class EditProperty extends AppCompatActivity {
                             toast.show();
 
                             //Volvemos a User
-                            Intent intent = new Intent(EditProperty.this, ListOffer.class);
+                            Intent intent = new Intent(EditProperty.this, MyProperties.class);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
