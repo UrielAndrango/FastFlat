@@ -1,7 +1,14 @@
 
 package com.example.fatflat.ui.logged;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
@@ -10,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +33,10 @@ import com.android.volley.toolbox.Volley;
 import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraChat;
 import com.example.fatflat.ui.ControladoraPresentacio;
+import com.example.fatflat.ui.Offer;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +46,12 @@ import java.util.ArrayList;
 
 public class ListChat extends AppCompatActivity {
 
+    FirebaseStorage storage = FirebaseStorage.getInstance();
+    StorageReference storageRef = storage.getReference();
+
     SwipeRefreshLayout refreshLayout;
+
+    LinearLayout llBotonera;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +60,7 @@ public class ListChat extends AppCompatActivity {
         getSupportActionBar().hide();
 
         final ImageView Atras = findViewById(R.id.ListChat_Atras);
-        final LinearLayout llBotonera = findViewById(R.id.LinearLayout_Chats);
+        llBotonera = findViewById(R.id.LinearLayout_Chats);
 
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +73,6 @@ public class ListChat extends AppCompatActivity {
         });
 
         refreshLayout = findViewById(R.id.refreshLayout_LC);
-        RequestGetChats(llBotonera);
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -68,9 +84,11 @@ public class ListChat extends AppCompatActivity {
                 refreshLayout.setRefreshing(false);
             }
         });
+
+        RequestGetChats();
     }
 
-    private void RequestGetChats(final LinearLayout llBotonera) {
+    private void RequestGetChats() {
         final String username = ControladoraPresentacio.getUsername();
         // Instantiate the RequestQueue.
         final ArrayList<Pair<String,String>> chats_list = new ArrayList<>();
@@ -91,7 +109,8 @@ public class ListChat extends AppCompatActivity {
                         Pair<String, String> info = new Pair(user,id_chat);
                         chats_list.add(info);
                     }
-                    InicialitzaBotons(chats_list, llBotonera);
+                    //InicialitzaBotons(chats_list);
+                    InicialitzaBotonsOffers(chats_list);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -104,7 +123,196 @@ public class ListChat extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
     }
-    private void InicialitzaBotons(ArrayList<Pair<String,String>> chats_list, LinearLayout llBotonera) {
+
+    @SuppressLint("SetTextI18n")
+    private void InicialitzaBotonsOffers(ArrayList<Pair<String,String>> chat_list) {
+        //Borramos la busqueda anterior
+        //if (llBotonera.getChildCount() > 0) llBotonera.removeAllViews();
+
+        //ControladoraPresentacio.setOffer_List(chat_list);
+        int numBotones = chat_list.size();
+
+        //Obtenemos el linear layout donde colocar los botones
+        //LinearLayout llBotonera = findViewById(R.id.listaPropiedades_MyP);
+
+        for (int i=0; i<numBotones; ++i) {
+            //Barrita separadora
+            if (i>0) {
+                LinearLayout Barrita = new LinearLayout(ListChat.this);
+                Barrita.setOrientation(LinearLayout.HORIZONTAL);
+
+                Barrita.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
+
+                //Margenes del layout dinamico
+                TableRow.LayoutParams paramsBarrita = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+                //paramsBarrita.weight = 1;
+                paramsBarrita.height = 1;
+                //paramsll.setMargins(left, top, right, bottom);
+                paramsBarrita.setMargins(0, 0, 0, 0);
+                Barrita.setLayoutParams(paramsBarrita);
+
+                //Agregamos al Linear Layout grande
+                llBotonera.addView(Barrita);
+            }
+
+            LinearLayout ll = new LinearLayout(ListChat.this);
+            ll.setOrientation(LinearLayout.HORIZONTAL);
+
+            //Definir que hay dentro del LinearLayout grande
+            //Imagen Propiedad
+            final ImageView foto = new ImageView(ListChat.this);
+            //Linear Layout VERTICAL con los datos (precio, nombre)
+            LinearLayout ll_datos = new LinearLayout(ListChat.this);
+            ll_datos.setOrientation(LinearLayout.VERTICAL);
+            TextView nom_producte = new TextView(ListChat.this);
+            TextView preu_producte = new TextView(ListChat.this);
+
+            //Asignar valores a los elementos (una foto al imageview, texto al textView...)
+            //foto.setImageURI();
+            /*
+            StorageReference Reference = storageRef.child("/products/" + chat_list.get(i).getId()).child("product_0");
+            Reference.getBytes(1000000000).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    //Redondeamos las esquinas de las fotos
+                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    foto.setImageBitmap(bmp);
+                    foto.setVisibility(View.VISIBLE);
+                }
+            });
+            */
+            Drawable drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
+            Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
+            //Redondeamos las esquinas de las fotos
+            bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2*8);
+            foto.setImageBitmap(bmp);
+            foto.setVisibility(View.VISIBLE);
+            //Asignamos Texto a los textViews
+            nom_producte.setText(chat_list.get(i).first + "");
+            //preu_producte.setText(chat_list.get(i).getValue() + "€");
+            //TODO: Hay que cambiar esto por el Nombre de la Propiedad Real!
+            preu_producte.setText("PROPIEDAD "+(i+1));
+
+
+            //Le damos el estilo que queremos al LinearLayout y a sus componentes
+            //ll.setBackgroundResource(R.drawable.button_rounded);
+            preu_producte.setTextColor(ListChat.this.getResources().getColor(R.color.colorBlancoMate));
+            nom_producte.setTextColor(ListChat.this.getResources().getColor(R.color.colorBlancoMate));
+            Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
+            preu_producte.setTypeface(boldTypeface);
+            nom_producte.setTypeface(boldTypeface);
+            preu_producte.setTextSize(16);
+            nom_producte.setTextSize(20);
+
+            //Asignar MARGENES
+            //Margenes del layout dinamico
+            TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramsll.weight = 1;
+            paramsll.height = 200;
+            //paramsll.setMargins(left, top, right, bottom);
+            paramsll.setMargins(0, 20, 0, 20);
+            if (i==0) paramsll.setMargins(0, 20, 0, 20);
+            else paramsll.setMargins(0, 0, 0, 20);
+            ll.setLayoutParams(paramsll);
+            //Margenes de la ImageView
+            //TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+            //paramsFoto.weight = 1;
+            paramsFoto.width = 150;
+            paramsFoto.setMargins(25, 25, 25, 25);
+            foto.setLayoutParams(paramsFoto);
+            //Margenes del layout de datos
+            //TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.MATCH_PARENT);
+            paramsll_datos.weight = 1;
+            //paramsll_datos.height = 400;
+            paramsll_datos.setMargins(25, 25, 25, 25);
+            ll_datos.setLayoutParams(paramsll_datos);
+            //Margenes de los datos
+            TableRow.LayoutParams paramsN = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            //paramsN.weight = 1;
+            paramsN.setMargins(0, 0, 0, 10);
+            nom_producte.setLayoutParams(paramsN);
+            TableRow.LayoutParams paramsPrecio = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramsPrecio.setMargins(0, 10, 0, 0);
+            preu_producte.setLayoutParams(paramsPrecio);
+
+            //Le escondemos el nombre del producto en la descripcion
+            //ll.setContentDescription(chat_list.get(i).getName());
+            ll.setContentDescription(chat_list.get(i).first);
+            //Asignamose el Listener al Layout dinamico
+            ll.setOnClickListener(new ListChat.LayoutOnClickListener(ListChat.this));
+
+
+            //Añadimos el layout dinamico al layout
+            ll.addView(foto);
+            ll_datos.addView(nom_producte);
+            ll_datos.addView(preu_producte);
+            ll.addView(ll_datos);
+            llBotonera.addView(ll);
+        }
+    }
+
+    private class LayoutOnClickListener implements View.OnClickListener {
+        public LayoutOnClickListener(ListChat listChat) {
+        }
+        @Override
+        public void onClick(final View view) {
+            //Provando que funciona el layout en modo boton
+            Toast.makeText(getApplicationContext(),view.getContentDescription().toString(),Toast.LENGTH_SHORT).show();
+/*
+            //Pasamos los datos del deseo a la controladora
+            Offer info_offer = ControladoraPresentacio.getOffer_perName(view.getContentDescription().toString());
+            //Pasamos los datos del deseo a la controladora
+            ControladoraPresentacio.setOffer_id(info_offer.getId());
+            ControladoraPresentacio.setOffer_name(info_offer.getName());
+            ControladoraPresentacio.setOffer_Categoria(info_offer.getCategory());
+            boolean type = true;
+            String tipus = info_offer.getType();
+            if(tipus.equals("Producte")) type = false;
+            ControladoraPresentacio.setOffer_Service(type);
+            ControladoraPresentacio.setOffer_PC(info_offer.getKeywords());
+            ControladoraPresentacio.setOffer_Value(info_offer.getValue());
+            ControladoraPresentacio.setOffer_Description(info_offer.getDescription());
+            //Nos vamos a la ventana de EditOffer
+            Intent intent = new Intent(ListChat.this, EditProperty.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            //finish();
+*/
+            final RequestQueue queue = Volley.newRequestQueue(ListChat.this);
+
+            String url = "https://us-central1-test-8ea8f.cloudfunctions.net/chat-getID?" + "un1=" + ControladoraPresentacio.getUsername()+ "&un2=" + view.getContentDescription().toString();
+            // Request a JSONObject response from the provided URL.
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            ControladoraChat.setUsername1(ControladoraPresentacio.getUsername());
+                            //ControladoraChat.setUsername2(view.getContentDescription().toString());
+                            ControladoraChat.setUsername2(view.getContentDescription().toString());
+                            ControladoraChat.setId_Chat(response);
+                            //Nos vamos a la ventana de EditOffer
+                            Intent intent = new Intent(ListChat.this, VisualizeChat.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            //finish();
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {  //TODO: aixo ho podem treure?
+                    String texterror = getString(R.string.error);
+                    Toast toast = Toast.makeText(ListChat.this, texterror, Toast.LENGTH_SHORT);
+                    toast.show();
+                    //reactivar resgistrarse
+                }
+            });
+            queue.add(stringRequest);
+        }
+    }
+
+    private void InicialitzaBotons(ArrayList<Pair<String,String>> chats_list) {
             //Borramos la busqueda anterior
             if (llBotonera.getChildCount() > 0) llBotonera.removeAllViews();
 

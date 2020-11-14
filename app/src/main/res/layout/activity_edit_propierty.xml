@@ -41,7 +41,7 @@
                     tools:ignore="PrivateResource" />
 
                 <Space
-                    android:layout_width="20dp"
+                    android:layout_width="15dp"
                     android:layout_height="match_parent" />
 
                 <LinearLayout
