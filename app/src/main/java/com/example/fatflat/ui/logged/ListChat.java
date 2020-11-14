@@ -44,6 +44,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ListChat extends AppCompatActivity {
 
     FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -160,7 +162,7 @@ public class ListChat extends AppCompatActivity {
 
             //Definir que hay dentro del LinearLayout grande
             //Imagen Propiedad
-            final ImageView foto = new ImageView(ListChat.this);
+            final CircleImageView foto = new CircleImageView(ListChat.this);
             //Linear Layout VERTICAL con los datos (precio, nombre)
             LinearLayout ll_datos = new LinearLayout(ListChat.this);
             ll_datos.setOrientation(LinearLayout.VERTICAL);
@@ -185,7 +187,7 @@ public class ListChat extends AppCompatActivity {
             Drawable drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
             Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
             //Redondeamos las esquinas de las fotos
-            bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2*8);
+            //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2*8);
             foto.setImageBitmap(bmp);
             foto.setVisibility(View.VISIBLE);
             //Asignamos Texto a los textViews
@@ -202,32 +204,36 @@ public class ListChat extends AppCompatActivity {
             Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
             preu_producte.setTypeface(boldTypeface);
             nom_producte.setTypeface(boldTypeface);
-            preu_producte.setTextSize(16);
-            nom_producte.setTextSize(20);
+            preu_producte.setTextSize(14);
+            nom_producte.setTextSize(18);
 
             //Asignar MARGENES
             //Margenes del layout dinamico
             TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             paramsll.weight = 1;
-            paramsll.height = 200;
+            //paramsll.height = 200;
             //paramsll.setMargins(left, top, right, bottom);
             paramsll.setMargins(0, 20, 0, 20);
-            if (i==0) paramsll.setMargins(0, 20, 0, 20);
-            else paramsll.setMargins(0, 0, 0, 20);
+            if (i==0) paramsll.setMargins(35, 10, 25, 10);
+            else paramsll.setMargins(35, 10, 25, 10);
             ll.setLayoutParams(paramsll);
             //Margenes de la ImageView
             //TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
             //paramsFoto.weight = 1;
             paramsFoto.width = 150;
-            paramsFoto.setMargins(25, 25, 25, 25);
+            paramsFoto.height = 150;
+            paramsFoto.setMargins(10, 10, 10, 10);
             foto.setLayoutParams(paramsFoto);
+            //Borde del circulo (aura)
+            foto.setBorderWidth(2);
+            foto.setBorderColor(getResources().getColor(R.color.colorBlancoMate));
             //Margenes del layout de datos
             //TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             TableRow.LayoutParams paramsll_datos = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.MATCH_PARENT);
             paramsll_datos.weight = 1;
             //paramsll_datos.height = 400;
-            paramsll_datos.setMargins(25, 25, 25, 25);
+            paramsll_datos.setMargins(25, 10, 0, 10);
             ll_datos.setLayoutParams(paramsll_datos);
             //Margenes de los datos
             TableRow.LayoutParams paramsN = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);

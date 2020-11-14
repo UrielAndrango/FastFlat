@@ -246,26 +246,7 @@
     <!-- Strings related to Sorprenme-->
     <string name="sorpren_me">Surprise me!</string>
     <string name="no_sorprenme_found">We do not have any offer which can surprise you yet</string>
-    <!-- Strings related to Forum-->
-    <string name="forum">Forum!</string>
-    <string name="title_add_post">Add post</string>
-    <string name="add_new_post_explication">Your post must have title and description. Post anything you think can be interesting! </string>
-    <string name="add_post_title">Title</string>
-    <string name="add_post_description">Description</string>
-    <string name="add_new_post">Add</string>
-    <string name="add_post_no_hay_titulo">You must add some title</string>
-    <string name="add_post_no_hay_descripcion">You must add a description</string>
     <string name="add_post_general_error">Something went wrong, try again</string>
-    <string name="add_post_general_ok">Post added!</string>
-    <string name="personalposts">Your posts</string>
-    <string name="title_editar_post">Modify post</string>
-    <string name="edit_post">Modify</string>
-    <string name="eliminar_post">Delete post</string>
-    <string name="eliminar_post_confirmacion">Do you want to delete this post?</string>
-    <string name="confirmar">Yes</string>
-    <string name="cancelar">No</string>
-    <string name="post_deleted_successfully">Post deleted</string>
-    <string name="post_modified_successfully">Post successfully modified</string>
 
     <!-- Strings related to EndExchange-->
     <string name="End_Exchange">End exchange</string>
@@ -277,5 +258,17 @@
     <string name="rate_explanation">Rate the user you have indicated previously. Remember the rating must be between 1 and 5.</string>
     <string name="save_rating">Send rating</string>
     <string name="wrong_rating">Invalid rating</string>
+
+    <!-- Strings related to ListBuyersByPercentage-->
+    <string name="list_buyer_requests_title">Buyer Requests</string>
+
+    <!-- Strings related to ListBuyersByPercentage-->
+    <string name="buyer_request_title">Buyer Request</string>
+    <string name="buyer_request_username">Username:</string>
+    <string name="buyer_request_name">Name:</string>
+    <string name="buyer_request_accuracy">Accuracy</string>
+    <string name="buyer_request_percentage">%</string>
+    <string name="buyer_request_schedule_title">Schedule:</string>
+    <string name="buyer_request_button_chat">Start Chat</string>
 
 </resources>

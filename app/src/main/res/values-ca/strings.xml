@@ -246,26 +246,7 @@
     <!-- Strings related to Sorprenme-->
     <string name="sorpren_me">Sorprèn-me!</string>
     <string name="no_sorprenme_found">Encara no tenim cap oferta que et pugui sorprendre</string>
-    <!-- Strings related to Forum-->
-    <string name="forum">Fòrum!</string>
-    <string name="title_add_post">Afegir publicació</string>
-    <string name="add_new_post_explication">La teva publicació ha de tenir títol i descripció. Publica qualsevol cosa que creguis interessant! </string>
-    <string name="add_post_title">Títol</string>
-    <string name="add_post_description">Descripció</string>
-    <string name="add_new_post">Afegir</string>
-    <string name="add_post_no_hay_titulo">Has d\'afegir un tìtol</string>
-    <string name="add_post_no_hay_descripcion">Has d\'afegir una descripció</string>
     <string name="add_post_general_error">Hi ha hagut un error, torna-ho a intentar</string>
-    <string name="add_post_general_ok">Publicació afegida!</string>
-    <string name="personalposts">Les teves publicacions</string>
-    ç<string name="title_editar_post">Modificar publicació</string>
-    <string name="edit_post">Modificar</string>
-    <string name="eliminar_post">Eliminar publicació</string>
-    <string name="eliminar_post_confirmacion">Vols eliminar aquesta publicació?</string>
-    <string name="confirmar">Si</string>
-    <string name="cancelar">No</string>
-    <string name="post_deleted_successfully">Publicació eliminada</string>
-    <string name="post_modified_successfully">Modificació efectuada</string>
 
     <!-- Strings related to EndExchange-->
     <string name="End_Exchange">Finalitzar intercanvi</string>
@@ -277,5 +258,17 @@
     <string name="rate_explanation">Valora l\'usuari que has indicat. Recorda que la puntuació és un valor entre 1 i 5.</string>
     <string name="save_rating">Enviar valoració</string>
     <string name="wrong_rating">Valoració invàlida</string>
+
+    <!-- Strings related to ListBuyersByPercentage-->
+    <string name="list_buyer_requests_title">Sol·licituds de Compradors</string>
+
+    <!-- Strings related to ListBuyersByPercentage-->
+    <string name="buyer_request_title">Sol·licitut de Comprador</string>
+    <string name="buyer_request_username">Nom d\'usuari:</string>
+    <string name="buyer_request_name">Nom:</string>
+    <string name="buyer_request_accuracy">Precisió</string>
+    <string name="buyer_request_percentage">%</string>
+    <string name="buyer_request_schedule_title">Horari:</string>
+    <string name="buyer_request_button_chat">Iniciar Xat</string>
 
 </resources>
