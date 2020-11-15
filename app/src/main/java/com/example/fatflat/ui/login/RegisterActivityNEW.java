@@ -161,18 +161,28 @@ public class RegisterActivityNEW extends AppCompatActivity {
                                  final EditText nameEditText, /*final EditText latitudeEditText,
                                  final EditText longitudeEditText, */final EditText descriptionEditText, final EditText birthdateEditText,
                                  final EditText questionEditText, final EditText answerEditText) {
+
+        /////////////////////////////////// NEXT PAGE WITHOUT DOING SHIT /////////////////////////////////////
+        Intent intent = new Intent(RegisterActivityNEW.this, RegisterBuyerPreferences.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
+
+        /*
+
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(RegisterActivityNEW.this);
 
         String url = "https://us-central1-test-8ea8f.cloudfunctions.net/user-add?" +
                 "un=" + usernameEditText.getText() + "&" +
                 "pw=" + passwordEditText.getText() + "&" +
-                "n=" + nameEditText.getText()/* + "&" +
-                "lat=" + latitudeEditText.getText() + "&" +
-                "lon=" + longitudeEditText.getText() */
+                "n=" + nameEditText.getText()
+                //+ "&" +
+                //"lat=" + latitudeEditText.getText() + "&" +
+                //"lon=" + longitudeEditText.getText()
 
                 ;
-
 
         if (descriptionEditText.getText().length() > 0)
             url += "&description=" + descriptionEditText.getText();
@@ -195,9 +205,8 @@ public class RegisterActivityNEW extends AppCompatActivity {
                             ControladoraPresentacio.setUsername(usernameEditText.getText().toString());
                             ControladoraPresentacio.setPassword(passwordEditText.getText().toString());
                             ControladoraPresentacio.setNom_real(nameEditText.getText().toString());
-                            /*ControladoraPresentacio.setLatitud(latitudeEditText.getText().toString());
-                            ControladoraPresentacio.setLongitud(longitudeEditText.getText().toString());
-                             */
+                            //ControladoraPresentacio.setLatitud(latitudeEditText.getText().toString());
+                            //ControladoraPresentacio.setLongitud(longitudeEditText.getText().toString();
                             ControladoraPresentacio.setDescriptionUser(descriptionEditText.getText().toString());
                             ControladoraPresentacio.setBirthdate(birthdateEditText.getText().toString());
                             ControladoraPresentacio.setQuestion(questionEditText.getText().toString());
@@ -236,5 +245,6 @@ public class RegisterActivityNEW extends AppCompatActivity {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
+         */
     }
 }

@@ -140,6 +140,24 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name="com.example.fatflat.ui.login.RegisterActivityNEW"
+            android:label="Introduce tus datos"
+            android:parentActivityName="com.example.fatflat.ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.example.fatflat.ui.login.RegisterBuyerPreferences"
+            android:label="Introduce tus preferencias"
+            android:parentActivityName="com.example.fatflat.ui.login.RegisterActivityNEW"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.example.fatflat.ui.login.RegisterHouseCharacteristics"
+            android:label="Introduce características"
+            android:parentActivityName="com.example.fatflat.ui.login.RegisterBuyerPreferences"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name="com.example.fatflat.ui.login.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

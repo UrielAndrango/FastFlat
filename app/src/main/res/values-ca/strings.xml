@@ -271,4 +271,14 @@
     <string name="buyer_request_schedule_title">Horari:</string>
     <string name="buyer_request_button_chat">Iniciar Xat</string>
 
+    <!-- Strings related to Buyer's preferences-->
+    <string name="poblacion">Població</string>
+    <string name="precio_minimo">Preu mínim</string>
+    <string name="numero_de_banos">Nombre de lavabos</string>
+    <string name="numero_de_habitaciones">Nombre habitacions</string>
+    <string name="zona">Zona</string>
+    <string name="precio_maximo">Preu màxim</string>
+    <string name="aceptar">Acceptar</string>
+    <string name="introduce_tus_preferencias_de_busqueda">Introdueix les teves preferences de búsqueda</string>
+
 </resources>

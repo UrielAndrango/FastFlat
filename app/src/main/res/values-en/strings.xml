@@ -271,4 +271,14 @@
     <string name="buyer_request_schedule_title">Schedule:</string>
     <string name="buyer_request_button_chat">Start Chat</string>
 
+    <!-- Strings related to Buyer's preferences-->
+    <string name="poblacion">Town</string>
+    <string name="precio_minimo">Minimum price</string>
+    <string name="numero_de_banos">Number of bathrooms</string>
+    <string name="numero_de_habitaciones">Muber of rooms</string>
+    <string name="zona">Zone</string>
+    <string name="precio_maximo">Maximum price</string>
+    <string name="aceptar">Acept</string>
+    <string name="introduce_tus_preferencias_de_busqueda">Insert your searching preferences</string>
+
 </resources>

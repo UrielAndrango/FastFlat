@@ -15,7 +15,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/subtitle_activity_register"
+        android:text="@string/introduce_los_datos_de_tu_inmueble"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,25 +40,50 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usernameLayout_R"
+            <TextView
+                android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp">
+                android:text="@string/tipo_de_operacion"
+                android:textSize="18sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/username_R"
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_username"
-                    android:lines="1"
-                    android:maxLength="20"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="20" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:text="@string/venta"
+                    android:onClick="checkButton"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alquiler" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/tipo_de_inmueble"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
@@ -71,7 +96,7 @@
                     android:id="@+id/nom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
+                    android:hint="@string/codigo_postal"
                     android:lines="1"
                     android:maxLength="30"
                     android:maxLines="1"
@@ -81,19 +106,44 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="@string/poblacion" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/zona"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameLayout_R"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                app:passwordToggleEnabled="true">
+                android:layout_marginEnd="50dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password1"
+                    android:id="@+id/username_R"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:inputType="textPassword"
+                    android:hint="@string/precio"
                     android:lines="1"
                     android:maxLength="20"
                     android:maxLines="1"
@@ -103,189 +153,39 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                app:passwordToggleEnabled="true">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password_2"
-                    android:inputType="textPassword"
-                    android:lines="1"
-                    android:maxLength="20"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="20" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:id="@+id/textInputLayoutVertical1"
-                android:layout_width="match_parent"
-                android:layout_height="115dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/textInputLayoutVertical2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="70dp"
-                    android:orientation="vertical">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/latitud"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/coordinate_latitude"
-                            android:inputType="numberDecimal"
-                            android:lines="1"
-                            android:maxLength="10"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            app:counterEnabled="true"
-                            app:counterMaxLength="20" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/longitud"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/coordinate_longitude"
-                            android:inputType="numberDecimal"
-                            android:lines="1"
-                            android:maxLength="10"
-                            android:maxLines="1"
-                            android:singleLine="true"
-                            app:counterEnabled="true"
-                            app:counterMaxLength="20" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/textInputLayoutVertical3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="-70dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Ubicacio"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="@string/descripcio"
-                        android:src="@drawable/icono_ubicacion_blanco" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:maxLength="100"
-                app:counterEnabled="true"
-                app:counterMaxLength="100"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextQuestion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/security_question"
-                    android:maxLength="100"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="100" />
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="@string/superficie" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout10"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextAnswer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/security_answer"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/write_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="125dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="@string/more_info_about_you"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:maxLength="260"
-                app:counterEnabled="true"
-                app:counterMaxLength="260"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/format_description"
-                    android:maxLength="260"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="260" />
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="@string/numero_de_banos" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextBirthdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/format_date_register"
-                    android:inputType="date"
-                    android:maxLength="10"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="10" />
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="@string/numero_de_habitaciones" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -299,7 +199,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_rounded"
-        android:text="@string/action_register"
+        android:text="@string/aceptar"
         android:textColor="@color/colorLetraKatundu"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,11 +27,15 @@ import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.logged.Mapa;
 import com.example.fatflat.ui.logged.MenuPrincipal;
 
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
-public class RegisterBuyerPreferences extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class RegisterHouseCharacteristics extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+
+    RadioGroup radioGroup;
+    RadioButton radioButton;
 
     Button registratButton;
     EditText latitudeEditText;
@@ -38,10 +44,11 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_buyer_preferences);
+        setContentView(R.layout.activity_register_house_characteristics);
         //getSupportActionBar().hide();
 
-        Spinner spinner = findViewById(R.id.spinner2);
+        radioGroup = findViewById(R.id.radioGroup);
+        Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.type, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -61,6 +68,7 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
         final EditText questionEditText = findViewById(R.id.editTextQuestion);
         final EditText answerEditText = findViewById(R.id.editTextAnswer);
+
         registratButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,15 +91,9 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
          */
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        // check if the request code is same as what is passed  here it is 2
-        if(requestCode==2)
-        {
-            latitudeEditText.setText(ControladoraPresentacio.getLatitudMapa());
-            longitudeEditText.setText(ControladoraPresentacio.getLongitudMapa());
-        }
+    public void checkButton(View v) {
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
     }
 
     static boolean valid(String d) {
@@ -116,11 +118,6 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
                                  final EditText nameEditText, final EditText latitudeEditText,
                                  final EditText longitudeEditText, final EditText descriptionEditText, final EditText birthdateEditText,
                                  final EditText questionEditText, final EditText answerEditText) {
-        /////////////////////////////////// NEXT PAGE WITHOUT DOING SHIT /////////////////////////////////////
-        Intent intent = new Intent(RegisterBuyerPreferences.this, RegisterHouseCharacteristics.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
 
 
         /*

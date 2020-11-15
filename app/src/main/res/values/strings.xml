@@ -275,4 +275,31 @@
     <string name="buyer_request_schedule_title">Horario:</string>
     <string name="buyer_request_button_chat">Iniciar Chat</string>
 
+    <!-- Strings related to Buyer's preferences-->
+    <string name="poblacion">Población</string>
+    <string name="precio_minimo">Precio mínimo</string>
+    <string name="numero_de_banos">Número de baños</string>
+    <string name="numero_de_habitaciones">Número de habitaciones</string>
+    <string name="zona">Zona</string>
+    <string name="precio_maximo">Precio máximo</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="introduce_tus_preferencias_de_busqueda">Introduce tus preferencias de búsqueda</string>
+    <string name="tipo_de_operacion">Tipo de operación</string>
+    <string name="venta">Venta</string>
+    <string name="alquiler">Alquiler</string>
+    <string name="tipo_de_inmueble">Tipo de inmueble</string>
+    <string name="precio">Precio</string>
+    <string name="codigo_postal">Código postal</string>
+    <string name="superficie">Superficie</string>
+    <string name="introduce_los_datos_de_tu_inmueble">Introduce los datos de tu inmueble</string>
+
+    <!-- Strings related to House characteristics-->
+    <string-array name="type">
+        <item>Vivienda</item>
+        <item>Oficina</item>
+        <item>Local</item>
+        <item>Industrial</item>
+        <item>Aparcamiento</item>
+    </string-array>
+
 </resources>

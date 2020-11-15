@@ -15,7 +15,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="15dp"
-        android:text="@string/subtitle_activity_register"
+        android:text="@string/introduce_tus_preferencias_de_busqueda"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,6 +40,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/tipo_de_inmueble"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/usernameLayout_R"
                 android:layout_width="match_parent"
@@ -51,7 +67,7 @@
                     android:id="@+id/town"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_username"
+                    android:hint="@string/poblacion"
                     android:lines="1"
                     android:maxLength="20"
                     android:maxLines="1"
@@ -68,10 +84,10 @@
                 android:layout_marginEnd="50dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nom"
+                    android:id="@+id/zone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
+                    android:hint="@string/zona"
                     android:lines="1"
                     android:maxLength="30"
                     android:maxLines="1"
@@ -86,13 +102,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password1"
+                    android:id="@+id/minimumPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
+                    android:hint="@string/precio_minimo"
                     android:inputType="textPassword"
                     android:lines="1"
                     android:maxLength="20"
@@ -108,13 +124,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password2"
+                    android:id="@+id/maximumPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password_2"
+                    android:hint="@string/precio_maximo"
                     android:inputType="textPassword"
                     android:lines="1"
                     android:maxLength="20"
@@ -125,95 +141,27 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:maxLength="100"
-                app:counterEnabled="true"
-                app:counterMaxLength="100"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextQuestion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/security_question"
-                    android:maxLength="100"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="100" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextAnswer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/security_answer"
-                    android:textSize="18sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/write_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="125dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="@string/more_info_about_you"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:maxLength="260"
-                app:counterEnabled="true"
-                app:counterMaxLength="260"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/format_description"
-                    android:maxLength="260"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="260" />
+                    android:hint="@string/numero_de_habitaciones" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout7"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextBirthdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/format_date_register"
-                    android:inputType="date"
-                    android:maxLength="10"
-                    android:textSize="18sp"
-                    app:counterEnabled="true"
-                    app:counterMaxLength="10" />
+                    android:hint="@string/numero_de_banos" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -227,7 +175,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_rounded"
-        android:text="@string/action_register"
+        android:text="@string/aceptar"
         android:textColor="@color/colorLetraKatundu"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
