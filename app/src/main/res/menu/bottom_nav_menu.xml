@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/navigation_comprador"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/buyer" />
+        android:icon="@drawable/icon_buy_house" />
+        <!-- android:title="@string/buyer" /> -->
 
     <item
         android:id="@+id/navigation_vendedor"
-        android:icon="@drawable/icon_target"
-        android:title="@string/seller" />
+        android:icon="@drawable/icon_sell_house" />
+        <!-- android:title="@string/seller" /> -->
 </menu>
