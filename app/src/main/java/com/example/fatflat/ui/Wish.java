@@ -1,5 +1,5 @@
 package com.example.fatflat.ui;
-
+//A
 public class Wish {
     private String id;
     private String name;
