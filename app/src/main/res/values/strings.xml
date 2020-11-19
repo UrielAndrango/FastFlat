@@ -292,14 +292,48 @@
     <string name="codigo_postal">Código postal</string>
     <string name="superficie">Superficie</string>
     <string name="introduce_los_datos_de_tu_inmueble">Introduce los datos de tu inmueble</string>
+    <string name="superficie_maxima">Superfície máxima</string>
+    <string name="con_garaje">Con garaje</string>
+    <string name="con_piscina">Con piscina</string>
+    <string name="estado_del_inmueble">Estado del inmueble</string>
+    <string name="con_trastero">Con trastero</string>
+    <string name="zonas_adicionales">Zonas adicionales</string>
+    <string name="con_jardin">Con jardín</string>
+    <string name="con_terraza">Con terraza</string>
+    <string name="con_parking">Con párking</string>
+    <string name="extras">Extras</string>
+    <string name="con_chimenea">Con chimenea</string>
+    <string name="con_ascensor">Con ascensor</string>
+    <string name="fecha_de_publicacion">Fecha de publicación</string>
+    <string name="compra">Compra</string>
+    <string name="con_calefaccion">Con calefacción</string>
+    <string name="con_aire_acondicionado">Con aire acondicionado</string>
+    <string name="amueblado">Amueblado</string>
+    <string name="superficie_minima">Superfície mínima</string>
 
     <!-- Strings related to House characteristics-->
     <string-array name="type">
-        <item>Vivienda</item>
+        <item>Piso</item>
+        <item>Casa</item>
         <item>Oficina</item>
         <item>Local</item>
-        <item>Industrial</item>
-        <item>Aparcamiento</item>
+        <item>Industria</item>
+    </string-array>
+
+    <string-array name="date">
+        <item>Última semana</item>
+        <item>Último mes</item>
+        <item>Último año</item>
+        <item>Todo</item>
+    </string-array>
+
+    <string-array name="state">
+        <item>Obra nueva</item>
+        <item>Casi nuevo</item>
+        <item>Muy bien</item>
+        <item>Bien</item>
+        <item>A reformar</item>
+        <item>Reformado</item>
     </string-array>
 
 </resources>

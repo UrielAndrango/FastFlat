@@ -8,7 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,17 +37,36 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
     EditText latitudeEditText;
     EditText longitudeEditText;
 
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_buyer_preferences);
         //getSupportActionBar().hide();
 
+        radioGroup = findViewById(R.id.radioGroup);
+
         Spinner spinner = findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.type, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        Spinner spinner2 = findViewById(R.id.spinner3);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.date, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
+        spinner2.setOnItemSelectedListener(this);
+
+        Spinner spinner3 = findViewById(R.id.spinner4);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.state, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
+        spinner3.setOnItemSelectedListener(this);
+
+
 
         final EditText usernameEditText = findViewById(R.id.username_R);
         final EditText nameEditText = findViewById(R.id.nom);
@@ -81,6 +102,10 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
         });
 
          */
+    }
+    public void checkButton(View v) {
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioId);
     }
 
     @Override
@@ -203,7 +228,7 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        String item = parent.getItemAtPosition(position).toString();
     }
 
     @Override
