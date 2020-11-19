@@ -280,6 +280,8 @@
     <string name="precio_minimo">Precio mínimo</string>
     <string name="numero_de_banos">Número de baños</string>
     <string name="numero_de_habitaciones">Número de habitaciones</string>
+    <string name="numero_minimo_de_banos">Número mínimo de baños</string>
+    <string name="numero_minimo_de_habitaciones">Número mínimo de habitaciones</string>
     <string name="zona">Zona</string>
     <string name="precio_maximo">Precio máximo</string>
     <string name="aceptar">Aceptar</string>
@@ -328,6 +330,16 @@
     </string-array>
 
     <string-array name="state">
+        <item>Obra nueva</item>
+        <item>Casi nuevo</item>
+        <item>Muy bien</item>
+        <item>Bien</item>
+        <item>A reformar</item>
+        <item>Reformado</item>
+        <item>Indiferente</item>
+    </string-array>
+
+    <string-array name="state_wo_indifferent">
         <item>Obra nueva</item>
         <item>Casi nuevo</item>
         <item>Muy bien</item>

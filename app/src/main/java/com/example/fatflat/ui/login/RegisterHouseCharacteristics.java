@@ -54,6 +54,12 @@ public class RegisterHouseCharacteristics extends AppCompatActivity implements A
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        Spinner spinner3 = findViewById(R.id.spinner5);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.state_wo_indifferent, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
+        spinner3.setOnItemSelectedListener(this);
+
         final EditText usernameEditText = findViewById(R.id.username_R);
         final EditText nameEditText = findViewById(R.id.nom);
         final EditText passwordEditText = findViewById(R.id.password1);
