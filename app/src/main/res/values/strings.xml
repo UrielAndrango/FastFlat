@@ -277,6 +277,10 @@
 
     <!-- Strings related to Buyer's preferences-->
     <string name="poblacion">Población</string>
+    <string name="registerBP_price">Precio:</string>
+    <string name="registerBP_min">mín</string>
+    <string name="registerBP_max">máx</string>
+    <string name="registerBP_area">Superfície:</string>
     <string name="precio_minimo">Precio mínimo</string>
     <string name="numero_de_banos">Número de baños</string>
     <string name="numero_de_habitaciones">Número de habitaciones</string>
@@ -346,6 +350,11 @@
         <item>Bien</item>
         <item>A reformar</item>
         <item>Reformado</item>
+    </string-array>
+
+    <string-array name="tipo_precio">
+        <item>m.</item>
+        <item>M.</item>
     </string-array>
 
 </resources>

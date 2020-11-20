@@ -7,21 +7,59 @@
     android:background="@color/colorPrimary"
     tools:context=".ui.login.RegisterActivity">
 
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="341dp"
-        android:layout_height="12dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="15dp"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView6"
-        app:layout_constraintEnd_toEndOf="@id/SaveButton"
-        app:layout_constraintStart_toStartOf="@id/SaveButton"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/RegisterHouse_Atras"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="@color/colorBlancoMate"
+                app:srcCompat="@drawable/icon_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/register_house_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/subtitle_activity_register"
+                    android:textColor="@color/colorBlancoMate"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:id="@+id/scrollView6"
@@ -32,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subtitle">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,18 +96,17 @@
                 android:textSize="24sp" />
 
             <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:id="@+id/radioGroup">
+                android:layout_marginEnd="50dp">
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/venta"
-                    android:onClick="checkButton"/>
+                    android:text="@string/venta" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
@@ -307,7 +344,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/SaveButton"
+        android:id="@+id/RegisterHouse_SaveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"

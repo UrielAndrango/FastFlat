@@ -34,8 +34,6 @@ import java.text.SimpleDateFormat;
 public class RegisterBuyerPreferences extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Button registratButton;
-    EditText latitudeEditText;
-    EditText longitudeEditText;
 
     RadioGroup radioGroup;
     RadioButton radioButton;
@@ -44,7 +42,21 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_buyer_preferences);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
+
+        final ImageView Atras = findViewById(R.id.RegisterBuyer_Atras);
+
+        final Button SaveButton = findViewById(R.id.RegisterBuyer_SaveButton);
+
+        Atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterBuyerPreferences.this, RegisterActivityNEW.class);
+                onNewIntent(intent);
+                //startActivity(intent);
+                finish();
+            }
+        });
 
         radioGroup = findViewById(R.id.radioGroup);
 
@@ -66,57 +78,18 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
         spinner3.setAdapter(adapter3);
         spinner3.setOnItemSelectedListener(this);
 
-
-
-        final EditText usernameEditText = findViewById(R.id.username_R);
-        final EditText nameEditText = findViewById(R.id.nom);
-        final EditText passwordEditText = findViewById(R.id.password1);
-        final EditText repeatpasswordEditText = findViewById(R.id.password2);
-        latitudeEditText = findViewById(R.id.latitud);
-        longitudeEditText = findViewById(R.id.longitud);
-        final ImageView ubicacio = findViewById(R.id.Ubicacio);
-
-        final EditText descriptionEditText = findViewById(R.id.editTextDescription);
-        final EditText birthdateEditText = findViewById(R.id.editTextBirthdate);
-        registratButton = findViewById(R.id.SaveButton);
-
-        final EditText questionEditText = findViewById(R.id.editTextQuestion);
-        final EditText answerEditText = findViewById(R.id.editTextAnswer);
-        registratButton.setOnClickListener(new View.OnClickListener() {
+        SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                registratButton.setEnabled(false);
-                RequestRegister(usernameEditText, passwordEditText, nameEditText, latitudeEditText,
-                        longitudeEditText, descriptionEditText, birthdateEditText, questionEditText, answerEditText);
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterBuyerPreferences.this, RegisterHouseCharacteristics.class);
+                startActivity(intent);
             }
         });
-        /*
-        ubicacio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegisterBuyerPreferences.this, Mapa.class);
-                //startActivity(intent);
-                //finish();
-                startActivityForResult(intent,2);
-            }
-        });
-
-         */
     }
+
     public void checkButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        // check if the request code is same as what is passed  here it is 2
-        if(requestCode==2)
-        {
-            latitudeEditText.setText(ControladoraPresentacio.getLatitudMapa());
-            longitudeEditText.setText(ControladoraPresentacio.getLongitudMapa());
-        }
     }
 
     static boolean valid(String d) {

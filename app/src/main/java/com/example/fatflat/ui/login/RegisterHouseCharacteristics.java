@@ -37,15 +37,25 @@ public class RegisterHouseCharacteristics extends AppCompatActivity implements A
     RadioGroup radioGroup;
     RadioButton radioButton;
 
-    Button registratButton;
-    EditText latitudeEditText;
-    EditText longitudeEditText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_house_characteristics);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
+
+        final ImageView Atras = findViewById(R.id.RegisterHouse_Atras);
+
+        final Button SaveButton = findViewById(R.id.RegisterHouse_SaveButton);
+
+        Atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterHouseCharacteristics.this, RegisterBuyerPreferences.class);
+                onNewIntent(intent);
+                //startActivity(intent);
+                finish();
+            }
+        });
 
         radioGroup = findViewById(R.id.radioGroup);
         Spinner spinner = findViewById(R.id.spinner);
@@ -60,41 +70,15 @@ public class RegisterHouseCharacteristics extends AppCompatActivity implements A
         spinner3.setAdapter(adapter3);
         spinner3.setOnItemSelectedListener(this);
 
-        final EditText usernameEditText = findViewById(R.id.username_R);
-        final EditText nameEditText = findViewById(R.id.nom);
-        final EditText passwordEditText = findViewById(R.id.password1);
-        final EditText repeatpasswordEditText = findViewById(R.id.password2);
-        latitudeEditText = findViewById(R.id.latitud);
-        longitudeEditText = findViewById(R.id.longitud);
-        final ImageView ubicacio = findViewById(R.id.Ubicacio);
-
-        final EditText descriptionEditText = findViewById(R.id.editTextDescription);
-        final EditText birthdateEditText = findViewById(R.id.editTextBirthdate);
-        registratButton = findViewById(R.id.SaveButton);
-
-        final EditText questionEditText = findViewById(R.id.editTextQuestion);
-        final EditText answerEditText = findViewById(R.id.editTextAnswer);
-
-        registratButton.setOnClickListener(new View.OnClickListener() {
+        SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                registratButton.setEnabled(false);
-                RequestRegister(usernameEditText, passwordEditText, nameEditText, latitudeEditText,
-                        longitudeEditText, descriptionEditText, birthdateEditText, questionEditText, answerEditText);
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterHouseCharacteristics.this, MenuPrincipal.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
-        /*
-        ubicacio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegisterBuyerPreferences.this, Mapa.class);
-                //startActivity(intent);
-                //finish();
-                startActivityForResult(intent,2);
-            }
-        });
-
-         */
     }
 
     public void checkButton(View v) {

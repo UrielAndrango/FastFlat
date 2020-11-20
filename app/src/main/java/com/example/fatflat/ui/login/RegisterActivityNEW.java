@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraPresentacio;
+import com.example.fatflat.ui.logged.ListChat;
 import com.example.fatflat.ui.logged.Mapa;
 import com.example.fatflat.ui.logged.MenuPrincipal;
 
@@ -28,34 +29,46 @@ import java.text.SimpleDateFormat;
 
 public class RegisterActivityNEW extends AppCompatActivity {
 
-    Button registratButton;
-   /*EditText latitudeEditText;
-    EditText longitudeEditText;
-
-    */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
+
+        final ImageView Atras = findViewById(R.id.Register_Atras);
 
         final EditText usernameEditText = findViewById(R.id.username_R);
         final EditText nameEditText = findViewById(R.id.nom);
         final EditText passwordEditText = findViewById(R.id.password1);
         final EditText repeatpasswordEditText = findViewById(R.id.password2);
-        /*latitudeEditText = findViewById(R.id.latitud);
-        longitudeEditText = findViewById(R.id.longitud);
-        final ImageView ubicacio = findViewById(R.id.Ubicacio); */
 
         final EditText descriptionEditText = findViewById(R.id.editTextDescription);
         final EditText birthdateEditText = findViewById(R.id.editTextBirthdate);
-        registratButton = findViewById(R.id.SaveButton);
+        final Button SaveButton = findViewById(R.id.SaveButton_Register);
 
         final EditText questionEditText = findViewById(R.id.editTextQuestion);
         final EditText answerEditText = findViewById(R.id.editTextAnswer);
 
-        registratButton.setOnClickListener(new View.OnClickListener() {
+        Atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivityNEW.this, LoginActivity.class);
+                onNewIntent(intent);
+                //startActivity(intent);
+                finish();
+            }
+        });
+
+        //Sin necesidad de rellenar campos (VERSION PRUEBAS)
+        SaveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivityNEW.this, RegisterBuyerPreferences.class);
+                startActivity(intent);
+            }
+        });
+/*
+        SaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (usernameEditText.getText().length() == 0) {
@@ -83,12 +96,6 @@ public class RegisterActivityNEW extends AppCompatActivity {
                     Toast toast = Toast.makeText(RegisterActivityNEW.this, texterror, Toast.LENGTH_SHORT);
                     toast.show();
                 }
-                /*else if (latitudeEditText.getText().length() == 0 || longitudeEditText.getText().length() == 0) {
-                    String texterror = getString(R.string.empty_location);
-                    Toast toast = Toast.makeText(RegisterActivityNEW.this, texterror, Toast.LENGTH_SHORT);
-                    toast.show();
-                }
-                 */
                 else if (birthdateEditText.getText().length() > 0 && !valid(birthdateEditText.getText().toString())) {
                     String texterror = getString(R.string.invalid_birthdate);
                     Toast toast = Toast.makeText(RegisterActivityNEW.this, texterror, Toast.LENGTH_SHORT);
@@ -106,38 +113,11 @@ public class RegisterActivityNEW extends AppCompatActivity {
                 }
                 else {
                     registratButton.setEnabled(false);
-                    RequestRegister(usernameEditText, passwordEditText, nameEditText, /*latitudeEditText,
-                            longitudeEditText, */descriptionEditText, birthdateEditText, questionEditText, answerEditText);
+                    RequestRegister(usernameEditText, passwordEditText, nameEditText, descriptionEditText, birthdateEditText, questionEditText, answerEditText);
                 }
             }
-        });
-
-        /*
-        ubicacio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivityNEW.this, Mapa.class);
-                //startActivity(intent);
-                //finish();
-                startActivityForResult(intent,2);
-            }
-        });
-
-         */
+        });*/
     }
-    /*
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        // check if the request code is same as what is passed  here it is 2
-        if(requestCode==2)
-        {
-            latitudeEditText.setText(ControladoraPresentacio.getLatitudMapa());
-            longitudeEditText.setText(ControladoraPresentacio.getLongitudMapa());
-        }
-    }
-
-     */
 
     static boolean valid(String d) {
         if (d.length() != 10) return false;
@@ -158,16 +138,12 @@ public class RegisterActivityNEW extends AppCompatActivity {
     }
 
     private void RequestRegister(final EditText usernameEditText, final EditText passwordEditText,
-                                 final EditText nameEditText, /*final EditText latitudeEditText,
-                                 final EditText longitudeEditText, */final EditText descriptionEditText, final EditText birthdateEditText,
+                                 final EditText nameEditText, final EditText descriptionEditText, final EditText birthdateEditText,
                                  final EditText questionEditText, final EditText answerEditText) {
 
         /////////////////////////////////// NEXT PAGE WITHOUT DOING SHIT /////////////////////////////////////
         Intent intent = new Intent(RegisterActivityNEW.this, RegisterBuyerPreferences.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-
 
         /*
 
