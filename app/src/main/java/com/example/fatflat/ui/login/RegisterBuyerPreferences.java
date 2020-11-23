@@ -1,6 +1,7 @@
 package com.example.fatflat.ui.login;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,21 +12,10 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.fatflat.R;
-import com.example.fatflat.ui.ControladoraPresentacio;
-import com.example.fatflat.ui.logged.Mapa;
-import com.example.fatflat.ui.logged.MenuPrincipal;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -37,6 +27,14 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
     RadioGroup radioGroup;
     RadioButton radioButton;
+
+    Button[] btn_array_BP = new Button[4];
+    Button btn_unfocus_BP;
+    int[] btn_id_BP = {R.id.btn00, R.id.btn11, R.id.btn22, R.id.btn33};
+
+    Button[] btn_array2_BP = new Button[3];
+    Button btn_unfocus2_BP;
+    int[] btn_id2_BP = {R.id.btn44, R.id.btn55, R.id.btn66};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +55,59 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
                 finish();
             }
         });
+
+        for(int i = 0; i < btn_array_BP.length; i++){
+            btn_array_BP[i] = (Button) findViewById(btn_id_BP[i]);
+            btn_array_BP[i].setBackgroundColor(Color.rgb(207, 207, 207));
+            btn_array_BP[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    switch (v.getId()){
+                        case R.id.btn00 :
+                            setFocus(btn_unfocus_BP, btn_array_BP[0]);
+                            break;
+
+                        case R.id.btn11 :
+                            setFocus(btn_unfocus_BP, btn_array_BP[1]);
+                            break;
+
+                        case R.id.btn22:
+                            setFocus(btn_unfocus_BP, btn_array_BP[2]);
+                            break;
+
+                        case R.id.btn33 :
+                            setFocus(btn_unfocus_BP, btn_array_BP[3]);
+                            break;
+                    }
+                }
+            });
+        }
+        btn_unfocus_BP = btn_array_BP[0];
+
+        for(int i = 0; i < btn_array2_BP.length; i++){
+            btn_array2_BP[i] = (Button) findViewById(btn_id2_BP[i]);
+            btn_array2_BP[i].setBackgroundColor(Color.rgb(207, 207, 207));
+            btn_array2_BP[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    switch (v.getId()){
+                        case R.id.btn44 :
+                            setFocus2(btn_unfocus2_BP, btn_array2_BP[0]);
+                            break;
+
+                        case R.id.btn55 :
+                            setFocus2(btn_unfocus2_BP, btn_array2_BP[1]);
+                            break;
+
+                        case R.id.btn66 :
+                            setFocus2(btn_unfocus2_BP, btn_array2_BP[2]);
+                            break;
+                    }
+                }
+            });
+        }
+
+        btn_unfocus2_BP = btn_array2_BP[0];
 
         radioGroup = findViewById(R.id.radioGroup);
 
@@ -90,6 +141,22 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
     public void checkButton(View v) {
         int radioId = radioGroup.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
+    }
+
+    private void setFocus(Button btn_unfocus, Button btn_focus){
+        btn_unfocus.setTextColor(Color.rgb(49, 50, 51));
+        btn_unfocus.setBackgroundColor(Color.rgb(207, 207, 207));
+        btn_focus.setTextColor(Color.rgb(255, 255, 255));
+        btn_focus.setBackgroundColor(Color.rgb(3, 106, 150));
+        this.btn_unfocus_BP = btn_focus;
+    }
+
+    private void setFocus2(Button btn_unfocus, Button btn_focus){
+        btn_unfocus.setTextColor(Color.rgb(49, 50, 51));
+        btn_unfocus.setBackgroundColor(Color.rgb(207, 207, 207));
+        btn_focus.setTextColor(Color.rgb(255, 255, 255));
+        btn_focus.setBackgroundColor(Color.rgb(3, 106, 150));
+        this.btn_unfocus2_BP = btn_focus;
     }
 
     static boolean valid(String d) {

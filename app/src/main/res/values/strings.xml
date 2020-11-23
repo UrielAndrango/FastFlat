@@ -295,7 +295,6 @@
     <string name="alquiler">Alquiler</string>
     <string name="tipo_de_inmueble">Tipo de inmueble</string>
     <string name="precio">Precio</string>
-    <string name="codigo_postal">Código postal</string>
     <string name="superficie">Superficie</string>
     <string name="introduce_los_datos_de_tu_inmueble">Introduce los datos de tu inmueble</string>
     <string name="superficie_maxima">Superfície máxima</string>
@@ -316,6 +315,13 @@
     <string name="con_aire_acondicionado">Con aire acondicionado</string>
     <string name="amueblado">Amueblado</string>
     <string name="superficie_minima">Superfície mínima</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="mensaje_register_house">En caso de que tenga intención de vender un inmueble, introduzca las características del inmueble. Si quiere añadir más inmuebles lo podrá hacer posteriormente. Si no quiere vender, simplemente continúe.</string>
+    <string name="mensaje_Buyer_Preferences">En caso de que tenga intención de comprar un inmueble, introduzca sus preferencias de búsqueda. Si quiere modificarlas lo podrá hacer posteriormente. Si no quiere comprar, simplemente continúe.</string>
+    <string name="max">máx</string>
 
     <!-- Strings related to House characteristics-->
     <string-array name="type">

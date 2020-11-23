@@ -85,7 +85,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="25dp"
-                android:text="En caso de que tenga intención de comprar un inmueble, introduzca sus preferencias de búsqueda. Si quiere  modificarlas lo podrá hacer posteriormente. Si no quiere comprar, simplemente continúe."
+                android:text="@string/mensaje_Buyer_Preferences"
                 android:textColor="@color/colorBlancoMate"
                 android:textSize="18sp" />
 
@@ -139,7 +139,7 @@
                     android:textSize="18sp" />
 
                 <Space
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
@@ -253,7 +253,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="2"
-                        android:hint="max"
+                        android:hint="@string/max"
                         android:inputType="number"
                         android:lines="1"
                         android:maxLength="7"
@@ -341,33 +341,99 @@
 
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textView26"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/numero_minimo_de_habitaciones"
+                android:textSize="18sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btn00"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:hint="@string/numero_de_habitaciones"
-                    android:inputType="number" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_1" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btn11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_2" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                <Button
+                    android:id="@+id/btn22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_3" />
+
+                <Button
+                    android:id="@+id/btn33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView27"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/numero_minimo_de_banos"
+                android:textSize="18sp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="43dp"
-                    android:hint="@string/numero_de_banos"
-                    android:inputType="number" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:gravity="center_horizontal">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btn44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_1" />
+
+                <Button
+                    android:id="@+id/btn55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_2" />
+
+                <Button
+                    android:id="@+id/btn66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/_3" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -385,7 +451,7 @@
                     android:textSize="18sp" />
 
                 <Space
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
@@ -411,7 +477,7 @@
                     android:textSize="18sp" />
 
                 <Space
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
 
@@ -563,7 +629,7 @@
 
                     <CheckBox
                         android:id="@+id/checkBox11"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/con_aire_acondicionado" />

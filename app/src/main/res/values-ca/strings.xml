@@ -273,12 +273,50 @@
 
     <!-- Strings related to Buyer's preferences-->
     <string name="poblacion">Població</string>
+    <string name="registerBP_price">Preu:</string>
+    <string name="registerBP_min">mín</string>
+    <string name="registerBP_max">màx</string>
+    <string name="registerBP_area">Superfície:</string>
     <string name="precio_minimo">Preu mínim</string>
     <string name="numero_de_banos">Nombre de lavabos</string>
     <string name="numero_de_habitaciones">Nombre habitacions</string>
+    <string name="numero_minimo_de_banos">Nombre mínim de banys</string>
+    <string name="numero_minimo_de_habitaciones">Nombre mínim de habitacions</string>
     <string name="zona">Zona</string>
     <string name="precio_maximo">Preu màxim</string>
     <string name="aceptar">Acceptar</string>
     <string name="introduce_tus_preferencias_de_busqueda">Introdueix les teves preferences de búsqueda</string>
+    <string name="tipo_de_operacion">Tipus de operació</string>
+    <string name="venta">Venta</string>
+    <string name="alquiler">Alquiler</string>
+    <string name="tipo_de_inmueble">Tipus de inmoble</string>
+    <string name="precio">Preu</string>
+    <string name="superficie">Superficie</string>
+    <string name="introduce_los_datos_de_tu_inmueble">Introdueix les dades del inmoble</string>
+    <string name="superficie_maxima">Superfície màxima</string>
+    <string name="con_garaje">Amb garatge</string>
+    <string name="con_piscina">Amb piscinaa</string>
+    <string name="estado_del_inmueble">Estat del inmoble</string>
+    <string name="con_trastero">Amb traster</string>
+    <string name="zonas_adicionales">Zones adicionals</string>
+    <string name="con_jardin">Amb jardí</string>
+    <string name="con_terraza">Amb terrassa</string>
+    <string name="con_parking">Amb pàrking</string>
+    <string name="extras">Extras</string>
+    <string name="con_chimenea">Con chimenea</string>
+    <string name="con_ascensor">Con ascensor</string>
+    <string name="fecha_de_publicacion">Fecha de publicación</string>
+    <string name="compra">Compra</string>
+    <string name="con_calefaccion">Con calefacción</string>
+    <string name="con_aire_acondicionado">Con aire acondicionado</string>
+    <string name="amueblado">Amueblado</string>
+    <string name="superficie_minima">Superfície mínima</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="mensaje_register_house">En cas de que tingui la intenció de vendre un inmoble, introdueixi les característiques del inmoble. Si vol afegir més inmobles ho podrà fer posteriorment. Si no vol vendre, simplement continui.</string>
+    <string name="mensaje_Buyer_Preferences">En cas de que tingui la intenció de comprar un inmoble, introdueixi les preferències de búsqueda. Si vol modificar-les ho podrà fer posteriorment. Si no vol comprar, simplement continui.</string>
+    <string name="max">màx</string>
 
 </resources>

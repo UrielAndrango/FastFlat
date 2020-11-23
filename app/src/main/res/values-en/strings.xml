@@ -273,12 +273,50 @@
 
     <!-- Strings related to Buyer's preferences-->
     <string name="poblacion">Town</string>
+    <string name="registerBP_price">Price:</string>
+    <string name="registerBP_min">min</string>
+    <string name="registerBP_max">max</string>
+    <string name="registerBP_area">Areae:</string>
     <string name="precio_minimo">Minimum price</string>
     <string name="numero_de_banos">Number of bathrooms</string>
-    <string name="numero_de_habitaciones">Muber of rooms</string>
+    <string name="numero_de_habitaciones">Nuber of rooms</string>
+    <string name="numero_minimo_de_banos">Minimum number of bathrooms</string>
+    <string name="numero_minimo_de_habitaciones">Minimum number of bedrooms</string>
     <string name="zona">Zone</string>
     <string name="precio_maximo">Maximum price</string>
     <string name="aceptar">Acept</string>
     <string name="introduce_tus_preferencias_de_busqueda">Insert your searching preferences</string>
+    <string name="tipo_de_operacion">Type of operation</string>
+    <string name="venta">Sell</string>
+    <string name="alquiler">Rent</string>
+    <string name="tipo_de_inmueble">Type of house</string>
+    <string name="precio">Price</string>
+    <string name="superficie">Area</string>
+    <string name="introduce_los_datos_de_tu_inmueble">Introduce the information of your house</string>
+    <string name="superficie_maxima">Maximum area</string>
+    <string name="con_garaje">With garage</string>
+    <string name="con_piscina">With pool</string>
+    <string name="estado_del_inmueble">State of the house</string>
+    <string name="con_trastero">With storage</string>
+    <string name="zonas_adicionales">Addditonal zones</string>
+    <string name="con_jardin">With garden</string>
+    <string name="con_terraza">With terrace</string>
+    <string name="con_parking">With parking</string>
+    <string name="extras">Extras</string>
+    <string name="con_chimenea">With chimney</string>
+    <string name="con_ascensor">With elevator</string>
+    <string name="fecha_de_publicacion">Time of publication</string>
+    <string name="compra">Buy</string>
+    <string name="con_calefaccion">With heating</string>
+    <string name="con_aire_acondicionado">With air conditioner</string>
+    <string name="amueblado">With furniture</string>
+    <string name="superficie_minima">Minimum area</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_4">4</string>
+    <string name="_3">3</string>
+    <string name="mensaje_register_house"> In case you wanted to sell a house, please introduce the characteristics of the house. If you want to had more houses you could do so afterwards. If you do not want to buy, simply press the accept button.</string>
+    <string name="mensaje_Buyer_Preferences">In case you wanted to buy a house, please introduce the search criteria to follow. If you want to modify them you could do so afterwards. If you do not want to sell, simply press the accept button.</string>
+    <string name="max">max</string>
 
 </resources>
