@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,6 +21,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -35,6 +37,7 @@ import com.example.fatflat.ui.ControladoraChat;
 import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.Offer;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -51,8 +54,36 @@ public class ListChat extends AppCompatActivity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReference();
 
-    SwipeRefreshLayout refreshLayout;
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_comprador:
+                    Intent intent2 = new Intent(ListChat.this, MenuPrincipal.class);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent2);
+                    overridePendingTransition(0,0);
+                    //finish();
+                    break;
+                case R.id.navigation_chats:
+                    return true;
+                case R.id.navigation_vendedor:
+                    Intent intent3 = new Intent(ListChat.this, Vendedor.class);
+                    intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent3.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent3);
+                    overridePendingTransition(0,0);
+                    //finish();
+                    break;
+            }
+            return false;
+        }
+    };
+
+    SwipeRefreshLayout refreshLayout;
     LinearLayout llBotonera;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +91,10 @@ public class ListChat extends AppCompatActivity {
         setContentView(R.layout.activity_list_chat);
         //Escondemos la Action Bar porque usamos la ToolBar
         getSupportActionBar().hide();
+
+        BottomNavigationView navView = (BottomNavigationView) findViewById(R.id.nav_view_listChat);
+        navView.setSelectedItemId(R.id.navigation_chats);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         final ImageView Atras = findViewById(R.id.ListChat_Atras);
         llBotonera = findViewById(R.id.LinearLayout_Chats);

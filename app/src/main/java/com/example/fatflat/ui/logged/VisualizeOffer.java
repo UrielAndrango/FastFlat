@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -66,22 +67,25 @@ public class VisualizeOffer extends AppCompatActivity {
         final TextView paraulesClauOffer = findViewById(R.id.editTextParaulesClau_EditOffer);
         final TextView valueOffer = findViewById(R.id.editTextValor_VisualizeOffer);
         final TextView descriptionOffer = findViewById(R.id.textDescripcion_EditOffer);
-        final ImageView afegirFavorite = findViewById(R.id.imageView_Favorite);
+        //final ImageView afegirFavorite = findViewById(R.id.imageView_Favorite);
+        //final ImageView new_chat = findViewById(R.id.icona_new_missatge);
+        final ImageView Calendar = findViewById(R.id.VisualizeOffer_ScheduleVisit);
+        final Button new_chat = findViewById(R.id.ok_button_VisualizeOffer);
 
         // FOTOS
-        final ImageView new_chat = findViewById(R.id.icona_new_missatge);
+
         PreviewFoto0 = findViewById(R.id.previewFoto_EditOffer);
         PreviewFoto1 = findViewById(R.id.previewFoto2_EditOffer);
         PreviewFoto2 = findViewById(R.id.previewFoto3_EditOffer);
         PreviewFoto3 = findViewById(R.id.previewFoto4_EditOffer);
         PreviewFoto4 = findViewById(R.id.previewFoto5_EditOffer);
         PreviewFotos = new ImageView[]{PreviewFoto0, PreviewFoto1, PreviewFoto2, PreviewFoto3, PreviewFoto4};
-
+/*
         //Posem l'estrella de color blanc si l'usuari ja te aquesta oferta com a favorite. En cas contrari la pintem de color negre
         if(ControladoraPresentacio.isFavorite_withID(id))
             afegirFavorite.setImageTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
         else afegirFavorite.setImageTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-
+*/
         for (int i = 0; i < 5; ++i) {
             final int finalI = i;
             StorageReference Reference2 = storageRef.child("/products/" + ControladoraPresentacio.getOffer_id()).child("product_" + i);
@@ -271,6 +275,15 @@ public class VisualizeOffer extends AppCompatActivity {
             }
         });
 
+        Calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VisualizeOffer.this, ScheduleVisit.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+/*
         afegirFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -282,6 +295,7 @@ public class VisualizeOffer extends AppCompatActivity {
                     RequestDeleteFavorite(id, afegirFavorite, Atras);
             }
         });
+        */
     }
 
     private void RequestAddFavorite(final ImageView Atras, final ImageView afegirFavorite, final String id) {

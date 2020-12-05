@@ -7,6 +7,11 @@
         <!-- android:title="@string/buyer" /> -->
 
     <item
+        android:id="@+id/navigation_chats"
+        android:icon="@drawable/icono_chat" />
+    <!-- android:title="@string/buyer" /> -->
+
+    <item
         android:id="@+id/navigation_vendedor"
         android:icon="@drawable/icon_sell_house" />
         <!-- android:title="@string/seller" /> -->

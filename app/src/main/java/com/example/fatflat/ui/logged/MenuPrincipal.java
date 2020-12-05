@@ -7,6 +7,7 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -59,6 +60,14 @@ public class MenuPrincipal extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_comprador:
                     return true;
+                case R.id.navigation_chats:
+                    Intent intent2 = new Intent(MenuPrincipal.this, ListChat.class);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent2);
+                    overridePendingTransition(0,0);
+                    //finish();
+                    break;
                 case R.id.navigation_vendedor:
                     Intent intent3 = new Intent(MenuPrincipal.this, Vendedor.class);
                     intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -82,7 +91,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         final ImageView Perfil_img = findViewById(R.id.img_perfil);
         final LinearLayout search = findViewById(R.id.search_MP);
-        final ImageView Chats = findViewById(R.id.Chats);
+        //final ImageView Chats = findViewById(R.id.Chats);
 
         refreshLayout = findViewById(R.id.refreshLayout_MP);
 
@@ -113,7 +122,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-
+/*
         Chats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,7 +132,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-
+*/
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -291,8 +300,11 @@ public class MenuPrincipal extends AppCompatActivity {
             //Definimos el layout y lo que contiene (foto+precio+nombre)
             LinearLayout ll = new LinearLayout(MenuPrincipal.this);
             ll.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout preu_eye = new LinearLayout(MenuPrincipal.this);
+            preu_eye.setOrientation(LinearLayout.HORIZONTAL);
             final ImageView foto = new ImageView(MenuPrincipal.this);
             TextView preu_producte = new TextView(MenuPrincipal.this);
+            final ImageView icon_eye = new ImageView(MenuPrincipal.this);
             TextView nom_producte = new TextView(MenuPrincipal.this);
             //Asignamos Texto a los textViews
             preu_producte.setText(offer_list.get(i).getValue() + "€");
@@ -315,6 +327,13 @@ public class MenuPrincipal extends AppCompatActivity {
                 }
             });
             preu_producte.setTextColor(MenuPrincipal.this.getResources().getColor(R.color.colorLetraKatundu));
+            Drawable drawable = getResources().getDrawable(R.drawable.icon_eye);
+            Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
+            //Redondeamos las esquinas de las fotos
+            //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2*8);
+            icon_eye.setImageBitmap(bmp);
+            //if (i%2 == 0) icon_eye.setVisibility(View.INVISIBLE);
+            icon_eye.setVisibility(View.VISIBLE);
             nom_producte.setTextColor(MenuPrincipal.this.getResources().getColor(R.color.colorLetraKatundu));
             Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
             preu_producte.setTypeface(boldTypeface);
@@ -336,6 +355,9 @@ public class MenuPrincipal extends AppCompatActivity {
             if (i%2==0) paramsll.setMargins(0, 0, 0, 0);
             else paramsll.setMargins(0, 0, 0, 0);
             ll.setLayoutParams(paramsll);
+            TableRow.LayoutParams paramsPreuEye = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramsPreuEye.setMargins(0, 0, 0, 0);
+            preu_eye.setLayoutParams(paramsPreuEye);
             //Margenes de los textViews
             TableRow.LayoutParams paramsFoto = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             paramsFoto.weight = 1;
@@ -343,9 +365,15 @@ public class MenuPrincipal extends AppCompatActivity {
             paramsFoto.setMargins(0, 0, 0, 10);
             foto.setLayoutParams(paramsFoto);
             foto.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            TableRow.LayoutParams paramsPrecio = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
+            TableRow.LayoutParams paramsPrecio = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramsPrecio.weight = 1;
             paramsPrecio.setMargins(25, 10, 25, 10);
             preu_producte.setLayoutParams(paramsPrecio);
+            TableRow.LayoutParams paramsIconEye = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
+            paramsIconEye.width = 70;
+            paramsIconEye.height = 70;
+            paramsIconEye.setMargins(25, 10, 25, 10);
+            icon_eye.setLayoutParams(paramsIconEye);
             TableRow.LayoutParams paramsN = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             //paramsN.weight = 1;
             paramsN.setMargins(25, 10, 25, 20);
@@ -355,8 +383,10 @@ public class MenuPrincipal extends AppCompatActivity {
             //Asignamose el Listener al Layout dinamico
             ll.setOnClickListener(new MenuPrincipal.LayoutOnClickListener(MenuPrincipal.this));
             //Añadimos el layout dinamico al layout
+            preu_eye.addView(preu_producte);
+            preu_eye.addView(icon_eye);
             ll.addView(foto);
-            ll.addView(preu_producte);
+            ll.addView(preu_eye);
             ll.addView(nom_producte);
             cv.addView(ll);
             if (!mostrar_producto) cv.setVisibility(View.INVISIBLE);

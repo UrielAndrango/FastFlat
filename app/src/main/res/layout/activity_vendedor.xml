@@ -9,7 +9,8 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/refreshLayout_SP"
         android:layout_width="match_parent"
-        android:layout_height="770dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view_sorprenme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nav_view_ofertas_compradores">
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         app:elevation="0dp"
-        app:itemIconSize="36dp"
+        app:itemIconSize="40dp"
         app:itemIconTint="@color/nav_item_colors"
         app:itemTextColor="@color/nav_item_colors"
         app:layout_constraintBottom_toBottomOf="parent"

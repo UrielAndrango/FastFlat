@@ -319,4 +319,14 @@
     <string name="mensaje_Buyer_Preferences">In case you wanted to buy a house, please introduce the search criteria to follow. If you want to modify them you could do so afterwards. If you do not want to sell, simply press the accept button.</string>
     <string name="max">max</string>
 
+    <!-- Strings related to ScheduleVisit-->
+    <string name="ScheduleVisit_title">Schedule visit</string>
+
+    <!-- Strings related to VisualizeOffer-->
+    <string name="VisualizeOffer_button">Send chat request</string>
+
+    <!-- Strings related to EditPreferences-->
+    <string name="EditPreferences_SwitchTracking">Employ tracking</string>
+    <string name="EditPreferences_Acurracy">Affinity threshold</string>
+
 </resources>

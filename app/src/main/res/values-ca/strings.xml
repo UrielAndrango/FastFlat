@@ -319,4 +319,14 @@
     <string name="mensaje_Buyer_Preferences">En cas de que tingui la intenció de comprar un inmoble, introdueixi les preferències de búsqueda. Si vol modificar-les ho podrà fer posteriorment. Si no vol comprar, simplement continui.</string>
     <string name="max">màx</string>
 
+    <!-- Strings related to ScheduleVisit-->
+    <string name="ScheduleVisit_title">Programar una visita</string>
+
+    <!-- Strings related to VisualizeOffer-->
+    <string name="VisualizeOffer_button">Enviar sol·licitud de xat</string>
+
+    <!-- Strings related to EditPreferences-->
+    <string name="EditPreferences_SwitchTracking">Emprar tracking</string>
+    <string name="EditPreferences_Acurracy">Llindar d\'afinitat</string>
+
 </resources>

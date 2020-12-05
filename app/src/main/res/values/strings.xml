@@ -363,4 +363,15 @@
         <item>M.</item>
     </string-array>
 
+    <!-- Strings related to ScheduleVisit-->
+    <string name="ScheduleVisit_title">Programar una visita</string>
+
+    <!-- Strings related to VisualizeOffer-->
+    <string name="VisualizeOffer_button">Enviar solicitud de chat</string>
+
+    <!-- Strings related to EditPreferences-->
+    <string name="EditPreferences_SwitchTracking">Emplear tracking</string>
+    <string name="EditPreferences_Acurracy">Umbral de afinidad</string>
+
+
 </resources>

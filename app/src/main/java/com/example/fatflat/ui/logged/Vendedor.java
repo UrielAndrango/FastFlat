@@ -62,6 +62,14 @@ public class Vendedor extends AppCompatActivity {
                     overridePendingTransition(0, 0);
                     //finish();
                     break;
+                case R.id.navigation_chats:
+                    Intent intent2 = new Intent(Vendedor.this, ListChat.class);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent2.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent2);
+                    overridePendingTransition(0,0);
+                    //finish();
+                    break;
                 case R.id.navigation_vendedor:
                     return true;
             }

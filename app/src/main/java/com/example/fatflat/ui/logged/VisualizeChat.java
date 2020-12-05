@@ -59,7 +59,8 @@ public class VisualizeChat extends AppCompatActivity {
         final LinearLayout llBotonera = findViewById(R.id.LinearLayout_Messages);
         final ScrollView scrollView = findViewById(R.id.scrollview);
         final ImageView refresh = findViewById(R.id.icono_refresh);
-        final ImageView end_exchange = findViewById(R.id.icono_end_exchange);
+        final ImageView calendar = findViewById(R.id.icono_end_exchange);
+        //final ImageView end_exchange = findViewById(R.id.icono_end_exchange);
 
         username2.setText(ControladoraChat.getUsername2());
 
@@ -94,6 +95,15 @@ public class VisualizeChat extends AppCompatActivity {
             }
         });
 
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VisualizeChat.this, ScheduleVisit.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+/*
         end_exchange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +112,7 @@ public class VisualizeChat extends AppCompatActivity {
                 //finish();
             }
         });
-
+*/
         /* PER SI VOLEM FER UNA REQUEST DE GETMESSAGES CADA X TEMPS
         //Fa la request de getMessages cada 10 segons per mantenir actualitzats els missatges del chat
         final Handler handler = new Handler();
