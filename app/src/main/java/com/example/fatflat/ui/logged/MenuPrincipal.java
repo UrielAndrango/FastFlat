@@ -334,7 +334,10 @@ public class MenuPrincipal extends AppCompatActivity {
             icon_eye.setImageBitmap(bmp);
             //if (i%2 == 0) icon_eye.setVisibility(View.INVISIBLE);
             icon_eye.setVisibility(View.VISIBLE);
-            nom_producte.setTextColor(MenuPrincipal.this.getResources().getColor(R.color.colorLetraKatundu));
+
+            icon_eye.setColorFilter(getResources().getColor(R.color.colorLetraKatundu));
+            preu_producte.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
+            nom_producte.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
             Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);
             preu_producte.setTypeface(boldTypeface);
             nom_producte.setTypeface(boldTypeface);

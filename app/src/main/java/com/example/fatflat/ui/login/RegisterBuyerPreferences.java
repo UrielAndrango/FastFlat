@@ -58,7 +58,8 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
         for(int i = 0; i < btn_array_BP.length; i++){
             btn_array_BP[i] = (Button) findViewById(btn_id_BP[i]);
-            btn_array_BP[i].setBackgroundColor(Color.rgb(207, 207, 207));
+            btn_array_BP[i].setTextColor(getResources().getColor(R.color.colorLetraKatundu));
+            btn_array_BP[i].setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
             btn_array_BP[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -86,7 +87,8 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
         for(int i = 0; i < btn_array2_BP.length; i++){
             btn_array2_BP[i] = (Button) findViewById(btn_id2_BP[i]);
-            btn_array2_BP[i].setBackgroundColor(Color.rgb(207, 207, 207));
+            btn_array2_BP[i].setTextColor(getResources().getColor(R.color.colorLetraKatundu));
+            btn_array2_BP[i].setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
             btn_array2_BP[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -144,18 +146,18 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
     }
 
     private void setFocus(Button btn_unfocus, Button btn_focus){
-        btn_unfocus.setTextColor(Color.rgb(49, 50, 51));
-        btn_unfocus.setBackgroundColor(Color.rgb(207, 207, 207));
-        btn_focus.setTextColor(Color.rgb(255, 255, 255));
-        btn_focus.setBackgroundColor(Color.rgb(3, 106, 150));
+        btn_unfocus.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
+        btn_unfocus.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
+        btn_focus.setTextColor(getResources().getColor(R.color.colorBlancoMate));
+        btn_focus.setBackgroundColor(getResources().getColor(R.color.color_focused));
         this.btn_unfocus_BP = btn_focus;
     }
 
     private void setFocus2(Button btn_unfocus, Button btn_focus){
-        btn_unfocus.setTextColor(Color.rgb(49, 50, 51));
-        btn_unfocus.setBackgroundColor(Color.rgb(207, 207, 207));
-        btn_focus.setTextColor(Color.rgb(255, 255, 255));
-        btn_focus.setBackgroundColor(Color.rgb(3, 106, 150));
+        btn_unfocus.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
+        btn_unfocus.setBackgroundColor(getResources().getColor(R.color.colorBlancoMate));
+        btn_focus.setTextColor(getResources().getColor(R.color.colorBlancoMate));
+        btn_focus.setBackgroundColor(getResources().getColor(R.color.color_focused));
         this.btn_unfocus2_BP = btn_focus;
     }
 

@@ -11,4 +11,5 @@
 
     <color name="colorBlancoMate">#E6FFFFFF</color>
     <color name="event_color">#f57f68</color>
+    <color name="color_focused">#036A96</color>
 </resources>
