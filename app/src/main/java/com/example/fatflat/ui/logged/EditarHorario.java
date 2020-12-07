@@ -1,17 +1,23 @@
 package com.example.fatflat.ui.logged;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alamkanak.weekview.MonthLoader;
 import com.alamkanak.weekview.WeekView;
 import com.alamkanak.weekview.WeekViewEvent;
 import com.example.fatflat.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.time.YearMonth;
 import java.util.ArrayList;
@@ -19,30 +25,41 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-public class ScheduleVisit extends AppCompatActivity {
+
+public class EditarHorario extends AppCompatActivity {
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     WeekView mWeekView;
     List<WeekViewEvent> weekEvents;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_schedule_visit);
+        setContentView(R.layout.activity_editar_horario);
         //Escondemos la Action Bar porque usamos la ToolBar
         getSupportActionBar().hide();
+        if (mAuth.getCurrentUser() == null) signInAnonymously();
+        final ImageView Atras = findViewById(R.id.DeleteAccount_Atras);
+        // Get a reference for the week view in the layout.
+        mWeekView = findViewById(R.id.weekView);
+        weekEvents = initWeekEvents();
 
-        final ImageView Atras = findViewById(R.id.ScheduleVisit_Atras);
+        // Set an action when any event is clicked.
+        //mWeekView.setOnEventClickListener(mEventClickListener);
+
+        // The week view has infinite scrolling horizontally. We have to provide the events of a
+        // month every time the month changes on the week view.
+        mWeekView.setMonthChangeListener(mMonthChangeListener);
+
+        // Set long press listener for events.
+        //mWeekView.setEventLongPressListener(mEventLongPressListener);
 
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ScheduleVisit.this, VisualizeChat.class);
+                Intent intent = new Intent(EditarHorario.this, Profile.class);
                 onNewIntent(intent);
                 finish();
             }
         });
-
-        mWeekView = findViewById(R.id.weekView);
-        weekEvents = initWeekEvents();
-        mWeekView.setMonthChangeListener(mMonthChangeListener);
     }
 
     MonthLoader.MonthChangeListener mMonthChangeListener = new MonthLoader.MonthChangeListener() {
@@ -116,7 +133,7 @@ public class ScheduleVisit extends AppCompatActivity {
         startTime.set(Calendar.HOUR_OF_DAY, 8);
         startTime.set(Calendar.MINUTE, 0);
         endTime = (Calendar) startTime.clone();
-        endTime.add(Calendar.HOUR_OF_DAY, 6);
+        endTime.add(Calendar.HOUR_OF_DAY, 8);
         event = new WeekViewEvent(3, getEventTitle(), startTime, endTime);
         event.setColor(getResources().getColor(R.color.event_color));
         weekEvents.add(event);
@@ -145,4 +162,20 @@ public class ScheduleVisit extends AppCompatActivity {
     protected String getEventTitle() {
         return "Horario de visitas";
     }
+
+    private void signInAnonymously() {
+        mAuth.signInAnonymously().addOnSuccessListener(this, new  OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                // do your stuff
+            }
+        }).addOnFailureListener(this, new OnFailureListener() {
+            private static final String TAG = "SignInStorage" ;
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                Log.e(TAG, "signInAnonymously:FAILURE", exception);
+            }
+        });
+    }
 }
+

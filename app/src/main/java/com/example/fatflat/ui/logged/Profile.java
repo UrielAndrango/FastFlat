@@ -74,7 +74,7 @@ public class Profile extends AppCompatActivity {
         MiHorario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, EditarPerfil.class);
+                Intent intent = new Intent(Profile.this, EditarHorario.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();

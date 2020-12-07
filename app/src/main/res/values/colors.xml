@@ -10,4 +10,5 @@
     <color name="colorMessage">#FAE7D3</color>
 
     <color name="colorBlancoMate">#E6FFFFFF</color>
+    <color name="event_color">#f57f68</color>
 </resources>
