@@ -114,7 +114,7 @@
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
                             android:maxWidth="120dp"
-                            android:maxHeight="200dp" />
+                            android:maxHeight="250dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto2_EditOffer"
@@ -123,7 +123,7 @@
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
                             android:maxWidth="120dp"
-                            android:maxHeight="200dp" />
+                            android:maxHeight="250dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto3_EditOffer"
@@ -132,7 +132,7 @@
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
                             android:maxWidth="120dp"
-                            android:maxHeight="200dp" />
+                            android:maxHeight="250dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto4_EditOffer"
@@ -141,7 +141,7 @@
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
                             android:maxWidth="120dp"
-                            android:maxHeight="200dp" />
+                            android:maxHeight="250dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto5_EditOffer"
@@ -149,7 +149,7 @@
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
                             android:maxWidth="120dp"
-                            android:maxHeight="200dp" />
+                            android:maxHeight="250dp" />
                     </LinearLayout>
                 </HorizontalScrollView>
 

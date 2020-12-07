@@ -334,6 +334,7 @@ public class MenuPrincipal extends AppCompatActivity {
             icon_eye.setImageBitmap(bmp);
             //if (i%2 == 0) icon_eye.setVisibility(View.INVISIBLE);
             icon_eye.setVisibility(View.VISIBLE);
+            if (i != 0) icon_eye.setVisibility(View.INVISIBLE);
 
             icon_eye.setColorFilter(getResources().getColor(R.color.colorLetraKatundu));
             preu_producte.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
@@ -353,7 +354,7 @@ public class MenuPrincipal extends AppCompatActivity {
             cv.setLayoutParams(paramscv);
             TableRow.LayoutParams paramsll = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT);
             //paramsll.weight = 1;
-            paramsll.height = 600;
+            paramsll.height = 700;
             //paramsll.setMargins(left, top, right, bottom);
             if (i%2==0) paramsll.setMargins(0, 0, 0, 0);
             else paramsll.setMargins(0, 0, 0, 0);

@@ -219,7 +219,10 @@ public class ListChat extends AppCompatActivity {
                 }
             });
             */
-            Drawable drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
+            Drawable drawable;
+            if (i == 0) drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
+            else drawable = getResources().getDrawable(R.drawable.icon_default_profile);
+            //Drawable drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
             Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
             //Redondeamos las esquinas de las fotos
             //bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2*8);
