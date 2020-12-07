@@ -373,5 +373,15 @@
     <string name="EditPreferences_SwitchTracking">Emplear tracking</string>
     <string name="EditPreferences_Acurracy">Umbral de afinidad</string>
 
+    <!-- Strings related to Register-->
+    <string name="Register_title">Introduce tus datos</string>
+    <string name="Register_continue">Continuar</string>
+    <string name="Register_register">Registrarse</string>
+
+    <!-- Strings related to Register Buyer Preferences-->
+    <string name="RegisterBuyerPreferences_title">Preferencias de búsqueda</string>
+
+    <!-- Strings related to Register House Preferences-->
+    <string name="RegisterHousePreferences_title">Datos del piso a vender</string>
 
 </resources>

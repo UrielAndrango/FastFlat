@@ -329,4 +329,15 @@
     <string name="EditPreferences_SwitchTracking">Employ tracking</string>
     <string name="EditPreferences_Acurracy">Affinity threshold</string>
 
+    <!-- Strings related to Register-->
+    <string name="Register_title">Enter your data</string>
+    <string name="Register_continue">Continue</string>
+    <string name="Register_register">Sign in</string>
+
+    <!-- Strings related to Register Buyer Preferences-->
+    <string name="RegisterBuyerPreferences_title">Search preferences</string>
+
+    <!-- Strings related to Register House Preferences-->
+    <string name="RegisterHousePreferences_title">Details of the flat to sell</string>
+
 </resources>
