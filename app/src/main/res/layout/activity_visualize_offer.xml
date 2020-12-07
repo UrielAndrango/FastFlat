@@ -410,7 +410,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/button_rounded"
-        android:text="@string/VisualizeOffer_button"
+        android:text="@string/buyer_request_button_chat"
         android:textColor="@color/colorLetraKatundu"
         android:textColorLink="@color/colorLetraKatundu"
         android:textSize="18sp"
