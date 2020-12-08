@@ -10,8 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -44,7 +46,15 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
 
         final ImageView Atras = findViewById(R.id.RegisterBuyer_Atras);
 
+        final TextView Accuracy = findViewById(R.id.RBP_Accuracy);
+        final SeekBar seekBar = findViewById(R.id.seekBar_RBP);
+
         final Button SaveButton = findViewById(R.id.RegisterBuyer_SaveButton);
+
+        //Definir Accurracy por defecto
+        int Accuracy_default = 90;
+        Accuracy.setText("" + Accuracy_default + "%");
+        seekBar.setProgress(Accuracy_default);
 
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +63,23 @@ public class RegisterBuyerPreferences extends AppCompatActivity implements Adapt
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();
+            }
+        });
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                Accuracy.setText("" + i + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
             }
         });
 

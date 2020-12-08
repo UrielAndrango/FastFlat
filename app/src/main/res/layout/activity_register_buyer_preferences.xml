@@ -70,7 +70,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,6 +89,52 @@
                 android:text="@string/mensaje_Buyer_Preferences"
                 android:textColor="@color/colorBlancoMate"
                 android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switch_RBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="@string/EditPreferences_SwitchTracking"
+                android:textColor="@color/colorBlancoMate"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/afinidad_RBP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/EditPreferences_Acurracy"
+                    android:textColor="@color/colorBlancoMate"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/RBP_Accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorBlancoMate"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBar_RBP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="20dp" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -458,7 +505,7 @@
                 <Spinner
                     android:id="@+id/spinner3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
@@ -484,7 +531,7 @@
                 <Spinner
                     android:id="@+id/spinner4"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <TextView
