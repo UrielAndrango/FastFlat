@@ -8,8 +8,11 @@
     <color name="colorBarraNotificaciones">#006875</color>
     <color name="colorRojoLogout">#BFFA0000</color>
     <color name="colorMessage">#FAE7D3</color>
-
     <color name="colorBlancoMate">#E6FFFFFF</color>
-    <color name="event_color">#f57f68</color>
     <color name="color_focused">#036A96</color>
+    <!--<color name="event_color">#f57f68</color>-->
+    <color name="event_color">#87D288</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="accent">#2789e4</color>
 </resources>

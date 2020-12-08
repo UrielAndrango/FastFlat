@@ -29,6 +29,7 @@ import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraChat;
 import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.Message;
+import com.example.fatflat.ui.logged.weekview.ScheduleVisitActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -98,7 +99,7 @@ public class VisualizeChat extends AppCompatActivity {
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisualizeChat.this, ScheduleVisit.class);
+                Intent intent = new Intent(VisualizeChat.this, ScheduleVisitActivity.class);
                 startActivity(intent);
                 //finish();
             }

@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId 'com.example.fatflat'
@@ -39,6 +46,12 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.firebase:firebase-core:17.4.1'
-    implementation 'com.github.alamkanak:android-week-view:1.2.6'
+    implementation 'com.github.thellmund.Android-Week-View:core:5.2.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

@@ -19,7 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.logged.ScheduleVisit"></activity>
         <activity
             android:name=".ui.logged.MyProperties"
             android:screenOrientation="portrait"
@@ -185,7 +184,11 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.logged.EditarHorario"
+            android:name=".ui.logged.weekview.ScheduleVisitActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.logged.weekview.WeekViewActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity

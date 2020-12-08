@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.login.LoginActivity;
+import com.example.fatflat.ui.logged.weekview.WeekViewActivity;
 
 public class Profile extends AppCompatActivity {
 
@@ -74,7 +75,7 @@ public class Profile extends AppCompatActivity {
         MiHorario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, EditarHorario.class);
+                Intent intent = new Intent(Profile.this, WeekViewActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();

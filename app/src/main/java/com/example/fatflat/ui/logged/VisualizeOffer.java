@@ -30,6 +30,7 @@ import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraChat;
 import com.example.fatflat.ui.ControladoraEditOffer;
 import com.example.fatflat.ui.ControladoraPresentacio;
+import com.example.fatflat.ui.logged.weekview.ScheduleVisitActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -278,7 +279,7 @@ public class VisualizeOffer extends AppCompatActivity {
         Calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisualizeOffer.this, ScheduleVisit.class);
+                Intent intent = new Intent(VisualizeOffer.this, ScheduleVisitActivity.class);
                 startActivity(intent);
                 //finish();
             }
