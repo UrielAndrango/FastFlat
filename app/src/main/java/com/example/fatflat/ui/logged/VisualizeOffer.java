@@ -9,8 +9,10 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.fatflat.R;
 import com.example.fatflat.ui.ControladoraChat;
 import com.example.fatflat.ui.ControladoraEditOffer;
+import com.example.fatflat.ui.ControladoraOffer;
 import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.logged.weekview.ScheduleVisitActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -54,27 +57,70 @@ public class VisualizeOffer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_visualize_offer);
+        //Escondemos la Action Bar porque usamos la ToolBar, aunque podriamos usar la ActionBar
+        getSupportActionBar().hide();
 
         String folder_product = "/products/Q9KGzX0vB7rC5aakqBEp/";
         final StorageReference imagesRef = storageRef.child(folder_product);
-        setContentView(R.layout.activity_visualize_offer);
 
-        final ImageView Atras = findViewById(R.id.EditOffer_Atras);
 
-        final String id = ControladoraPresentacio.getOffer_id();
-        final TextView nameOffer = findViewById(R.id.editTextNom_EditOffer);
-        final TextView categoriaOffer = findViewById(R.id.spinner_EditOffer);
-        final Switch tipusOffer = findViewById(R.id.switch3);
-        final TextView paraulesClauOffer = findViewById(R.id.editTextParaulesClau_EditOffer);
-        final TextView valueOffer = findViewById(R.id.editTextValor_VisualizeOffer);
-        final TextView descriptionOffer = findViewById(R.id.textDescripcion_EditOffer);
+        final ImageView Atras = findViewById(R.id.VisualizeOffer_Atras);
+        final TextView accuracy = findViewById(R.id.VisualizeOffer_Accuracy_dinamic);
+        final TextView venta = findViewById(R.id.VisualizeOffer_Venta_dinamic);
+        final TextView tipo_inmueble = findViewById(R.id.VisualizeOffer_TipoInmueble_dinamic);
+        final TextView poblacion = findViewById(R.id.VisualizeOffer_Poblacion_dinamic);
+        final TextView zona = findViewById(R.id.VisualizeOffer_Zona_dinamic);
+        final TextView precio = findViewById(R.id.VisualizeOffer_Precio_dinamic);
+        final TextView superficie = findViewById(R.id.VisualizeOffer_Superficie_dinamic);
+        final TextView numero_habitaciones = findViewById(R.id.VisualizeOffer_NHabitaciones_dinamic);
+        final TextView numero_banyos = findViewById(R.id.VisualizeOffer_NBanyos_dinamic);
+        final TextView fecha_publicacion = findViewById(R.id.VisualizeOffer_FechaPublicacion_dinamic);
+        final TextView estado_inmueble = findViewById(R.id.VisualizeOffer_EstadoInmueble_dinamic);
+        final TextView descriptionOffer = findViewById(R.id.textDescripcion_VisualizeOffer);
+        final CheckBox piscina = findViewById(R.id.VisualizeOffer_ZonasAdds_Piscina);
+        final CheckBox parking = findViewById(R.id.VisualizeOffer_ZonasAdds_Parking);
+        final CheckBox terraza = findViewById(R.id.VisualizeOffer_ZonasAdds_Terraza);
+        final CheckBox jardin = findViewById(R.id.VisualizeOffer_ZonasAdds_Jardin);
+        final CheckBox trastero = findViewById(R.id.VisualizeOffer_ZonasAdds_Trastero);
+        final CheckBox garaje = findViewById(R.id.VisualizeOffer_ZonasAdds_Garaje);
+        final CheckBox ascensor = findViewById(R.id.VisualizeOffer_Extras_Ascensor);
+        final CheckBox chimenea = findViewById(R.id.VisualizeOffer_Extras_Chimenea);
+        final CheckBox calefaccion = findViewById(R.id.VisualizeOffer_Extras_Calefaccion);
+        final CheckBox amueblado = findViewById(R.id.VisualizeOffer_Extras_Amueblado);
+        final CheckBox aire_acondicionado = findViewById(R.id.VisualizeOffer_Extras_AireAcondicionado);
         //final ImageView afegirFavorite = findViewById(R.id.imageView_Favorite);
         //final ImageView new_chat = findViewById(R.id.icona_new_missatge);
         final ImageView Calendar = findViewById(R.id.VisualizeOffer_ScheduleVisit);
         final Button new_chat = findViewById(R.id.ok_button_VisualizeOffer);
 
-        // FOTOS
+        //Inicializamos los TextView con nuestros datos
+        accuracy.setText(ControladoraOffer.getAccuracy() + "%");
+        if (ControladoraOffer.isVenta()) venta.setText("venta");
+        else venta.setText("alquiler");
+        tipo_inmueble.setText(ControladoraOffer.getTipo_inmueble());
+        poblacion.setText(ControladoraOffer.getPoblacion());
+        zona.setText(ControladoraOffer.getZona());
+        precio.setText(String.valueOf(ControladoraOffer.getPrecio()) + " €");
+        superficie.setText(String.valueOf(ControladoraOffer.getSuperficie()) + " m2");
+        numero_habitaciones.setText(String.valueOf(ControladoraOffer.getNumero_habitaciones()));
+        numero_banyos.setText(String.valueOf(ControladoraOffer.getNumero_banyos()));
+        fecha_publicacion.setText(ControladoraOffer.getFecha_publicacion());
+        estado_inmueble.setText(ControladoraOffer.getEstado_inmueble());
+        descriptionOffer.setText(ControladoraPresentacio.getOffer_Description());
+        //Inicializamos los CheckBox con nuestros datos
+        CheckBox[] zonas_totales = {piscina, parking, terraza, jardin, trastero, garaje};
+        boolean[] zonas_adds = ControladoraOffer.getZonas_adicionales();
+        for (int i=0; i<zonas_adds.length; ++i) {
+            if (zonas_adds[i]) zonas_totales[i].setChecked(true);
+        }
+        CheckBox[] extras_totales = {ascensor, chimenea, calefaccion, amueblado, aire_acondicionado};
+        boolean[] extras = ControladoraOffer.getExtras();
+        for (int i=0; i<extras.length; ++i) {
+            if (extras[i]) extras_totales[i].setChecked(true);
+        }
 
+        // FOTOS
         PreviewFoto0 = findViewById(R.id.previewFoto_EditOffer);
         PreviewFoto1 = findViewById(R.id.previewFoto2_EditOffer);
         PreviewFoto2 = findViewById(R.id.previewFoto3_EditOffer);
@@ -97,7 +143,7 @@ public class VisualizeOffer extends AppCompatActivity {
                     cantidad_fotos[0] +=1;
                     Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     //Redondeamos las esquinas de las fotos
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64);
                     PreviewFotos[finalI].setImageBitmap(bmp);
                     PreviewFotos[finalI].setVisibility(View.VISIBLE);
                 }
@@ -243,9 +289,6 @@ public class VisualizeOffer extends AppCompatActivity {
             }
         });
 
-        //Escondemos la Action Bar porque usamos la ToolBar, aunque podriamos usar la ActionBar
-        getSupportActionBar().hide();
-
 
         //Inicilizamos las categorias
         categorias[0] = getString(R.string.add_product_category_technology);
@@ -257,19 +300,10 @@ public class VisualizeOffer extends AppCompatActivity {
         categorias[6] = getString(R.string.add_product_category_transport);
 
 
-        //Inicializamos los editText con nuestros datos
-        nameOffer.setText(ControladoraPresentacio.getOffer_name());
-        categoriaOffer.setText(categorias[ControladoraPresentacio.getWish_Categoria()]); //esto es para cambiar el elemento seleccionado por defecto del spinner
-        tipusOffer.setChecked(ControladoraPresentacio.isOffer_Service()); //esto es para cambiar el switch
-        tipusOffer.setClickable(false);
-        paraulesClauOffer.setText(ControladoraPresentacio.getOffer_PC());
-        valueOffer.setText(ControladoraPresentacio.getOffer_Value().toString());
-        descriptionOffer.setText(ControladoraPresentacio.getOffer_Description());
-
         Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisualizeOffer.this, VisualizeListOUser.class);
+                Intent intent = new Intent(VisualizeOffer.this, MenuPrincipal.class);
                 onNewIntent(intent);
                 //startActivity(intent);
                 finish();

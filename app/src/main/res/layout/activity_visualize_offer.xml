@@ -34,7 +34,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/EditOffer_Atras"
+                    android:id="@+id/VisualizeOffer_Atras"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:tint="@color/colorBlancoMate"
@@ -92,15 +92,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:orientation="vertical">
 
                 <HorizontalScrollView
                     android:id="@+id/scroll_fotos_EditOffer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginRight="25dp">
+                    android:layout_marginTop="20dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -113,8 +113,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
-                            android:maxWidth="120dp"
-                            android:maxHeight="250dp" />
+                            android:maxWidth="150dp"
+                            android:maxHeight="200dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto2_EditOffer"
@@ -122,8 +122,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
-                            android:maxWidth="120dp"
-                            android:maxHeight="250dp" />
+                            android:maxWidth="150dp"
+                            android:maxHeight="200dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto3_EditOffer"
@@ -131,8 +131,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
-                            android:maxWidth="120dp"
-                            android:maxHeight="250dp" />
+                            android:maxWidth="150dp"
+                            android:maxHeight="200dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto4_EditOffer"
@@ -140,254 +140,540 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
                             android:adjustViewBounds="true"
-                            android:maxWidth="120dp"
-                            android:maxHeight="250dp" />
+                            android:maxWidth="150dp"
+                            android:maxHeight="200dp" />
 
                         <ImageView
                             android:id="@+id/previewFoto5_EditOffer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:maxWidth="120dp"
-                            android:maxHeight="250dp" />
+                            android:maxWidth="150dp"
+                            android:maxHeight="200dp" />
                     </LinearLayout>
                 </HorizontalScrollView>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal"
-                    android:textAlignment="textEnd"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/EditP_name"
+                        android:id="@+id/VisualizeOffer_Accuracy_static"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/add_product_name"
+                        android:text="@string/VisualizeOffer_Accuracy"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
-                    <TextView
-                        android:id="@+id/editTextNom_EditOffer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:inputType="textEmailAddress"
-                        android:textAlignment="viewEnd"
-                        android:textSize="18sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/VisualizeOffer_Accuracy_dinamic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/colorBlancoMate"
+                    android:textSize="18sp" />
+            </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout12"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/EditOffer_categoria"
+                        android:id="@+id/VisualizeOffer_Venta_static"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/add_product_categories"
+                        android:text="@string/VisualizeOffer_TipoOferta"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Space
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/spinner_EditOffer"
+                        android:id="@+id/VisualizeOffer_Venta_dinamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textEmailAddress"
-                        android:maxLength="20"
-                        android:textAlignment="viewEnd"
-                        android:textSize="18sp"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="20" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearLayout13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-                    <TextView
-                        android:id="@+id/EditOffer_valor"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/add_product_value"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:id="@+id/editTextValor_VisualizeOffer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:inputType="number"
-                        android:textAlignment="viewEnd"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp" />
-
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:id="@+id/euro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/euro"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout14"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/EditOffer_tipus"
+                        android:id="@+id/VisualizeOffer_TipoInmueble_static"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/add_product_type"
+                        android:text="@string/VisualizeOffer_TipoInmueble"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Space
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/VisualizeOffer_TipoInmueble_dinamic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/add_product_type_product"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <Switch
-                        android:id="@+id/switch3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:textOff="@string/add_product_type_product"
-                        android:textOn="@string/add_product_type_service"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:thumbTint="@android:color/white" />
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/add_product_type_service"
-                        android:textAlignment="viewEnd"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout15"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal"
-                    android:textAlignment="textEnd"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/EditOffer_paraules_clau"
+                        android:id="@+id/VisualizeOffer_Poblacion_static"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/add_product_key_words"
+                        android:text="@string/VisualizeOffer_Poblacion"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:id="@+id/editTextParaulesClau_EditOffer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:inputType="textEmailAddress"
-                        android:textAlignment="viewEnd"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Poblacion_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Zona_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_Zona"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Zona_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Precio_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_Precio"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Precio_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Superficie_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_Superficie"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Superficie_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_NHabitaciones_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_NHabitaciones"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_NHabitaciones_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_NBanyos_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_NBanyos"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_NBanyos_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_FechaPublicacion_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_FechaPublicacion"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_FechaPublicacion_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_EstadoInmueble_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_EstadoInmueble"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_EstadoInmueble_dinamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_ZonasAdds_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_ZonasAdds"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Piscina"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_piscina" />
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Parking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_parking" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Terraza"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_terraza" />
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Jardin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_jardin" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Trastero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_trastero" />
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_ZonasAdds_Garaje"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_garaje" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/VisualizeOffer_Extras_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VisualizeOffer_Extras"
+                        android:textColor="@color/colorBlancoMate"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_Extras_Ascensor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_ascensor" />
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_Extras_Chimenea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_chimenea" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_Extras_Calefaccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_calefaccion" />
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_Extras_Amueblado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/amueblado" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/VisualizeOffer_Extras_AireAcondicionado"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/con_aire_acondicionado" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linearLayout16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginEnd="25dp"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                     <TextView
-                        android:id="@+id/EditOffer_descripcio"
+                        android:id="@+id/VisualizeOffer_descripcio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/add_product_description"
+                        android:textColor="@color/colorBlancoMate"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textDescripcion_EditOffer"
+                        android:id="@+id/textDescripcion_VisualizeOffer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLength="260"

@@ -340,4 +340,22 @@
     <!-- Strings related to Register House Preferences-->
     <string name="RegisterHousePreferences_title">Details of the flat to sell</string>
 
+    <!-- Strings related to Register Visualize Offer-->
+    <string name="VisualizeOffer_title">Oferta</string>
+    <string name="VisualizeOffer_Accuracy">Precisión</string>
+    <string name="VisualizeOffer_TipoOferta">Tipo de oferta</string>
+    <string name="VisualizeOffer_Venta">Venta</string>
+    <string name="VisualizeOffer_Alquiler">Alquiler</string>
+    <string name="VisualizeOffer_TipoInmueble">Tipo de inmueble</string>
+    <string name="VisualizeOffer_Poblacion">Población</string>
+    <string name="VisualizeOffer_Zona">Zona</string>
+    <string name="VisualizeOffer_Precio">Precio</string>
+    <string name="VisualizeOffer_Superficie">Superfície</string>
+    <string name="VisualizeOffer_NHabitaciones">Número de habitaciones</string>
+    <string name="VisualizeOffer_NBanyos">Número de baños</string>
+    <string name="VisualizeOffer_FechaPublicacion">Fecha de publicación</string>
+    <string name="VisualizeOffer_EstadoInmueble">Estado del inmueble</string>
+    <string name="VisualizeOffer_ZonasAdds">Zonas adicionales</string>
+    <string name="VisualizeOffer_Extras">Extras</string>
+
 </resources>

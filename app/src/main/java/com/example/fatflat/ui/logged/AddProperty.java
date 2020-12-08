@@ -130,7 +130,7 @@ public class AddProperty extends AppCompatActivity {
                     imageView.setDrawingCacheEnabled(true);
                     imageView.buildDrawingCache();
                     Bitmap bmp = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64);
                     PreviewFotos[i].setImageBitmap(bmp);
                     PreviewFotos[i].setVisibility(View.VISIBLE);
 
@@ -502,7 +502,7 @@ public class AddProperty extends AppCompatActivity {
                     imageView.setDrawingCacheEnabled(true);
                     imageView.buildDrawingCache();
                     Bitmap bmp = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
-                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64*2);
+                    bmp = ControladoraPresentacio.getRoundedCornerBitmap(bmp,64);
                     PreviewFotos[i].setImageBitmap(bmp);
                     PreviewFotos[i].setVisibility(View.VISIBLE);
                     //Actualizamos la controladora
