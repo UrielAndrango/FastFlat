@@ -358,4 +358,8 @@
     <string name="VisualizeOffer_ZonasAdds">Zonas adicionales</string>
     <string name="VisualizeOffer_Extras">Extras</string>
 
+    <!-- Strings related to Notifications-->
+    <string name="Notification_title">Today is your lucky day!</string>
+    <string name="Notification_body">We have found a flat that suits your preferences near you</string>
+
 </resources>

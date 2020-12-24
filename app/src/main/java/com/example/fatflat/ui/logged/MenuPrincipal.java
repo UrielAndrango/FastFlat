@@ -1,19 +1,29 @@
 package com.example.fatflat.ui.logged;
 
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.LocationManager;
 import android.media.Image;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +32,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.solver.widgets.Rectangle;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.location.LocationManagerCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
@@ -44,7 +57,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MenuPrincipal extends AppCompatActivity {
     private TextView mTextMessage;
@@ -81,6 +97,10 @@ public class MenuPrincipal extends AppCompatActivity {
         }
     };
 
+    //Notificaciones
+    private NotificationManagerCompat notificationManager;
+
+
     SwipeRefreshLayout refreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +115,14 @@ public class MenuPrincipal extends AppCompatActivity {
 
         refreshLayout = findViewById(R.id.refreshLayout_MP);
 
+
+        //Notificaciones
+        notificationManager = NotificationManagerCompat.from(this);
+        //Localizacion
+        IntentFilter intentFilter = new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
+        registerReceiver(locationStateReceiver, intentFilter);
+
+        //Barra navegacion
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -122,17 +150,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-/*
-        Chats.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuPrincipal.this, ListChat.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                //finish();
-            }
-        });
-*/
+
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -604,5 +622,48 @@ public class MenuPrincipal extends AppCompatActivity {
             startActivity(intent);
             //finish();
         }
+    }
+
+    private BroadcastReceiver locationStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String title = getString(R.string.Notification_title);
+            String body = getString(R.string.Notification_body);
+            if (checkIfLocationOpened()){
+                notifica(title, body);
+            }
+        }
+    };
+
+    private boolean checkIfLocationOpened() {
+        String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+        //System.out.println("Provider contains=> " + provider);
+        if (provider.contains("gps") || provider.contains("network")){
+            return true;
+        }
+        return false;
+    }
+
+    public void notifica(String title, String text) {
+        String body = getString(R.string.Notification_body);
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        Drawable drawable = getResources().getDrawable(R.drawable.logo_fatflat);
+        Bitmap myBitmap = ((BitmapDrawable) drawable).getBitmap();
+
+        Notification not = new NotificationCompat.Builder(this, ConfigureNotifications.CHANNEL_1)
+                .setSmallIcon(R.drawable.icon_building)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(body))
+                .setContentIntent(pendingIntent)
+                .setLargeIcon(myBitmap)
+                //.setStyle(new NotificationCompat.BigPictureStyle()
+                //        .bigPicture(myBitmap)
+                //        .bigLargeIcon(null))
+                .setAutoCancel(true)
+                .build();
+        notificationManager.notify(1,not);
     }
 }

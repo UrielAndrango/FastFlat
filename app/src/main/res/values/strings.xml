@@ -261,7 +261,7 @@
     <string name="rate_explanation">Valora el usuario que has indicado. Recuerda que la puntuación es un valor entre 1 y 5.</string>
     <string name="save_rating">Enviar valoración</string>
     <string name="wrong_rating">Valoración inválida</string>
-    <string name="app_name" translatable="false">FatFlat</string>
+    <string name="app_name" translatable="false">FastFlat</string>
 
     <!-- Strings related to ListBuyersByPercentage-->
     <string name="list_buyer_requests_title">Solicitudes de Compradores</string>
@@ -402,5 +402,9 @@
     <string name="VisualizeOffer_EstadoInmueble">Estado del inmueble</string>
     <string name="VisualizeOffer_ZonasAdds">Zonas adicionales</string>
     <string name="VisualizeOffer_Extras">Extras</string>
+
+    <!-- Strings related to Notifications-->
+    <string name="Notification_title">¡Hoy es tu día de suerte!</string>
+    <string name="Notification_body">Hemos encontrado un piso que se adapta a tus preferencias cerca de ti</string>
 
 </resources>
