@@ -19,7 +19,7 @@ public class ConfigureNotifications extends Application {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel ch1 = new NotificationChannel(
                     CHANNEL_1,
-                    "Limpia el movil !",
+                    "¡Entra en la App y descubre que hay de nuevo!",
                     NotificationManager.IMPORTANCE_HIGH
             );
             ch1.setDescription("Acabas de volver del exterior, recueda que la limpieza es importante");
