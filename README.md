@@ -1,6 +1,6 @@
 # FastFlat
 
-Un aplicacion Android enfocada a la compra/venta de inmuebles.
+Una aplicacion Android enfocada a la compra/venta de inmuebles.
 
 ## Autores
 
