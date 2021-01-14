@@ -220,7 +220,7 @@ public class ListChat extends AppCompatActivity {
             });
             */
             Drawable drawable;
-            if (i == 0) drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
+            if (i == 0) drawable = getResources().getDrawable(R.drawable.icon_trophy_sabio);
             else drawable = getResources().getDrawable(R.drawable.icon_default_profile);
             //Drawable drawable = getResources().getDrawable(R.drawable.icon_trophy_500);
             Bitmap bmp = ((BitmapDrawable) drawable).getBitmap();
@@ -232,7 +232,7 @@ public class ListChat extends AppCompatActivity {
             nom_producte.setText(chat_list.get(i).first + "");
             //preu_producte.setText(chat_list.get(i).getValue() + "€");
             //TODO: Hay que cambiar esto por el Nombre de la Propiedad Real!
-            preu_producte.setText("PROPIEDAD "+(i+1));
+            preu_producte.setText("Piso en Cornellá de 75 m2");
 
 
             //Le damos el estilo que queremos al LinearLayout y a sus componentes

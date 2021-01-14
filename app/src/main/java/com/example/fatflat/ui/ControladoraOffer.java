@@ -2,16 +2,16 @@ package com.example.fatflat.ui;
 
 public class ControladoraOffer {
     private static boolean tracking = true;
-    private static int accuracy = 96;
+    private static int accuracy = 92;
     private static boolean venta = true;
     private static String tipo_inmueble = "piso";
     private static String poblacion = "Cornellá de Llobregat";
     private static String zona = "Sant Ildefons";
     private static int precio = 195000;
-    private static int superficie = 67;
+    private static int superficie = 75;
     private static int numero_habitaciones = 3;
     private static int numero_banyos = 1;
-    private static String fecha_publicacion = "09/12/2020";
+    private static String fecha_publicacion = "11/01/2021";
     private static String estado_inmueble = "Casi nuevo";
     private static boolean[] zonas_adicionales = {false, true, false, false, false, false};
     private static boolean[] extras = {true, false, true, true, true};
@@ -42,6 +42,10 @@ public class ControladoraOffer {
 
     public static int getPrecio() {
         return precio;
+    }
+
+    public static void setPrecio(int precio) {
+        ControladoraOffer.precio = precio;
     }
 
     public static int getSuperficie() {

@@ -37,6 +37,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.fatflat.R;
+import com.example.fatflat.ui.ControladoraOffer;
 import com.example.fatflat.ui.ControladoraPresentacio;
 import com.example.fatflat.ui.ControladoraTrophies;
 import com.example.fatflat.ui.Offer;
@@ -129,7 +130,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-
+/*
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,7 +140,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 //finish();
             }
         });
-
+*/
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -314,7 +315,10 @@ public class MenuPrincipal extends AppCompatActivity {
             final ImageView icon_eye = new ImageView(MenuPrincipal.this);
             TextView nom_producte = new TextView(MenuPrincipal.this);
             //Asignamos Texto a los textViews
-            preu_producte.setText(offer_list.get(i).getValue() + "€");
+            String s = String.valueOf(offer_list.get(i).getValue());
+            s = s.substring(0,3) + "." + s.substring(3,6);
+            preu_producte.setText(s + " €");
+            //preu_producte.setText(offer_list.get(i).getValue() + "€");
             nom_producte.setText(offer_list.get(i).getName() + "");
             //Le damos el estilo que queremos
             //pareja.setBackgroundResource(R.drawable.button_rounded);
@@ -341,7 +345,7 @@ public class MenuPrincipal extends AppCompatActivity {
             icon_eye.setImageBitmap(bmp);
             //if (i%2 == 0) icon_eye.setVisibility(View.INVISIBLE);
             icon_eye.setVisibility(View.VISIBLE);
-            if (i != 0) icon_eye.setVisibility(View.INVISIBLE);
+            if (i == 1 || i == 2 || i == 3) icon_eye.setVisibility(View.INVISIBLE);
 
             icon_eye.setColorFilter(getResources().getColor(R.color.colorLetraKatundu));
             preu_producte.setTextColor(getResources().getColor(R.color.colorLetraKatundu));
@@ -605,6 +609,7 @@ public class MenuPrincipal extends AppCompatActivity {
             ControladoraPresentacio.setOffer_PC(info_offer.getKeywords());
             ControladoraPresentacio.setOffer_Value(info_offer.getValue());
             ControladoraPresentacio.setOffer_Description(info_offer.getDescription());
+            ControladoraOffer.setPrecio(info_offer.getValue());
             //Nos vamos a la ventana de EditOffer
             Intent intent = new Intent(MenuPrincipal.this, VisualizeOffer.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

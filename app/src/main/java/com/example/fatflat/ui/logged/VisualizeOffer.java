@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -101,7 +102,9 @@ public class VisualizeOffer extends AppCompatActivity {
         tipo_inmueble.setText(ControladoraOffer.getTipo_inmueble());
         poblacion.setText(ControladoraOffer.getPoblacion());
         zona.setText(ControladoraOffer.getZona());
-        precio.setText(String.valueOf(ControladoraOffer.getPrecio()) + " €");
+        String s = String.valueOf(ControladoraOffer.getPrecio());
+        s = s.substring(0,3) + "." + s.substring(3,6);
+        precio.setText(s + " €");
         superficie.setText(String.valueOf(ControladoraOffer.getSuperficie()) + " m2");
         numero_habitaciones.setText(String.valueOf(ControladoraOffer.getNumero_habitaciones()));
         numero_banyos.setText(String.valueOf(ControladoraOffer.getNumero_banyos()));

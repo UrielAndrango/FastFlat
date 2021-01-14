@@ -262,12 +262,12 @@ public class VisualizeChat extends AppCompatActivity {
             //Le damos el estilo que queremos
             if(message_list.get(i).getUsername().equals(ControladoraPresentacio.getUsername()))
                 ll.setBackgroundResource(R.drawable.button_rounded_message);
-            else ll.setBackgroundResource(R.drawable.button_rounded);
+            else ll.setBackgroundResource(R.drawable.button_rounded_message_2);
 
-            text_missatge.setTextColor(VisualizeChat.this.getResources().getColor(R.color.colorLetraKatundu));
+            text_missatge.setTextColor(VisualizeChat.this.getResources().getColor(R.color.colorBlancoMate));
             text_missatge.setTextSize(18);
 
-            time_missatge.setTextColor(VisualizeChat.this.getResources().getColor(R.color.colorLetraKatundu));
+            time_missatge.setTextColor(VisualizeChat.this.getResources().getColor(R.color.colorBlancoMate));
             time_missatge.setTextSize(10);
 
             //Typeface boldTypeface = Typeface.defaultFromStyle(Typeface.BOLD);

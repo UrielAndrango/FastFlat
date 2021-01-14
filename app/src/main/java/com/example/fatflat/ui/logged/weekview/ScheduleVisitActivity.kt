@@ -25,10 +25,10 @@ class ScheduleVisitActivity : AppCompatActivity() {
         //Monday
         var startTime = Calendar.getInstance()
         startTime[Calendar.DAY_OF_WEEK] = startTime.firstDayOfWeek
-        startTime[Calendar.HOUR_OF_DAY] = 8
+        startTime[Calendar.HOUR_OF_DAY] = 7
         startTime[Calendar.MINUTE] = 0
         var endTime = startTime.clone() as Calendar
-        endTime.add(Calendar.HOUR_OF_DAY, 7)
+        endTime.add(Calendar.HOUR_OF_DAY, 5)
         events.add(Event(1, "Visita", startTime, endTime))
         //Tuesday
         startTime = Calendar.getInstance()
@@ -36,7 +36,7 @@ class ScheduleVisitActivity : AppCompatActivity() {
         startTime[Calendar.HOUR_OF_DAY] = 7
         startTime[Calendar.MINUTE] = 0
         endTime = startTime.clone() as Calendar
-        endTime.add(Calendar.HOUR_OF_DAY, 6)
+        endTime.add(Calendar.HOUR_OF_DAY, 5)
         events.add(Event(1, "Visita", startTime, endTime))
         // Wednesday
         startTime = Calendar.getInstance()
@@ -44,12 +44,12 @@ class ScheduleVisitActivity : AppCompatActivity() {
         startTime[Calendar.HOUR_OF_DAY] = 7
         startTime[Calendar.MINUTE] = 0
         endTime = startTime.clone() as Calendar
-        endTime.add(Calendar.HOUR_OF_DAY, 8)
+        endTime.add(Calendar.HOUR_OF_DAY, 3)
         events.add(Event(1, "Visita", startTime, endTime))
         // Thursday
         startTime = Calendar.getInstance()
         startTime[Calendar.DAY_OF_WEEK] = startTime.firstDayOfWeek + 3
-        startTime[Calendar.HOUR_OF_DAY] = 14
+        startTime[Calendar.HOUR_OF_DAY] = 7
         startTime[Calendar.MINUTE] = 0
         endTime = startTime.clone() as Calendar
         endTime.add(Calendar.HOUR_OF_DAY, 5)
@@ -60,15 +60,15 @@ class ScheduleVisitActivity : AppCompatActivity() {
         startTime[Calendar.HOUR_OF_DAY] = 8
         startTime[Calendar.MINUTE] = 0
         endTime = startTime.clone() as Calendar
-        endTime.add(Calendar.HOUR_OF_DAY, 8)
+        endTime.add(Calendar.HOUR_OF_DAY, 4)
         events.add(Event(1, "Visita", startTime, endTime))
         // Saturday
         startTime = Calendar.getInstance()
         startTime[Calendar.DAY_OF_WEEK] = startTime.firstDayOfWeek + 5
-        startTime[Calendar.HOUR_OF_DAY] = 9
+        startTime[Calendar.HOUR_OF_DAY] = 10
         startTime[Calendar.MINUTE] = 0
         endTime = startTime.clone() as Calendar
-        endTime.add(Calendar.HOUR_OF_DAY, 4)
+        endTime.add(Calendar.HOUR_OF_DAY, 10)
         events.add(Event(1, "Visita", startTime, endTime))
         adapter.submitList(events)
     }

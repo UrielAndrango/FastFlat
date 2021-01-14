@@ -208,7 +208,7 @@ public class Vendedor extends AppCompatActivity {
             nom_producte.setText(offer_list.get(i).getName() + "");
             preu_producte.setText(offer_list.get(i).getValue() + "€");
             //TODO: Hay que cambiar esto por el Numero de Ofertas REAL por la Propiedad!
-            num_ofertes.setText("Tienes: " +"X"+"ofertas");
+            num_ofertes.setText("Tienes: " + (5-i*2) +" ofertas");
 
 
             //Le damos el estilo que queremos al LinearLayout y a sus componentes

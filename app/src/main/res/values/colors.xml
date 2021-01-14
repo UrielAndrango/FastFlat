@@ -15,4 +15,6 @@
     <color name="white">#FFFFFF</color>
     <color name="gray_300">#E0E0E0</color>
     <color name="accent">#2789e4</color>
+
+    <color name="mensaje">#006446</color>
 </resources>

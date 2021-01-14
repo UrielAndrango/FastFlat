@@ -63,7 +63,9 @@
                 android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:contentDescription="@string/descripcio"
-                android:src="@drawable/icono_refresh" />
+                android:src="@drawable/icono_refresh"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/icono_end_exchange"
@@ -90,8 +92,8 @@
             android:id="@+id/LinearLayout_Messages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="vertical" />
     </ScrollView>
 
@@ -99,7 +101,7 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@color/colorBlancoMate"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,40 +115,26 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="3dp">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+            <EditText
+                android:id="@+id/contingut_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <EditText
-                    android:id="@+id/contingut_message"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints=""
-                    android:hint="@string/contingut_message"
-                    android:inputType="textLongMessage|textMultiLine|text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textColorHint="?attr/colorPrimary"
-                    android:textSize="18sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                android:autofillHints=""
+                android:hint="@string/contingut_message"
+                android:inputType="textLongMessage|textMultiLine|text"
+                android:maxHeight="200dp"
+                android:textColor="?attr/colorPrimary"
+                android:textColorHint="?attr/colorPrimary"
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/enviar_message"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:layout_weight="1"
                 android:contentDescription="@string/descripcio"
                 android:src="@drawable/icono_enviar_message" />
 
